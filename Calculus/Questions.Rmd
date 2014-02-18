@@ -1,0 +1,36 @@
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Questions on Calculus}
+\author{Rob Hayward} 
+\date{\today}
+\maketitle
+
+\begin{enumerate}
+
+
+%<<plot, fig.align='center', echo=FALSE>>=
+%TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
+%TL <- c(0:10)
+%APP <- TPP/TL
+%plot(TL, TPP, main = "Total Physical Product", type = 'l', col = 'red')
+%lines(APP, col = 'blue')
+%legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+%@
+
+This is the total physical product curve from last week.  How would you calculate hte average physical product? 
+\end{enumerate}
+\end{document}

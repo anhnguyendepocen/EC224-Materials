@@ -1,0 +1,3 @@
+These notes have been complied in R markedown and then the la tex file has been adjusted to make some spaces where they are necessary.  Therefore, if you return to the Markdown file, you will change some of the fromatting. The main adjustments that need to be done are verticle spaces between some of the element. 
+
+I have also added a box for the main element for f(x) x^k, f'(x) = kx^{k-1}

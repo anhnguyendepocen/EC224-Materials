@@ -1,0 +1,152 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{tikz}
+\bibliographystyle{agsm}
+\graphicspath{{./Figures/}}
+
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{An Introduction to Calculus}
+\author{Rob Hayward}
+\date{Friday, 20th September 2013}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%\tableofcontents
+%\end{frame}
+
+\begin{frame}{Usain Bolt}
+\begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.6]
+\draw [thick, <->] (0,100) -- (0,0) -- (10,0);
+\draw [thin] (0,0) -- (9.58, 100);
+\node [below left] at (9,0) {x = seconds};
+\node [above, rotate = 90] at (0,95) {y = meters};
+\draw [<->, blue] (0,0) to [out = 57, in = 232] (9.58, 100);
+\node [below right] at (9.58, 100) {UB};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Speed}
+\framesubtitle{Average and Instantaneous Speed}
+Slope is constant with average speed but varies over time.
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item $\text{Average Speed} = \frac{Distance}{Time}$
+\item $\text{Average Speed} = \frac{100}{9.58} = 10.43\frac{m}{s}$
+\item Need to find the tangent to the line for \emph{Instantaneous Speed}
+\item $\text{Instantaneous Speed} = \frac{\Delta y}{\Delta x}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Instantaneous Speed}
+\framesubtitle{Small change (h)}
+Instantaneous speed is the tangent to the curve.  For $f(x)$
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item $\text{Instantaneous speed} = \frac{f(x_0 + h_0) - f(x_0)}{(x_0 +h_0) - 
+x_0}$ 
+\item $h_0$ is small
+\item $\text{Instantaneous speed} = \frac{f(x_0 + h_0) - f(x_0)}{h_0}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example page 1}
+\framesubtitle{$f(x) = y = x^2$}
+\begin{tikzpicture}[yscale = 1/5]
+\draw [thick, <->] (0,20) -- (0,0) -- (4,0);
+\draw [thick <-] (-4,0) -- (0, 0);
+\draw [olive, thick, domain = -4:4] plot (\x, {\x*\x});
+\node [below left] at (4,0) {x};
+\node [above, rotate = 90] at (,16) {y};
+\node [right] at (-4, 16) {$y = x^2$};
+\node [right] at (3, 9) {(3, 9)};
+
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}{Example page 2}
+\framesubtitle{Instantaneous change at (3, 9) when $f(x) = x^2$}
+$\text{Instantaneous speed} = \frac{f(x_0 + h_0) - f(x_0)}{h_0}$
+\vskip 0.25cm
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l r r r}
+h & x + h & f(x + h) & $\frac{f(x +h) - f(x)}{h}\\
+\hline
+0.1 & 3.1 & 9.61 & 6.1 \\
+0.01 & 3.01 & 9.0601 & 6.01 \\
+0.001 & 3.001 & 9.0060 & 6.001\\
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Example page 3}
+\framesubtitle{Calculation}
+\begin{align*}
+\text{Instantaneous speed} = &\frac{f(x_0 + h_0) - f(x_0)}{h_0}\\
+ = & \frac{(x_0 + h_0)^2 - x_0^2}{h_0}\\
+ = & \frac{x_0^2 +2x_0h_0 + h_0^2 - x_0^2}{h_0}\\
+ = & \frac{h_0(2x_0 + h_0)}{h_0}\\
+ = & 2x + h
+ \end{align*}
+ \end{frame}
+ 
+ \begin{frame}{The derivative}
+ \framesubtitle{Instantaneous rate of change}
+ The instantaneous rate of change 
+ \pause
+  \begin{itemize}[<+-| alert@+>]
+ \item $f'(x_0) = \lim_{h \to 0} \frac{f(x_0 +h) - f(x_0)}{h}$
+ \item $f'(x)$
+ or
+ \item $\frac{\mathrm d y}{\mathrm d x}(x)$
+ \end{itemize}
+ \pause
+ \begin{block}{}
+For any positive integer k, the derivative of $f(x) = x^k$ at $x_0$ is $f'(x) = kx^{k-1}$
+\end{block}
+\end{frame}
+
+\begin{frame}{Example 2 page 1}
+\framesubtitle{$TPP  = 100 + 32Q + 10Q^2 - Q^3$}
+\begin{tikzpicture}[yscale = 1/50, scale = 0.6]
+\draw [thick, <->] (0,500) -- (0,0) -- (10,0);
+\draw [olive, thick, domain = 0:10] plot (\x, {100+32*\x+10*\x*\x-\x*\x*\x});
+\node [right] at (10, 420) {TPP}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Example 2 page 2}
+{Differentiating TPP}
+\begin{align*}
+TPP  =& 100 + 32Q + 10Q2 - Q^3\\
+TPP' =& 32 +20Q -3Q^2
+\end{align*}
+Gradient at maximum is zero, therefore
+\begin{align*}
+3Q^2 - 20Q -32 = & 0\\
+(3Q + 4)(Q - 8) =& 0
+\end{align*}
+\end{frame}
+
+
+\end{document}

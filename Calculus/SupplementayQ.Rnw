@@ -1,0 +1,108 @@
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Textbook Examples}
+\author{Rob Hayward} 
+\date{\today}
+\maketitle
+\section{Box 3.3, p. 66}
+
+The following equation for a demand curve
+
+$$Q = 60 - 15P + P^2$$
+
+<<table, echo = FALSE, fig.height=3.5, fig.width=5>>=
+P <- seq(0:6)
+Q = 60 - 15*P + P^2
+plot(Q, P, main = "Demand Curve", type = 'l')
+@
+$$p_{ed} = \frac{\text{proportionate change in } Q}{\text{proportionate change in } P}$$
+Remember 
+$$\text{proportionate change } x = \frac{\Delta x}{x} \times 100$$
+
+so, for a very small change in price 
+
+$$p_{ed} = \frac{dQ}{dP} \times \frac{P}{Q}$$
+
+$$\frac{dQ}{dP} = -15 + 2P$$
+
+Therefore, what is the elasticity at the price of 3? 
+
+$$P_{ed} = \frac{dQ}{dP} \times \frac{P}{Q}$$
+
+$$-15 + 2P \times \frac{3}{24}$$
+
+$$ -15 + 6 = -9$$
+
+$$ -9 \times \frac{3}{4} = -\frac{9}{8}$$
+
+This is elastic.
+
+\section{Box 4.1 p. 102}
+Consumer Utility is 
+
+$$TU = 60Q - 4Q^2$$
+
+$$MU = \frac{dTU}{dQ} = 60 - 8Q$$
+
+<<MU, echo=FALSE, fig.height=3.5, fig.width = 5>>=
+Q <- 0:4
+MU = 60 - 8*Q
+plot(Q, MU, type = 'l', main = "Marginal Utility")
+@
+
+\section{Box 5.4, P. 138}
+This is discussed in the lecture on calculus and is in the lecture slides.
+
+\section{Box 5.9 p. 166}
+Total Revenue
+$$TR = 48Q - Q^2$$
+Total Cost 
+$$TC = 12 + 16Q +3Q^2$$
+There is a table in the textbook that will calculate the costs and revenues for each of the quantities.  As Profit is the difference between total cost and total revenue, finding the maximum profit that way is relatively easy. 
+
+However, it is also possible to use the fact that profits will be maximised at the point where marginal revenue equal marginal cost. Remember that marginal revenue is the derivative of total revenue and marginal cost is the derivative of total cost. 
+Marginal Revenue
+$$ MR = \frac{d(TR)}{d(Q)} = 48 - 2Q$$
+Marginal Cost
+$$MC = \frac{d(TC)}{d(Q)} = 16 +6Q$$
+
+Set $MR = MC$
+
+$$48 - 2Q = 16 + 6Q$$
+
+Solving for Q
+$$32 = 4Q$$
+
+or
+$$Q = 4$$
+
+Now substitute 4Q into the equation for Total Profit
+
+$$TP = TR - TC$$
+
+or 
+
+$$TP = 48Q - Q^2 - (12 + 16Q +3Q^2)$$
+$$TP = -12 + 32Q - 4Q^2$$
+ substitute $Q = 4$
+ 
+$$TP = -12 +(32 \times 4) - 4(4^2)$$
+$$TP = 52$$
+
+
+\end{document}
