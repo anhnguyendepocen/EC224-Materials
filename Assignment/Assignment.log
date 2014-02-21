@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.18)  20 FEB 2014 13:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.18)  21 FEB 2014 09:48
 entering extended mode
-**Answers.tex
-(C:\Users\rh49\Projects\EC224-Materials\Answers\Answers.tex
+**Assignment.tex
+(C:\Users\rh49\Projects\EC224-Materials\Assignment.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -299,7 +299,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(C:\Users\rh49\Projects\EC224-Materials\Answers\Answers.aux)
+(C:\Users\rh49\Projects\EC224-Materials\Assignment.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
@@ -343,8 +343,8 @@ LaTeX Info: Redefining \ref on input line 72.
 LaTeX Info: Redefining \pageref on input line 72.
 LaTeX Info: Redefining \nameref on input line 72.
 
-(C:\Users\rh49\Projects\EC224-Materials\Answers\Answers.out)
-(C:\Users\rh49\Projects\EC224-Materials\Answers\Answers.out)
+(C:\Users\rh49\Projects\EC224-Materials\Assignment.out)
+(C:\Users\rh49\Projects\EC224-Materials\Assignment.out)
 \@outlinefile=\write3
 
 
@@ -353,62 +353,31 @@ LaTeX Warning: No \author given.
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package color Info: Redefining color shadecolor on input line 121.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
 
-<figure/ceiling.pdf, id=21, 505.89pt x 289.08pt>
-File: figure/ceiling.pdf Graphic file (type pdf)
- <use figure/ceiling.pdf>
-Package pdftex.def Info: figure/ceiling.pdf used on input line 122.
-(pdftex.def)             Requested size: 390.0pt x 222.86134pt.
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 122--123
-[][] 
- []
-
-[2 <C:/Users/rh49/Projects/EC224-Materials/Answers/figure/ceiling.pdf>]
-[3]
-Package color Info: Redefining color shadecolor on input line 193.
- <figure/speculation.pdf, id=40, 505.89pt x 289.08pt>
-File: figure/speculation.pdf Graphic file (type pdf)
-
-<use figure/speculation.pdf>
-Package pdftex.def Info: figure/speculation.pdf used on input line 194.
-(pdftex.def)             Requested size: 390.0pt x 222.86134pt.
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 194--195
-[][] 
- []
-
-[4 <C:/Users/rh49/Projects/EC224-Materials/Answers/figure/speculation.pdf>]
-[5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
- (C:\Users\rh49\Projects\EC224-Materials\Answers\Answers.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
-Package rerunfilecheck Info: File `Answers.out' has not changed.
-(rerunfilecheck)             Checksum: 7B16D693738922534F0C5420097DA759;46.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
+(C:\Users\rh49\Projects\EC224-Materials\Assignment.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package rerunfilecheck Info: File `Assignment.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 6270 strings out of 493921
- 90849 string characters out of 3144879
- 179172 words of memory out of 3000000
- 9464 multiletter control sequences out of 15000+200000
- 9626 words of font info for 35 fonts, out of 3000000 for 9000
+ 6235 strings out of 493921
+ 90294 string characters out of 3144879
+ 176172 words of memory out of 3000000
+ 9442 multiletter control sequences out of 15000+200000
+ 6514 words of font info for 24 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,11n,28p,390b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,6n,23p,371b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Answers.pdf (7 pages, 101069 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Assignment.pdf (2 pages, 46519 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 19 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 54 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
