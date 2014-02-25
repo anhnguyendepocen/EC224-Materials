@@ -1,0 +1,72 @@
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Short-run fluctuations:  Senimar questions and answers}
+%\author{Rob Hayward\footnote{University of Brighton Business School, Lewes Road, Brighton, BN2 4AT; Telephone 01273 642586.  rh49@brighton.ac.uk}}
+\date{\today}
+\maketitle
+\section*{Q1}
+Explain the terms \textbf{exogenous} and \textbf{endogenous}. 
+
+Exogenous means outside the system; endogenous means part of the system.  Thinking about the circular flow and the factors that affect the \emph{injections} and \emph{withdrawls}, business investment, government spending and exports are considered to be exogenous; savings, tax and imports would be considered endogenous because they will be affected by the level of income.  Endogenous variables are important to the multiplier effect as they cause feedback. 
+
+\section*{Q2}
+If the marginal propensity to consume is 0.8, national income is \textsterling 10.0bn and Household spending is \textsterling 8.0bn, what level of household spending would be expected if national income increased to \textsterling 11.0bn?
+
+If there is an increase in national income from \textsterling 10.0bn to \textsterling 11.0bn, the first round effect is that there will be \textsterling 800 mn additional spending as the initial adjustment as \textsterling 200mn will be saved.  For the second round effect there will be \textsterling 640mn spending; followed by \textsterling 512mn.  This will continue onwards as an infinite progression.  The final outcome is that $\frac{1}{(1 - MPC)}$ or $\frac{1}{MPS}$ will be the total expansion.  This is equal to $\frac{1}{0.2} = 5$.  Thertefore, the total expansion is \textsterling 5.0bn.  This is the multiplier. 
+
+If $M$ is the multiplier, 
+
+\begin{equation}\label{eq1}
+M = 1 + 0.8 + 0.8^2 + 0.6^3 +0.8^4 \dots
+\end{equation}
+
+Multiply each side by 0.8
+
+\begin{equation}\label{eq2}
+0.8M = 0.8 + 0.8^2 +0.8^3 +0.8^4 +0.8^5 \dots
+\end{equation}
+
+Take Equation \ref{eq2} from Equation \ref{eq1}
+
+\begin{align*}
+M& - 0.8M =  1\\
+M&(1 - 0.8) = 1\\
+M& =  \frac{1}{1 - 0.8}\\
+M& =  \frac{1}{0.2}\\
+M& = 5
+\end{align*}
+
+Therefore, a \textsterling 1.0bn increase in spending leads to a \textsterling 5.0bn increase in GDP. 
+
+\section*{Q3}
+Identify one factor that affects savings.  How has this factor influenced savings during the recent financial crisis in the UK?
+
+Amongst the factors that affect savings are 
+\begin{enumerate}
+\item Wealth
+\item Economic uncertainty
+\item Income
+\item Age
+\item Taste and fashion
+\item Interest rate
+\end{enumerate}
+
+\section*{Q4}
+
+
+\end{document}
