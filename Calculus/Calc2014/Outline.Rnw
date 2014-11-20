@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+ \usepackage{listings}
+ \usepackage{color}
+ \graphicspath{{../Pictures/}}
+\definecolor{mygrey}{gray}{0.95}
+\lstset{backgroundcolor=\color{mygrey}}
+\begin{document}
+\title{Calculus}
+\author{Rob Hayward}
+%\date{\today}
+\maketitle
+%\begin{abstract}
+%erehrere
+%\end{abstract}
+\section*{Introduction}
+\begin{itemize}
+\item Economics is all about relationships
+\begin{itemize}
+\item tax - spend
+\item education - income
+\item R and D - Sales
+\end{itemize}
+
+\item We would like to measure these relationships
+\end{itemize}
+
+Take the following equation
+\begin{equation*}
+Q_d = 25 - 2P
+\end{equation*}
+
+<<demand, fig.height=4, echo=FALSE>>=
+P <- seq(1, 10, 0.5)
+Q <- 25 - 2*P
+plot(P, Q, type = 'l', ylab = "Q_d", main = "Inverse demand curve")
+@
+Remember that the elasticity is calculated as 
+\begin{align*}
+\varepsilon_d =& \frac{Q_2 - Q_1}{Q1}/\frac{P_2 - P_1}{P_1}\\
+          =& \frac{Q_2 - Q_1}{Q_1} \times \frac{P_1}{P_2 - P_1}\\
+          =& \frac{\Delta(Q) P_1}{\Delta(P) Q_1}
+\end{align*}
+
+Knowing that $\Delta(Q)/\Delta(P) = -5$, this rule can be applied to any point on the graph.
+
+For example, when $P = 6, Q = 13$ and the elasticity of demand at that point is 
+
+\begin{align*}
+\varepsilon_d =& -5 \times \frac{6}{13}\\
+              =& -2.3077
+\end{align*}
+
+That is all very well, but what happens when there are non-linear relationships?  The last elasticity examples that we looked at had a non-linear demand curve. 
+
+\begin{equation} 
+Q_d = 50 -15P + P^2
+\end{equation}
+<<demand2, fig.height=4, echo=FALSE>>=
+P <- seq(1, 10, 0.5)
+Q <- 50 - 15*P + P^2
+plot(P, Q, type = 'l', ylab = "Q_d", main = "Inverse demand curve")
+@
+\subsection{Usain Bolt}
+
+\begin{figure}
+\begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.8]
+\draw [thick, <->] (0,100) -- (0,0) -- (10,0);
+\draw [thin] (0,0) -- (9.58, 100);
+\node [below left] at (9,0) {x = seconds};
+\node [above, rotate = 90] at (0,95) {y = meters};
+\draw [<->, blue] (0,0) to [out = 57, in = 232] (9.58, 100);
+\node [below right] at (9.58, 100) {UB};
+\end{tikzpicture}
+\end{figure}
+\end{document}
