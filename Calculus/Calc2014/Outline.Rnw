@@ -78,7 +78,6 @@ plot(P, Q, type = 'l', ylab = "Q_d", main = "Inverse demand curve")
 @
 \subsection{Usain Bolt}
 
-\begin{figure}
 \begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.8]
 \draw [thick, <->] (0,100) -- (0,0) -- (10,0);
 \draw [thin] (0,0) -- (9.58, 100);
@@ -87,5 +86,25 @@ plot(P, Q, type = 'l', ylab = "Q_d", main = "Inverse demand curve")
 \draw [<->, blue] (0,0) to [out = 57, in = 232] (9.58, 100);
 \node [below right] at (9.58, 100) {UB};
 \end{tikzpicture}
-\end{figure}
+
+The average speed can be calculated as the total distance divided by the time
+\begin{equation*}
+\text{average speed} = \frac{\text{total distance}}{\text{total time}}
+\end{equation*}
+
+In this case, that is 
+\begin{equation*}
+\text{average speed} = \frac{\text{100 meters}}{\text{9.58 seconds}}
+\end{equation*}
+
+This is $10.43\frac{m}{s}$
+
+
+However, if you want the instantaneous speed, it is necessary to draw the line at a tangent to the curve. 
+
+
+
+
+
+
 \end{document}

@@ -34,14 +34,15 @@
 %\end{frame}
 
 \begin{frame}{Usain Bolt}
-\begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.6]
-\draw [thick, <->] (0,100) -- (0,0) -- (10,0);
-\draw [thin] (0,0) -- (9.58, 100);
-\node [below left] at (9,0) {x = seconds};
-\node [above, rotate = 90] at (0,95) {y = meters};
-\draw [<->, blue] (0,0) to [out = 57, in = 232] (9.58, 100);
-\node [below right] at (9.58, 100) {UB};
-\end{tikzpicture}
+\includegraphics{tikz}
+%\begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.6]
+%\draw [thick, <->] (0,100) -- (0,0) -- (10,0);
+%\draw [thin] (0,0) -- (9.58, 100);
+%\node [below left] at (9,0) {x = seconds};
+%\node [above, rotate = 90] at (0,95) {y = meters};
+%\draw [<->, blue] (0,0) to [out = 57, in = 232] (9.58, 100);
+%\node [below right] at (9.58, 100) {UB};
+%\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Speed}
@@ -78,9 +79,7 @@ x_0}$
 \node [above, rotate = 90] at (,16) {y};
 \node [right] at (-4, 16) {$y = x^2$};
 \node [right] at (3, 9) {(3, 9)};
-
 \end{tikzpicture}
-
 \end{frame}
 
 \begin{frame}{Example page 2}
@@ -146,6 +145,21 @@ Gradient at maximum is zero, therefore
 3Q^2 - 20Q -32 = & 0\\
 (3Q + 4)(Q - 8) =& 0
 \end{align*}
+So $Q = 8$, or $Q = -1.33$ 
+\end{frame}
+
+\begin{frame}{Quadratic Solution}
+For a quadratic equation of the form
+\begin{equation*}
+ax^2 +bx + c
+\end{equation}
+
+The \emph{solution} or the roots can be found with 
+\begin{block}{}
+\begin{equation*}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation*}
+\end{block}
 \end{frame}
 
 
