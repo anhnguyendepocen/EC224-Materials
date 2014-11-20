@@ -1,0 +1,69 @@
+  \documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{rotating}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Trade, the current account and the balance of payments}
+\author{Rob Hayward}
+\date{\today}
+\maketitle
+\section{International capital markets}
+As a consequence of the rising prominence of international capital flows and as one response to the evidence of large and persistent deviations from PPP, there has been increased attention paid to the role of capital flows in determining  changes in the exchange rates.  To assess capital flows it is necessary to go back to the balance of payments and look at the relationship between trade and finance.  The standard model of international accounting defines the current account of the balance of payments as   
+
+\begin{equation}\label{currentaccount} 
+CA_1=B_{t+1}-B_t=Y_t+r_tB_t-C_t-G_t-I_t 
+\end{equation} 
+
+where $B_{t+1}$ is the value of net foreign assets at the end of the current period, $Y_t$ is current income, $G_t$ is government spending in the current period, $I_t$ is domestic gross fixed capital formation and $CA_t=B_{t+1}-B_t$ is the balance of payments, stating that the current account must be financed or, in other words, offset by an equal change in the financial account.  The return earned on the net foreign assets held in the previous period is $r_tB_t$, with $r_t$ as the weighted average return on international assets.  If national savings is defined as national income less spending of households and the government, and denoted as $S_t$ \footnote{This is a little confusing given that $S_t$ has already been used to denote the nominal exchange rate.  However, given the convention in this area and in the absence of any clear, logical alternative, it will be followed for the next few paragraphs.} 
+
+\begin{equation} 
+S_t \equiv Y_t+r_tB_{t+1}-C_t-G_t 
+\end{equation}
+
+%Equation \eqref{currentaccount} becomes
+
+\begin{equation}\label{SI} 
+CA_t=S_t-I_t 
+\end{equation}  
+
+or the current account balance is equal to the difference between domestic savings and investment. 
+Therefore, in the absence of a government, the accumulation of net foreign assets will be equal to domestic savings less investment,  
+
+\begin{equation}
+ B_{t+1}-B_{t}=S_t-I_t
+\end{equation} 
+
+and the determination of the current and financial account becomes an issue of inter-temporal allocation of spending.  
+
+To use this simple model of the balance of payments to assess more than one country and the exchange rate, the variables for an overseas country can be denoted with a superscript asterisk (*) as usual.   Therefore, $Y^*$ would be other-country income, $S^*$ would be other-country savings and $C^*$ denotes other country consumption.  Using the identity for income and output and allowing the two countries to trade goods and assets, would mean that 
+
+ \begin{equation} 
+Y_t+Y^*_t=(C_t+C^*_t) + (G_t +G^*_t)+(I_t +I^*_t) 
+\end{equation}
+
+The standard forward-looking representative agent used in these models would seek to smooth consumption over time and would therefore adjust savings and consumption to maximise utility in each period given expectations about future income and evolving preferences.\footnote{This smoothing can take place in a closed economy only if agents have heterogeneous endowments, preferences or expectations.  The idea is the same here, but the heterogeneity is across countries.}  Given the assumptions of this model, an increase in productivity and expected future income should lead to a current account deficit as the representative household takes advantage of a rise in the present value of future income.  The rundown in net foreign assets is compensated by the increased net present value of future income.  Obstfeld and Rogoff present a model of permanent balance of payment components based on an annuity value at the current interest rate to give a \emph{fundamental equation for the current account} %\citep[p. 74]{OandR}.
+Sachs provides one of the first of these long-run, dynamic, intertemporal models of current account (and therefore financial account) adjustment %\citep{SachsCA}.  
+
+\begin{equation} 
+CA_t=B_{t+1}+B_t=(Y_t-\bar{Y})+(I_t-\bar{I})-(G_t-\bar{G}) 
+\end{equation} 
+
+where $\bar{Y}$, $\bar{I}$ and $\bar{G}$ are the \emph{permanent} levels of income, investment and government spending respectively based on discounting expected future values back to the present. For a constant interest rate, the permanent level of each component at time t is given by   
+
+ \begin{equation} 
+E[\bar{Y}]=\frac{r}{1+r}\sum_{t=s}^{t=\infty}\left (\frac{1}{1+r}\right)^{s-t}Y_s 
+\end{equation}
+
+\end{document}
