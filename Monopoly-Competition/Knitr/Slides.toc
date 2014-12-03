@@ -1,0 +1,3 @@
+\beamer@endinputifotherversion {3.26pt}
+\beamer@sectionintoc {1}{Refresh output and costs}{2}{0}{1}
+\beamer@sectionintoc {2}{Monopoly vs competition}{2}{0}{2}
