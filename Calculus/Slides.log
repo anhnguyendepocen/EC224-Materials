@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  18 NOV 2013 20:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.19)  2 DEC 2014 06:37
 entering extended mode
 **Slides.tex
 
@@ -1073,7 +1073,7 @@ File: ot1mathkerncmss.fd 2012/04/26
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1081,7 +1081,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1089,14 +1089,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \pgf@shorten@start ...ws@invertthick < \endcsname 
                                                   
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1115,7 +1115,7 @@ Missing character: There is no @ in font nullfont!
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1123,7 +1123,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \pgfgetarrowoptions ...pgf@arrow@opt@#1\endcsname 
                                                   \relax 0\else \csname pgf@...
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1131,14 +1131,14 @@ Missing character: There is no 0 in font nullfont!
 ! Extra \endcsname.
 \pgf@arrow@call ...arrow@full@name {#1}\endcsname 
                                                   \relax \pgfsysprotocol@get...
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1146,14 +1146,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \pgf@arrow@call ...me pgf@arrow@code@#1\endcsname 
                                                   \pgfsys@endscope \pgfsyspr...
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1172,7 +1172,7 @@ Missing character: There is no @ in font nullfont!
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1180,7 +1180,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \pgfgetarrowoptions ...pgf@arrow@opt@#1\endcsname 
                                                   \relax 0\else \csname pgf@...
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1188,7 +1188,7 @@ Missing character: There is no 0 in font nullfont!
 ! Extra \endcsname.
 \pgf@arrow@call ...arrow@full@name {#1}\endcsname 
                                                   =\pgf@temp }\pgfsysprotoco...
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1196,7 +1196,7 @@ Missing character: There is no = in font nullfont!
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1215,7 +1215,7 @@ Missing character: There is no @ in font nullfont!
 ! Missing \endcsname inserted.
 <to be read again> 
                    \pgf@arrows@invertthick < 
-l.84 \end{frame}
+l.85 \end{frame}
                 
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -1223,7 +1223,7 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \pgfgetarrowoptions ...pgf@arrow@opt@#1\endcsname 
                                                   \relax 0\else \csname pgf@...
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -1231,25 +1231,38 @@ Missing character: There is no 0 in font nullfont!
 ! Extra \endcsname.
 \pgf@arrow@call ...arrow@full@name {#1}\endcsname 
                                                   
-l.84 \end{frame}
+l.85 \end{frame}
                 
 I'm ignoring this, since I wasn't doing a \csname.
 
+
+! Package PGF Math Error: Unknown function `radius' (in 'radius = 0.5').
+
+See the PGF Math package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{frame}
+                
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+! Package PGF Math Error: Unknown function `radius' (in 'radius = 0.5').
+
+See the PGF Math package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \end{frame}
+                
+(That was another \errmessage.)
+
 [12
 
-]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.100 \end{frame}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[13
+] [13
 
 ] [14
 
@@ -1266,41 +1279,16 @@ my insertion and my current dilemma will both disappear.
 ] [20
 
 ]
-
-! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 \end{frame}
-                 
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-Missing character: There is no - in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-[21
-
-] [22
-
-]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
 
 ("C:\Users\Toshiba\Google Drive\Research\GIT\EC224-Materials\Calculus\Slides.au
 x")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
 Package rerunfilecheck Info: File `Slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1308,13 +1296,13 @@ Package rerunfilecheck Info: File `Slides.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 153.
  ) 
 Here is how much of TeX's memory you used:
- 19505 strings out of 494045
- 373359 string characters out of 3145963
- 443838 words of memory out of 3000000
- 22311 multiletter control sequences out of 15000+200000
+ 19350 strings out of 494045
+ 370295 string characters out of 3145963
+ 443783 words of memory out of 3000000
+ 22160 multiletter control sequences out of 15000+200000
  11260 words of font info for 41 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  55i,16n,53p,396b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1328,9 +1316,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Fil
 es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Slides.pdf (22 pages, 244408 bytes).
+Output written on Slides.pdf (20 pages, 229045 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

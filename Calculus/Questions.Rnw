@@ -20,22 +20,14 @@
 \maketitle
 
 \doublespacing
-\begin{enumerate}
-\item This is the total physical product curve from last week.  How would you calculate the \emph{average physical product}? 
 
-This would be any line between the origin and the TPP curve, and it is $\frac{TPP}{Q}$.  
-
-<<plot, fig.align='center', echo=FALSE, fig.height=4, fig.width = 5>>=
-TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
-TL <- c(0:10)
-APP <- TPP/TL
-plot(TL, TPP, main = "Total Physical Product", type = 'l', col = 'red')
-#ines(APP, col = 'blue')
-#legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+<<plot1, echo=FALSE, fig.height=5>>=
+x <- seq(1, 10, 1)
+y <- 4 - x
+plot(x, y, type = 'l')
 @
-\item How would you calculate the \emph{marginal physical product}?
-
-This is the gradient of the TPP, which would be $\frac{\Delta TPP}{\Delta Q}$
+\begin{enumerate}
+\item The equation for this line is $y = 4 - x$, what is the slope or gradient of the line? 
 
 \item What are the drivatives of
 \begin{itemize}
@@ -54,6 +46,25 @@ $y' =  12x -9x^2 +100x^3$
 \item $y - 3 = 2x$
 
 $y' = 2$
+\end{itemize}
+
+
+\item This is the total physical product curve from last week.  How would you calculate the \emph{average physical product}? 
+
+<<plot, fig.align='center', echo=FALSE, fig.height=5, fig.width = 5>>=
+TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
+TL <- c(0:10)
+APP <- TPP/TL
+plot(TL, TPP, main = "Total Physical Product", type = 'l', col = 'red')
+lines(APP, col = 'blue')
+legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+@
+This would be any line between the origin and the TPP curve, and it is $\frac{TPP}{Q}$.
+
+\item How would you calculate the \emph{marginal physical product}?
+
+This is the gradient of the TPP, which would be $\frac{\Delta TPP}{\Delta Q}$
+
 
 \item $TPP = 24 +5Q +2Q^2 - Q^3$
 
@@ -81,7 +92,6 @@ $TU' = 25 - 4X_1$
 
 It shows that the utiity function is concave.  There are diminishing returns. 
 
-\end{itemize}
 
 \item What is the gradient of the TPP at its peak? 
 
@@ -102,18 +112,20 @@ $MPP = 32 +20Q - 3Q^2$
 Find the value of Q for which the derivative or the MPP is zero. 
 \end{itemize}
 
-\item Given the $TPP = 500 + 180Q + 30Q^2 - 2Q^3$, 
+\item Given the $TPP = 500 + 200L + L^2 - L^3$, 
 \begin{itemize}
 \item What is the TPP' or MPP?
 
-$MPP = 180 +60Q -6Q^2$
+$MPP = 200 +2L -3L^2$
 
 \item How would you find the maximum TPP?
 
-$180 +60Q -6Q^2 = 0$\\
-$6Q^2 -60Q -180 = 0$\\
+Set the marginal physical product equal to zero and solve the quadratic.
 
-Sorry!!!   I made a mistake.  You cannot get beyond this with the usual factorisation.  The maximum is not a whole number.  My mistake.  
+$200 + 290L -3L^2 = 0$\\
+$3L^2 -290L - 200 = 0$\\
+$(3L + 2)(L - 100)$
+Check and complete. 
 
 \end{itemize}
 

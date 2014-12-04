@@ -21,7 +21,7 @@
 % Title and author information
 \title{An Introduction to Calculus}
 \author{Rob Hayward}
-\date{Friday, 20th September 2013}
+\date{}
 
 \begin{document}
 
@@ -77,6 +77,7 @@ x_0}$
 \node [below left] at (4,0) {x};
 \node [above, rotate = 90] at (,16) {y};
 \node [right] at (-4, 16) {$y = x^2$};
+\draw [fill] (3, 9) circle (radius = 0.5);
 \node [right] at (3, 9) {(3, 9)};
 
 \end{tikzpicture}
@@ -90,7 +91,7 @@ $\text{Instantaneous speed} = \frac{f(x_0 + h_0) - f(x_0)}{h_0}$
 \begin{center}
 \rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l r r r}
-h & x + h & f(x + h) & $\frac{f(x +h) - f(x)}{h}\\
+h & x + h & f(x + h) & $\frac{f(x +h) - f(x)}{h}$\\
 \hline
 0.1 & 3.1 & 9.61 & 6.1 \\
 0.01 & 3.01 & 9.0601 & 6.01 \\
@@ -126,27 +127,27 @@ For any positive integer k, the derivative of $f(x) = x^k$ at $x_0$ is $f'(x) = 
 \end{block}
 \end{frame}
 
-\begin{frame}{Example 2 page 1}
-\framesubtitle{$TPP  = 100 + 32Q + 10Q^2 - Q^3$}
-\begin{tikzpicture}[yscale = 1/50, scale = 0.6]
-\draw [thick, <->] (0,500) -- (0,0) -- (10,0);
-\draw [olive, thick, domain = 0:10] plot (\x, {100+32*\x+10*\x*\x-\x*\x*\x});
-\node [right] at (10, 420) {TPP}
-\end{tikzpicture}
-\end{frame}
+%\begin{frame}{Example 2 page 1}
+%\framesubtitle{$TPP  = 100 + 32Q + 10Q^2 - Q^3$}
+%\begin{tikzpicture}[yscale = 1/50, scale = 0.6]
+%\draw [thick, <->] (0,500) -- (0,0) -- (10,0);
+%\draw [olive, thick, domain = 0:10] plot (\x, {100+32*\x+10*\x*\x-\x*\x*\x});
+%\node [right] at (10, 420) {TPP};
+%\end{tikzpicture}
+%\end{frame}
 
-\begin{frame}{Example 2 page 2}
-{Differentiating TPP}
-\begin{align*}
-TPP  =& 100 + 32Q + 10Q2 - Q^3\\
-TPP' =& 32 +20Q -3Q^2
-\end{align*}
-Gradient at maximum is zero, therefore
-\begin{align*}
-3Q^2 - 20Q -32 = & 0\\
-(3Q + 4)(Q - 8) =& 0
-\end{align*}
-\end{frame}
+%\begin{frame}{Example 2 page 2}
+%{Differentiating TPP}
+%\begin{align*}
+%TPP  =& 100 + 32Q + 10Q2 - Q^3\\
+%TPP' =& 32 +20Q -3Q^2
+%\end{align*}
+%Gradient at maximum is zero, therefore
+%\begin{align*}
+%3Q^2 - 20Q -32 = & 0\\
+%(3Q + 4)(Q - 8) =& 0
+%\end{align*}
+%\end{frame}
 
 
 \end{document}

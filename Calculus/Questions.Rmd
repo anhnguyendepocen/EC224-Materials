@@ -2,6 +2,7 @@
 %\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
 %\usepackage[dcucite]{harvard}
 \usepackage{rotating}
+\usepackage{amsmath}
 \usepackage{setspace}
 \usepackage{pdflscape}
 \usepackage[flushleft]{threeparttable}
