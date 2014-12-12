@@ -1,0 +1,8 @@
+\begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.6]
+\draw [thick, <->] (0,100) -- (0,0) -- (10,0);
+\draw [thin] (0,0) -- (9.58, 100);
+\node [below left] at (9,0) {x = seconds};
+\node [above, rotate = 90] at (0,95) {y = meters};
+\draw [<->, blue] (0,0) to [out = 57, in = 232] (9.58, 100);
+\node [below right] at (9.58, 100) {UB};
+\end{tikzpicture}

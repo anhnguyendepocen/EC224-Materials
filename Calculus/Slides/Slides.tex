@@ -34,6 +34,7 @@
 %\end{frame}
 
 \begin{frame}{Usain Bolt}
+\includegraphics{tikz}
 \begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.6]
 \draw [thick, <->] (0,100) -- (0,0) -- (10,0);
 \draw [thin] (0,0) -- (9.58, 100);
@@ -79,9 +80,7 @@ x_0}$
 \node [right] at (-4, 16) {$y = x^2$};
 \draw [fill] (3, 9) circle (radius = 0.5);
 \node [right] at (3, 9) {(3, 9)};
-
 \end{tikzpicture}
-
 \end{frame}
 
 \begin{frame}{Example page 2}
@@ -136,6 +135,8 @@ For any positive integer k, the derivative of $f(x) = x^k$ at $x_0$ is $f'(x) = 
 %\end{tikzpicture}
 %\end{frame}
 
+
+
 %\begin{frame}{Example 2 page 2}
 %{Differentiating TPP}
 %\begin{align*}
@@ -147,7 +148,20 @@ For any positive integer k, the derivative of $f(x) = x^k$ at $x_0$ is $f'(x) = 
 %3Q^2 - 20Q -32 = & 0\\
 %(3Q + 4)(Q - 8) =& 0
 %\end{align*}
+%So $Q = 8$, or $Q = -1.33$ 
 %\end{frame}
 
+\begin{frame}{Quadratic Solution}
+For a quadratic equation of the form
+\begin{equation*}
+ax^2 +bx + c
+\end{equation}
 
+The \emph{solution} or the roots can be found with 
+\begin{block}{}
+\begin{equation*}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation*}
+\end{block}
+\end{frame}
 \end{document}

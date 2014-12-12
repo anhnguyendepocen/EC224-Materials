@@ -1,9 +1,10 @@
 \documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
 %\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
 %\usepackage[dcucite]{harvard}
+\author{Rob Hayward}
 \usepackage{rotating}
-\usepackage{amsmath}
 \usepackage{setspace}
+\usepackage{tikz}
 \usepackage{pdflscape}
 \usepackage[flushleft]{threeparttable}
 \usepackage{multirow}
@@ -15,23 +16,40 @@
 %\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 %\renewcommand[\harvardurl]{URL: \url}
 \begin{document}
-\title{Questions on Calculus}
-\author{Rob Hayward} 
-\date{\today}
+\title{Competition-monopoly}
 \maketitle
 
 \begin{enumerate}
+\item complete the following table
+
+%\begin{tabular}{l | r r r r r r r}
+<<table, echo =FALSE, results='asis'>>=
+library(xtable)
+Q <- seq(0, 10, 1)
+FC <- rep(10, 11)
+L <- c(0, 1, 1.5, 2.1, 2.7, 3.5, 4.4, 5.5, 7, 10, 15)
+VC <- L*5
+AVC <- VC/Q
+AFC <- FC/Q
+TC <- VC + FC
+ATC <- TC/Q
+MC <- diff(TC)/diff(Q)
+MC <- c(NA, MC)
+da <- data.frame(Q, TC, FC, VC, AFC, AVC, ATC, MC)
+print(xtable(round(da, 2)))
+
+#plot(da$vc/q, type = 'l')
+#plot(da$mc, type = 'l')
+@
+
+%Quantity & TC & FC & VC & AC & AVC & ATC & MC \\
+
+%\end{tabular}
 
 
-%<<plot, fig.align='center', echo=FALSE>>=
-%TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
-%TL <- c(0:10)
-%APP <- TPP/TL
-%plot(TL, TPP, main = "Total Physical Product", type = 'l', col = 'red')
-%lines(APP, col = 'blue')
-%legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
-%@
 
-This is the total physical product curve from last week.  How would you calculate hte average physical product? 
 \end{enumerate}
+
+
+
 \end{document}
