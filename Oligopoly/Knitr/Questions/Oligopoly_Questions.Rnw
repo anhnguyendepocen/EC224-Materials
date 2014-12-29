@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\author{}
+\date{}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{pdflscape}
+\usepackage{amsmath}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Oligopoly}
+\maketitle
+
+
+\begin{enumerate}
+\item For a duopoly with the following demand curve ($Q = 100 - 10P$) and the assumption that the marginal cost of production is zero, 
+<<demand, warning=FALSE, message=FALSE, echo=FALSE, results='asis'>>=
+require(xtable)
+Q <- seq(0, 10, 1)
+P <- 100 - 10*Q
+TI <- P*Q
+da <- data.frame("Q" = Q, "P" = P, "Total Income" = TI)
+print(xtable(da, digits = 0), include.rownames = FALSE)
+#plot(Q, P, type = '')
+@
+\begin{itemize}
+\item Explain each firm's profit-maximising position? 
+\item Calculate total output, total profit and the profit for each firm? 
+\item What is the profit maximising position if there is \emph{collusion}?
+\item Explain the term \emph{Nash Equilibrium} identify the Nash Equilibrium for this example,
+\end{itemize}
+
+\item How does globalisation affect oligopolistic industries like cars? 
+
+\item Describe the \emph{kinked demand curve}.  What are the consequences of this demand curve for firms? 
+
+\item Looking at figure 16.7 in the textbook, explain why there is no equilibrium at the point where each firm charges 20 pounds for the product.  
+
+\item In the context of Game Theory, give an example of the following
+\begin{itemize}
+\item \emph{Dominant Strategy}
+\item \emph{Credible Threat}
+\item \emph{Commitment}
+\end{itemize}
+
+\item Is the market for Christmas trees \emph{Contestable}?  Explain your answer.
+
+\item Draw the decision tree for a monopolistic firm with a strategic choice over whether to advertise its detergent.  If the firm advertises, it adds to the cost but does not increase the overall size of the market for detergent.  However, if other firms enter the market, the advertising will take market share from them. Profits are $\pound 5$ million with no competition or advertising, profits will be $\pound 2.5$ million each if there are two firms in the industry with no advertising.  However, if the incumbent advertises it will take $90\%$ of the market, make a profit of $\pound 1 million after advertising expenses and reduce the profit of the potential entrant to zero.  
+
+
+  
+  
+\end{enumerate}
+
+
+
+\end{document}
