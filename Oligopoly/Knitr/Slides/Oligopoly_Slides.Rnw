@@ -75,12 +75,15 @@ The level of competition is influenced by
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item The number of firms
-\item The variability of demand or costs
-\item Changes in technology
-\item Whether product is standardised
-\item Barriers to entry change
-\item Social cohesion
-\item 
+\item The variability of 
+\begin{itemize}
+\item demand 
+\item costs
+\item technology
+\end{itemize}
+\item Level of product standardisation
+\item Durability of barriers to entry
+\item Level of social cohesion
 \end{itemize}
 \end{frame}
 
@@ -187,10 +190,10 @@ At the extreme as number of firms tends to infinity, output effect dominates and
 Game theory is the study of decision-making under interdependence. 
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item Players or actors make \emph{stratrgic decisions}
-\item Strategies have \emph{payoffs} that depend on the decision and the decision that is adopted by other players
-\item Own payoffs and payoffs to other players are known
-\item These are portrayed in a \emph{payoff matrix}
+\item Players or actors make \emph{strategic decisions}
+\item Strategies have \emph{pay-offs} that depend on the decision and the decision that is adopted by other players
+\item Own pay-offs and pay-offs to other players are known
+\item These are portrayed in a \emph{pay-off matrix}
 \end{itemize}
 \end{frame}
 
@@ -378,7 +381,7 @@ It is often the case that a better outcome can be reached with cooperation.  How
 \end{itemize}
 \item Barriers to entry
 \begin{itemize}
-\item \emph{Contestible markets}
+\item \emph{Contestable markets}
 \item Credible threats
 \end{itemize}
 \end{itemize}
@@ -453,7 +456,7 @@ It is often the case that a better outcome can be reached with cooperation.  How
 \end{itemize}
 \item Tying
 \begin{itemize}
-\item Gillet-printers 
+\item Gillette-printers 
 \end{itemize}
 
 \end{itemize}
