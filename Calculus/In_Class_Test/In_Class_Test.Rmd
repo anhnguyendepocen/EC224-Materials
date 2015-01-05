@@ -1,0 +1,60 @@
+---
+title: "In_Class_Test_Questions"
+author: "Rob Hayward"
+date: "Monday, January 05, 2015"
+output: word_document
+---
+
+1. Find the derivative of the following equations
+
+
++ $y = 2 + 5x +2x^2 - 6x^3$
+
+$\frac{\delta y}{\delta x}$  
+
++ $y = 5x^2 - 15x^5 + 2$
+
+$\frac{\delta y}{\delta x}$
+
++ $TU = 5X_1 - 0.5X_1^2$
+
+$\frac{\delta TU}{\delta X}$
+
++ $TPP = 15L + 25L^2 - 5L^3$
+
+$\frac{\delta TPP}{\delta L}$
+
+2. Find the second derivative of the following
+
+
++ $y = 2 + 5x +2x^2 - 6x^3$
+
+$\frac{\delta y}{\delta x}$  
+
++ $y = 2x^2 - 8x^4 + 2$
+
+$\frac{\delta^2 y}{\delta x^2}$
+
++ $TU = 8X_1 - 0.25X_1^2$
+
+$\frac{\delta^2 TU}{\delta X^2}$
+
++ $TPP = 8L + 50L^2 - 25L^3$
+
+$\frac{\delta^2 TPP}{\delta L^2}$
+
+3. What does the second derivative tell us about the rate of change in each of teh examples from question 2? 
+
+4. Given the following equations for total revenue and total costs, find the marginal rates and use them to find the profit maximising level of output. 
+
+$TR = 15Q - 2Q^2$
+
+$TC = 20 + 5Q - Q^2$
+
+5.  Find amout of labour input that will maximise output with the following function for total physical product. 
+
+$TPP = 31 + 15Q^2 - \frac{1}{3}Q^3$
+
+This can be factorised, but the equation for solving the quadratic is 
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
