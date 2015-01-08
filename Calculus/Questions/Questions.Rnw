@@ -24,7 +24,8 @@
 \begin{enumerate}
 
 
-\item What are the drivatives of
+\item State the derivative of the following equations
+
 \begin{itemize}
 \item $y = 2 + 6x$
 
@@ -40,13 +41,19 @@ $\frac{d(y)}{d(x)} = $
 
 \item $y - 3 = 2x$
 
+
 $\frac{d(y)}{d(x)} = $
 
 \item $TPP = 24 +5L +2L^2 - L^3$
 
+
 $\frac{d(TPP)}{d(L)} = $
 
+\end{itemize}
+
 Find the second derivative of the following
+
+\begin{itemize}
 
 \item $TU = 25 + X_1 - X_1^2$
 
@@ -56,41 +63,34 @@ $\frac{d^2(U)}{d(X_1)^2} = $
 
 $\frac{d^2(U)}{d(X_1)^2} = $
 
+\item What can we say about the utility of X?
+
+
 \item $TPP = 15 +15Q +Q^2 - Q^3$
 
 $\frac{d^2(TPP)}{d(L)^2} = $
 
 \item What does your answer to the previous question tell you about the shape of the Total Physical Product Curve? 
 
-
-\item Given the $TU = 25X - 0.5X^2$
-\begin{itemize}
-\item What is the drivative of TU?
-
-$\frac{d(TU)}{{dX}} = $
-
-\item What can we say about the utility of X?
-
-
-
 \end{itemize}
 
-Given a demand curve 
+
+
+\item Given a demand curve 
 \begin{equation*}
 Q_d = 90 - 5P + 0.2P^2
 \end{equation*}
 
 <<plot3, fig.height=5, echo=FALSE>>=
 P <- seq(1, 10, 0.5)
-Q <- 90 - 5*P +0.2*P^2
+Q <- 90 - 5*P + 0.2*P^2
 plot(P, Q, type = 'l', main = "Demand Curve")
 @
 
 What is the elasticity of demand at the point $P = 5, Q = 70$?  
 
 
-
-\item Here is the total physical product curve. Draw the \emph{average physical product}? for between two points on the graph. 
+\item Here is the total physical product curve.. 
 
   
 <<plot, fig.align='center', echo=FALSE, fig.height=4, fig.width = 5>>=
@@ -101,20 +101,27 @@ plot(L, TPP, main = "Total Physical Product", type = 'l', col = 'red')
 #ines(APP, col = 'blue')
 #legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
 @
-\item How would you calculate the \emph{marginal physical product}?
+\begin{itemize}
 
+\item How would you calculate the \emph{marginal physical product}?
 \end{itemize}
+
+
+\item Given the $TPP = 500 + 200L + L^2 - L^3$, 
+\begin{itemize}
+\item What is the TPP' or MPP?
 
 \item What is the gradient of the TPP at its peak? 
 
 \item What is the value of the MPP when TPP is at its peak? 
+\end{itemize}
+
 
 \item Given the $TPP = 100 + 32Q +23Q^2 - Q^3$, 
 \begin{itemize}
 \item What is the TPP' or MPP?
 
 \item How would you find the maximum TPP? What is the maximum TPP? This can be done with factorisation. 
-
 \end{itemize}
 
 \item Given the $TPP = 500 + 180Q + 15Q^2 - 2Q^3$, 
@@ -123,7 +130,7 @@ plot(L, TPP, main = "Total Physical Product", type = 'l', col = 'red')
 
 $MPP = 180 + 30Q -6Q^2$
 
-\item What is the maximum TPP? The equaition.
+\item What is the maximum TPP?  Use the equation method. 
 
 \end{itemize}
 
