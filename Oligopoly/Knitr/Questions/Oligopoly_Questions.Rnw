@@ -23,7 +23,7 @@
 
 
 \begin{enumerate}
-\item For a duopoly with the following demand curve ($Q = 100 - 10P$) and the assumption that the marginal cost of production is zero and that output can be set in half of one unit, 
+\item For a duopoly with the following demand curve ($P = 100 - 10Q$) and the assumption that the marginal cost of production is zero and that output can be set in half of one unit, 
 <<demand, warning=FALSE, message=FALSE, echo=FALSE, results='asis'>>=
 require(xtable)
 Q <- seq(0, 10, 1)
