@@ -1,0 +1,179 @@
+\documentclass[12pt, a4paper, oneside]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\author{}
+\date{}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{pdflscape}
+\usepackage{amsmath}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\title{Oligopoly}
+\maketitle
+
+
+\begin{enumerate}
+\item For a duopoly with the following demand curve ($P = 100 - 10Q$) and the assumption that the marginal cost of production is zero and that output can be set in half of one unit, 
+% latex table generated in R 3.0.1 by xtable 1.7-1 package
+% Tue Jan 13 08:16:46 2015
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrr}
+  \hline
+Q & P & Total.Income \\ 
+  \hline
+0 & 100 & 0 \\ 
+  1 & 90 & 90 \\ 
+  2 & 80 & 160 \\ 
+  3 & 70 & 210 \\ 
+  4 & 60 & 240 \\ 
+  5 & 50 & 250 \\ 
+  6 & 40 & 240 \\ 
+  7 & 30 & 210 \\ 
+  8 & 20 & 160 \\ 
+  9 & 10 & 90 \\ 
+  10 & 0 & 0 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item Explain each firm's profit-maximising position? 
+
+This will be where MC = MR = 0.  At output of Q = 5 and P = 50, there is a profit of 250.
+
+\item Calculate total output, total profit and the profit for each firm? 
+
+Each firm will produce 5 for a total of 10 and a price of 0.  In this case there is no super-normal profit.
+
+\item What is the profit maximising position if there is \emph{collusion}?
+
+If there is collusion, each will produce 2.5 and the total output will be 5, the price will be 50, total profit will be 250 (125 each)
+
+\item Explain the term \emph{Nash Equilibrium} identify the Nash Equilibrium for this example,
+
+The Nash Equilibrium is the point where there is no incentive to change given the behaviour of other players.  From a position of collusion, there is an incentive for one player to cheat and produce 
+
+3 for a total output of 5.5 
+
+The price is 45
+
+Total profit is 247.5 (135 and 112.5)
+
+In that case the other party has an incentive to cheat to produce 3 for a total output of 6
+
+The price is 40
+
+The total profit is 240 (120 each)
+
+If 3.5 is produced for a total of 6.5.  
+
+The price is 35
+
+The profit is 227.5 (122.5 and 105)
+
+If the other cheats so that each produce 3.5 for 7
+
+The price is 30. 
+
+Total profit is 210 (105 each)
+
+
+\end{itemize}
+
+\item How does globalisation affect oligopolistic industries like cars? 
+
+In this case it incresaes the number of players and makes it much more likely that the price will move towards the marginal cost.  There is a trade off between the \emph{output effect} and the \emph{price} effect.  The more players, the more the output effect dominates and at the extreme, there is perfect competition, no price effect and the price equals the marginal cost. 
+
+\item Describe the \emph{kinked demand curve}.  What are the consequences of this demand curve for firms? 
+
+Draw and explain.  Energy firms may have similar prices.  Needs regulation or other factors to encourage competition. 
+
+\item Looking at figure 16.7 in the textbook, explain why there is no equilibrium at the point where each firm charges 20 pounds for the product.  
+
+\item In the context of Game Theory, give an example of the following
+\begin{itemize}
+\item \emph{Dominant Strategy}
+The decision that should be taken no matter what the other side does
+\item \emph{Credible Threat}
+A threat that can be believed.  It is \emph{time consistent}
+\item \emph{Commitment}
+Something that means that an action must be taken. 
+\end{itemize}
+
+\item Is the market for Christmas trees \emph{Contestable}?  Explain your answer.
+
+I think so.  Pop up sellers. 
+
+\item Draw the decision tree for a monopolistic firm with a strategic choice over whether to advertise its detergent.  If the firm embarks on a multi-year advertising campaign, it adds to the cost but does not increase the overall size of the market for detergent.  However, if other firms enter the market, the advertising will take market share from the newcomers.  Profits are  5 million with no competition or advertising, profits will be  2.5 million each if there are two firms in the industry with no advertising.  The advertising campaign will reduce monopoly profits to 2 million without competition.  If another firm tries to enter the market, the advertising will ensure that it is able to take $90\%$ of the market, make a profit of  1 million after advertising expenses and reduce the profit of the potential entrant to zero.  
+
+Use the decision-tree to help explain why a monopolist may advertise. 
+
+
+  
+  
+\end{enumerate}
+
+
+
+\end{document}
