@@ -5,3 +5,5 @@ roots <- function(a, b, c){
 }
 roots(3, -20, -32)
 roots(6, -30, -180)
+roots(1, 30, 0)
+
