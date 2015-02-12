@@ -25,6 +25,17 @@
 \titlepage
 \end{frame}
 
+\section{Reading}
+\begin{frame}{Reading}
+This week's reading
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Chapter 24: Savings, investment and the financial system
+\item Chapter 26: The monetary system
+\item Chapter 25: The basic tools of finance
+\item Seminar preparation: Answer the question on student central
+\end{itemize}
+\end{frame}
 
 \section{The financial system}
 \begin{frame}{The financial system}
@@ -138,10 +149,10 @@ Y = C + I + G
 \begin{frame}{Investment}
 To understand more about the role of financial markets, take $C$ and $G$ from each side of Equation \ref{eqref:dom}
 \begin{block}{}
-\begin{align*}
+\begin{align}
 Y - C - G &= (C - C) + I + (G - G)\\
 Y - C - G &= I
-\end{align*}
+\end{align}
 \end{block}
 Investment is equal to the income left after consumption and government spending have taken place
 \end{frame}
@@ -149,10 +160,10 @@ Investment is equal to the income left after consumption and government spending
 \begin{frame}{National savings}
 Savings are the income after consumption and government spending.  Therefore, 
 \begin{block}{}
-\begin{align*}\label{eqref:s}
+\begin{align}
 S &= I\\
-S &= Y - C - G
-\end{align*}
+S &= Y - C - G \label{eqref:s}
+\end{align}
 \end{block}
 \end{frame}
 
@@ -164,6 +175,202 @@ S = \underbrace{(Y - T - C)}_{\text{Private Savings}} + \underbrace{(T -  G)}_{\
 \end{equation}
 \end{block}
 \end{frame}
+
+\section{Interest rates}
+\begin{frame}{The market for loanable funds 1}
+There are a number of theories about the determination of interest rates.  The most dominant is called \emph{The market for loanable funds}
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item The interest rate is set by the supply and demand for funds
+\item The supply of funds is savings
+\item The demand for funds comes primarily from business and government
+\item With international financial markets this is a golbal market and one international interest rate
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The market for loanable funds 2}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$S_1$};
+\node at (1, 2.4) {$D_1$};
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\node at (2.71, 0) [below] {$q^*$};
+\node at (0, 1.42) [left] {$i^*$};
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{Loanable funds: more supply}
+The supply of loanable funds could be increased by 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Switching tax from income to consumption
+\item Households being more cautious about the future
+\item Countries having limited pooling or government provision of welfare/health
+\end{itemize}
+\pause
+More savings will reduce interest rates and increase investment
+\end{frame}
+
+
+\begin{frame}{The market for loanable funds 3}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$S_1$};
+\node at (1, 2.4) {$D_1$};
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\node at (2.71, 0) [below] {$q_1^*$};
+\node at (0, 1.42) [left] {$i_1^*$};
+\pause
+\draw[thick] (1.5, 0.25) to (4.8, 2);
+\node at (4.4, 2) {$S_2$};
+\draw [fill = red] (3.22, 1.19) circle [radius = 0.05];
+\draw [dashed] (3.22, 0) to (3.22, 1.19);
+\draw [dashed] (0, 1.19) to (3.22, 1.19);
+\node at (3.22, 0) [below] {$q_2^*$};
+\node at (0, 1.19) [left] {$i_2^*$};
+
+%\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+%  |- (5, 0) node (xaxis) [right] {$Q$};
+%\node at (5, 2) [above left] {AC};
+%\node at (4, 2.5) [above left] {MC};
+%\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{Loanable funds: more demand}
+The demand for loanable funds could be increased by 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Government investment tax credit
+\item Business become more positive about the economic outlook
+\item There is new technology or new methods of doing things
+\item Government improve infrastructure of the economy
+\end{itemize}
+\pause
+More investment will increase interest rates and level of investment
+\end{frame}
+
+\begin{frame}{The market for loanable funds 4}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$S_1$};
+\node at (1, 2.4) {$D_1$};
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\node at (2.71, 0) [below] {$q_1^*$};
+\node at (0, 1.42) [left] {$i_1^*$};
+\pause
+\draw[thick] (1.5, 2.5) to (4.8, 0.8);
+\node at (1.8, 2.5) {$D_2$};
+\draw [fill = red] (3.19, 1.64) circle [radius = 0.05];
+\draw [dashed] (3.19, 0) to (3.19, 1.64);
+\draw [dashed] (0, 1.64) to (3.19, 1.64);
+\node at (3.19, 0) [below] {$q_3^*$};
+\node at (0, 1.64) [left] {$i_3^*$};
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{Loanable funds}
+Keynes argued that the market for funds could break down
+\begin{itemize}[<+-| alert@+>]
+\item If firms are scared of the future, they will not borrow no matter how low interest rates go.
+\item If households fear for their jobs and their future, they continue to save even if interest rates are low
+\end{itemize}
+\pause
+Keynes presented an alternative theory of \emph{liquidity preference} for times when there was a \emph{liquidity trap}. 
+\end{frame}
+
+\section{Money}
+\begin{frame}{The functions of money}
+The three main functions of money
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item A medium of exchange
+\item A unit of account
+\item A store of value
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What is money?}
+This is disputed. 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Commodity money - links paper to gold or other commodity
+\item Fiat money - is not backed by anything other than government debt
+\end{itemize}
+\pause
+Importance of \emph{liquidity}: the ability to make payments
+\end{frame}
+
+
+\begin{frame}{Commerical bank}
+\begin{figure}
+\begin{tikzpicture}[scale = 0.75]
+%\draw [very thin, color = gray](0, 0) grid (14, 7);
+\draw [thick] (2, 6) to (12, 6);
+\draw [thick] (7, 7) to (7, 0);
+\node [above] at (10, 6) {Liabilities};
+\node [above] at (4, 6) {Assets};
+\node [right] at (7, 5) {Deposits 1000};
+\node [left] at (7, 5) {Cash 100};
+\node [right] at (7, 4) {Borrowing 200};
+\node [left] at (7, 4) {Gov Sec 100};
+\draw (3, 2) to (11, 2);
+\node [right] at (7, 3) {Capital 200};
+\node [left] at (7, 3) {Loans 1200};
+\node [right] at (7, 1) {Total 1400};
+\node [left] at (7, 1) {Total 1400};
+\end{tikzpicture}
+\caption{Commercial bank balance sheet}
+\label{figref:bb}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Central bank}
+\begin{figure}
+\begin{tikzpicture}[scale = 0.75]
+%\draw [very thin, color = gray](0, 0) grid (14, 7);
+\draw [thick] (2, 6) to (12, 6);
+\draw [thick] (7, 7) to (7, 0);
+\node [above] at (10, 6) {Liabilities};
+\node [above] at (4, 6) {Assets};
+\node [right] at (7, 5) {Cash 15000};
+\node [left] at (7, 5) {Gov Sec 10000};
+%\node [right] at (7, 4) {Borrowing 200};
+\node [left] at (7, 4) {FX 4000};
+\draw (3, 2) to (11, 2);
+%\node [right] at (7, 3) {Capital 200};
+\node [left] at (7, 3) {Gold 1000};
+\node [right] at (7, 1) {Total 15000};
+\node [left] at (7, 1) {Total 15000};
+\end{tikzpicture}
+\caption{Central bank balance sheet}
+\label{figref:cb}
+\end{figure}
+\end{frame}
+
 
 \end{document}
 %\begin{itemize}[<+-| alert@+>]
