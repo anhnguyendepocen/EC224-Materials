@@ -1,3 +1,0 @@
-\beamer@endinputifotherversion {3.26pt}
-\beamer@sectionintoc {1}{The financial system}{2}{0}{1}
-\beamer@sectionintoc {2}{Savings and GDP}{15}{0}{2}
