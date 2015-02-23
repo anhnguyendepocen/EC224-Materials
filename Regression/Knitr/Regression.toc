@@ -1,0 +1,2 @@
+\beamer@endinputifotherversion {3.19pt}
+\beamer@sectionintoc {1}{Confidence intervals on coefficients}{22}{0}{1}
