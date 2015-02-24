@@ -67,6 +67,7 @@ Where
 \begin{quote} ``Essentially all models are wrong, but some are useful''
 \end{quote} %citep[p. 424]{Box}
 \end{block}
+George Box
 \end{frame}
 
 
@@ -76,14 +77,45 @@ Where
 da <- read.csv("../Data/USPhil.csv")
 eq1 <- lm(da$Inflation[6:34] ~ 
             da$Unemployment[6:34])
-plot(da$Unemployment, da$Inflation)
+plot(da$Unemployment, da$Inflation, , xlab = "Unemployment", ylab = "Inflation", main = "Inflation-unemployment")
 abline(eq1, col = 'darkgreen')
 @
 \end{frame}
 
 
-\begin{frame}{R Squared (p. 13)}
+\begin{frame}{Regression Table}
+% latex table generated in R 3.0.2 by xtable 1.7-1 package
+% Wed Dec 25 22:07:07 2013
+\begin{table}[ht]
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 3.99 & 0.92 & 4.35 & 0.003 \\ 
+Unemployment & -0.20 & 0.15 & -1.35 & 0.19 \\ 
+   \hline
+\end{tabular}
+\end{table}
+The Adjusted $R^2$ is 0.08, therefore only 8\% of the BAC returns are explained by the returns of the market.  95\% confidence intervals for the $\beta$ are -0.51 to 0.11. 
+\end{frame}
+
+\begin{frame}{Three additional ideas}
+There are three thing to consider
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item How well do the data fit the model? $(R^2)$
+\item How reliable is the estimated relationship?  Does $\beta_1 = 0$?
+\item Are the \emph{other factors} important $(\varepsilon)$? 
+\end{itemize}
+\pause
+Consider each in turn. 
+\end{frame}
+
+\begin{frame}{R Squared}
 The total variance of the dependent variable is called the total sum of squares (TSS).  This can be split into 
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Explained sum of squares or sum of squares of the regression (ESS)
 \item Residual sum of squares (RSS)
@@ -98,19 +130,11 @@ u = \hat{\varepsilon}
 \end{equation}
 \end{frame}
 
-\begin{frame}{Adjusted R Squared (p. 13)}
-The $R^2$ can be considered a measure of \emph{goodness of fit}.  However, the more variables that you add the smaller the $R^2$. The \emph{Adjusted R Squared} ($\bar{R}^2$) will make a penalty for adding variables. 
-
-\begin{equation}
-\bar{R}^2 = 1 - (1 - R^2) \times \frac{(T - 1)}{(T - K)}
-\end{equation}
-where $T$ is the total number of observations and $K$ is the number of variables. 
-\end{frame}
-
 
 \section{Confidence intervals on coefficients}
 \begin{frame}{Coefficient Estimates}
-Remember that the estimates of the coefficients will depend on the sample
+The estimates of the coefficients will depend on the sample
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item A different sample will give a different estimate
 \item We want to know how reliable the estimates will be under different samples
@@ -119,9 +143,48 @@ Remember that the estimates of the coefficients will depend on the sample
 \item $\hat{\beta_1} \sim N (\beta_1, \sigma_{\beta_1}^2)$
 \end{itemize}
 \pause
-If we assume a normal distribution we can carry out hypothese tests about coefficients like $\beta_1$
+If we assume a normal distribution we can carry out hypotheses tests about coefficients like $\beta_1$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Hypothesis tests of Coefficients p.14}
+Hypotheses tests are conducted using the t-statistic
+\begin{block}{}
+$\text{t-stat} = \frac{\text{estimator} - \text{hypothesised value}}{\text{standard error of the estimator}}$\\ 
+\vskip 0.5cm
+$t = \frac{\hat{\beta_1}-\beta_{1,0}}{SE(\hat{\beta_1})}$\\
+\vskip 0.5cm 
+Need to estimate the standard deviation of the coefficient estimate
+\end{block}
+\end{frame}
 
+\begin{frame}{Normal Distribution}
+<<norm, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+x <- seq(-4, 4, 0.1)
+y = dnorm(x, 0, 1)
+main <- expression(paste("Normal Distribition of ", beta[1]))
+plot(x, y, type = 'l', main = main)
+cord.x <- c(-4, seq(-4, -2, 0.01), -2)
+cord.y <- c(0, dnorm(seq(-4, -2, 0.01)), 0)
+polygon(cord.x, cord.y, col = 'darkgreen')
+cord.x <- c(2, seq(2, 4, 0.01), 4)
+cord.y <- c(0, dnorm(seq(2, 4, 0.01)), 0)
+polygon(cord.x, cord.y, col = 'darkgreen')
+text(-3, 0.1, "Less than 2 SD")
+text(3, 0.1, "More than 2 SD")
+@
+\end{frame}
+
+\begin{frame}{Residuals 1}
+<<resid, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+plot(da$Date[6:34], resid(eq1),  type = 'l', main = "Residuals from inflation-unemployment regression", 
+     xlab = "Year", ylab = "Residual")
+@
+\end{frame}
+
+\begin{frame}{Residuals 2}
+<<resid2, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+hist(resid(eq1),  main = "Residuals from inflation-unemployment regression", xlab = "Residuals")
+@
+\end{frame}
 \end{document}
