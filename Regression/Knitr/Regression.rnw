@@ -73,22 +73,41 @@ George Box
 da <- read.csv("../Data/USPhil.csv")
 eq1 <- lm(da$Inflation[6:34] ~ 
             da$Unemployment[6:34])
-plot(da$Unemployment, da$Inflation, main = "Scatterplot of US inflation and 
-     unemployment", ylab = "Inflation", xlab = "Unemployment")
+plot(da$Unemployment, da$Inflation, , xlab = "Unemployment", ylab = "Inflation", main = "Inflation-unemployment")
 abline(eq1, col = 'darkgreen')
 @
 \end{frame}
 
-\begin{frame}{Regression results}
-<<reg, echo=FALSE, warning=FALSE, message=FALSE, fig.show='asis'>>=
-library(xtable)
-da <- read.csv("../Data/USPhil.csv")
-eq1 <- lm(da$Inflation[6:34] ~ 
-            da$Unemployment[6:34])
-xtable(summary(eq1), digits = 2)
-@
+
+\begin{frame}{Regression Table}
+% latex table generated in R 3.0.2 by xtable 1.7-1 package
+% Wed Dec 25 22:07:07 2013
+\begin{table}[ht]
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 3.99 & 0.92 & 4.35 & 0.003 \\ 
+Unemployment & -0.20 & 0.15 & -1.35 & 0.19 \\ 
+   \hline
+\end{tabular}
+\end{table}
+The Adjusted $R^2$ is 0.08, therefore only 8\% of the BAC returns are explained by the returns of the market.  95\% confidence intervals for the $\beta$ are -0%.51 to 0.11. 
 \end{frame}
 
+\begin{frame}{Three additional ideas}
+There are three thing to consider
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item How well do the data fit the model? $(R^2)$
+\item How reliable is the estimated relationship?  Does $\beta_1 = 0$?
+\item Are the \emph{other factors} important $(\varepsilon)$? 
+\end{itemize}
+\pause
+Consider each in turn. 
+\end{frame}
 
 \begin{frame}{R Squared}
 The total variance of the dependent variable is called the total sum of squares (TSS).  This can be split into 
@@ -119,11 +138,11 @@ The estimates of the coefficients will depend on the sample
 \item $\hat{\beta_1} \sim N (\beta_1, \sigma_{\beta_1}^2)$
 \end{itemize}
 \pause
-If we assume a normal distribution we can carry out hypothese tests about coefficients like $\beta_1$
+If we assume a normal distribution we can carry out hypotheses tests about coefficients like $\beta_1$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Hypothesis tests of Coefficients p.14}
+\begin{frame}{Hypothesis tests of Coefficients}
 Hypothese tests are conducted using the t-statistic
 \begin{block}{}
 $\text{t-stat} = \frac{\text{estimator} - \text{hypothesised value}}{\text{standard error of the estimator}}$\\ 
@@ -133,6 +152,7 @@ $t = \frac{\hat{\beta_1}-\beta_{1,0}}{SE(\hat{\beta_1})}$\\
 Need to estimate the standard deviation of the coefficient estimate
 \end{block}
 \end{frame}
+
 
 \begin{frame}{Normal Distribution}
 <<norm, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
@@ -151,4 +171,16 @@ text(3, 0.1, "More than 2 SD")
 @
 \end{frame}
 
+\begin{frame}{Residuals 1}
+<<resid, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+plot(da$Date[6:34], resid(eq1),  type = 'l', main = "Residuals from inflation-unemployment regression", 
+     xlab = "Year", ylab = "Residual")
+@
+\end{frame}
+
+\begin{frame}{Residuals 2}
+<<resid2, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+hist(resid(eq1),  main = "Residuals from inflation-unemployment regression", xlab = "Residuals")
+@
+\end{frame}
 \end{document}
