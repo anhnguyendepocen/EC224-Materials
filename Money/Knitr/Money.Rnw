@@ -1,0 +1,70 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{Money and inflation}
+\author{Rob Hayward}
+
+
+\begin{document}
+
+\begin{frame}{Money, prices, inflation}
+Define terms
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Prices
+\item Price index
+\item RPI vs CPI
+\item Inflation vs deflation
+\item PPI, deflator and unit labour costs
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The UK price index}
+<<Price, echo=FALSE, warning=FALSE, message=FALSE,fig.height=4.5, cache=TRUE>>=
+da <- read.csv("../Data/CPI_Ann.csv")
+da <- da[,c("Date", "CDKO", "DOBH", "DOBP", "CZOG")]
+plot(da$Date, da$CDKO, type = 'l', main = "UK price index", xlab = "Date", 
+     ybal = "Index")
+@
+\end{frame}
+     
+\begin{frame}{The price of bread}
+<<Price2, echo=FALSE, warning=FALSE, message=FALSE,fig.height=4.5>>=
+plot(da$Date[120:216], da$CZOG[120:216], type = 'l', main = 
+       "Price of UK bread", xlab = "Date",  ybal = "Index")
+@
+\end{frame}     
+
+\begin{frame}{UK inflation}
+<<Inf, echo=FALSE, warning=FALSE, message=FALSE,fig.height=4.5>>=
+library(dplyr)
+da <- da %>%
+  mutate(CDKOl = lag(CDKO)) %>%
+  mutate(CDKOd = log(CDKO) - log(CDKOl)) 
+plot(da$Date, da$CDKOd, type = 'l', main = "UK inflation", ylab = "Percentage change year-on-year", xlab = "Date")
+abline(h = 0, col = "darkgreen")
+@
+\end{frame}
+
+
+\begin{frame}{Cost of living}
+
+
+\end{document}
+\begin{itemize}[<+-| alert@+>]
