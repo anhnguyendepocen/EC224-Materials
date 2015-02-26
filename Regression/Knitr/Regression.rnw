@@ -23,10 +23,6 @@
 
 \begin{document}
 
-\begin{frame}
-\titlepage
-\end{frame}
-
 \begin{frame}{Modelling}
 The model
 \begin{block}{}
@@ -67,6 +63,7 @@ Where
 \begin{quote} ``Essentially all models are wrong, but some are useful''
 \end{quote} %citep[p. 424]{Box}
 \end{block}
+George Box
 \end{frame}
 
 
@@ -76,14 +73,26 @@ Where
 da <- read.csv("../Data/USPhil.csv")
 eq1 <- lm(da$Inflation[6:34] ~ 
             da$Unemployment[6:34])
-plot(da$Unemployment, da$Inflation)
+plot(da$Unemployment, da$Inflation, main = "Scatterplot of US inflation and 
+     unemployment", ylab = "Inflation", xlab = "Unemployment")
 abline(eq1, col = 'darkgreen')
 @
 \end{frame}
 
+\begin{frame}{Regression results}
+<<reg, echo=FALSE, warning=FALSE, message=FALSE, fig.show='asis'>>=
+library(xtable)
+da <- read.csv("../Data/USPhil.csv")
+eq1 <- lm(da$Inflation[6:34] ~ 
+            da$Unemployment[6:34])
+xtable(summary(eq1), digits = 2)
+@
+\end{frame}
 
-\begin{frame}{R Squared (p. 13)}
+
+\begin{frame}{R Squared}
 The total variance of the dependent variable is called the total sum of squares (TSS).  This can be split into 
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Explained sum of squares or sum of squares of the regression (ESS)
 \item Residual sum of squares (RSS)
@@ -98,19 +107,10 @@ u = \hat{\varepsilon}
 \end{equation}
 \end{frame}
 
-\begin{frame}{Adjusted R Squared (p. 13)}
-The $R^2$ can be considered a measure of \emph{goodness of fit}.  However, the more variables that you add the smaller the $R^2$. The \emph{Adjusted R Squared} ($\bar{R}^2$) will make a penalty for adding variables. 
-
-\begin{equation}
-\bar{R}^2 = 1 - (1 - R^2) \times \frac{(T - 1)}{(T - K)}
-\end{equation}
-where $T$ is the total number of observations and $K$ is the number of variables. 
-\end{frame}
-
-
 \section{Confidence intervals on coefficients}
 \begin{frame}{Coefficient Estimates}
-Remember that the estimates of the coefficients will depend on the sample
+The estimates of the coefficients will depend on the sample
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item A different sample will give a different estimate
 \item We want to know how reliable the estimates will be under different samples
@@ -123,5 +123,32 @@ If we assume a normal distribution we can carry out hypothese tests about coeffi
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Hypothesis tests of Coefficients p.14}
+Hypothese tests are conducted using the t-statistic
+\begin{block}{}
+$\text{t-stat} = \frac{\text{estimator} - \text{hypothesised value}}{\text{standard error of the estimator}}$\\ 
+\vskip 0.5cm
+$t = \frac{\hat{\beta_1}-\beta_{1,0}}{SE(\hat{\beta_1})}$\\
+\vskip 0.5cm 
+Need to estimate the standard deviation of the coefficient estimate
+\end{block}
+\end{frame}
+
+\begin{frame}{Normal Distribution}
+<<norm, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+x <- seq(-4, 4, 0.1)
+y = dnorm(x, 0, 1)
+main <- expression(paste("Normal Distribition of ", beta[1]))
+plot(x, y, type = 'l', main = main)
+cord.x <- c(-4, seq(-4, -2, 0.01), -2)
+cord.y <- c(0, dnorm(seq(-4, -2, 0.01)), 0)
+polygon(cord.x, cord.y, col = 'darkgreen')
+cord.x <- c(2, seq(2, 4, 0.01), 4)
+cord.y <- c(0, dnorm(seq(2, 4, 0.01)), 0)
+polygon(cord.x, cord.y, col = 'darkgreen')
+text(-3, 0.1, "Less than 2 SD")
+text(3, 0.1, "More than 2 SD")
+@
+\end{frame}
 
 \end{document}
