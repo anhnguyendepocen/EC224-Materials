@@ -64,6 +64,164 @@ abline(h = 0, col = "darkgreen")
 
 
 \begin{frame}{Cost of living}
+Comparison of wages and price level
+\end{frame}
+
+\begin{frame}{Money supply and demand}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (2, 0) to (2, 4.8);
+\node at (4.4, 2.5) {$S_1$};
+\node at (1, 2.4) {$D_1$};
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\node at (2.71, 0) [below] {$q^*$};
+\node at (0, 1.42) [left] {$i^*$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Adjustment process}
+Imagine a helicopter dropping money
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item The money drop will move supply above the quantity demanded
+\item Excess demand will lead to increased spending, increased saving and lower interest rates
+\item Increased spending will push up prices if output cannot increase
+\item Output increase is constrained by factors of production (Labour, land, capital)
+\end{itemize}
+
+\begin{frame}{Nominal and real}
+The use of money brings in nominal and real variables
+\begin{itemize}[<+-| alert@+>]
+\item \emph{Classical dichotomy} separation into nominal and real factors
+\item Difference between monetary and real measurement
+\item Corn is \textsterling 2 a killo; Wheat is \textsterling 1 per kilo
+\item Corn is equal to 2 Wheat (no \textsterling sign)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Real wages}
+If the average wage is \textsterling 10 per hour and the price of banana is \textsterling 2 each
+\begin{block}{}
+The \emph{real wage} is $\frac{w}{p} \text{or} \frac{10}{2} = 5$
+\end{block}
+if the wage increases to \textsterling 12 per hour
+\begin{block}{}
+\begin{equation}
+\frac{w}{p} = {12}{2} = 6
+\end{equation}
+\end{block}
+of banands increase to \textsterling 5
+\begin{block}{}
+\begin{equation}
+\frac{w}{p} = {10}{5} = 2
+\end{equation}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Money neutrality}
+If changes in mony affect nominal values but not real values, there is \emph{money neutrality}
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Increase in money is like changing measurement from miles to kilometers
+\begin{itemize}
+\item Does not change distance
+\item But it may be confusing
+\end{itemize}
+\item Money neutrality does not seem to hold in the short-run
+\end{itemize}
+\end{frame}
+
+
+\begin{itemize}{Quantity theory 1}
+Velocity of money is the speed that it circulations around the economy
+\begin{block}
+\begin{align*}
+V =& \frac{P \times Y}{M}\\
+V =& \frac{\textsterling 10 \times 100}{\textsterling 50}\\
+  =& 20
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Quantity theory 2}
+The equation can be re-written
+\begin{block}{}
+\begin{align*}
+V =& \frac{P \times Y}{M}\\
+M \times V =& P \times Y 
+\end{block}
+\end{align*}
+$P \times Y$ is nominal GDP
+\end{frame}
+
+\begin{Monetarism}
+Milton Friedman argued that the central bank should control just the quantity of money
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Monetary history of the US
+\item Depends on a stable demand for money 
+\item Assumes that velocity of circulation is stable 
+\item In a condition when output is supply-constrained
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Velocity of circulation}
+\end{frame}
+
+\begin{frame}{Fisher Effect}
+Money neutrality suggests that increased money will affect nominal values but not real
+\begin{block}{}
+Real interest rate = nominal interest rate - inflation rate
+\end{block}
+or 
+\begin{block}{}
+Nominal interest rate = Real interest rate + inflation rate
+\end{block}
+Increased money, increases inflation and increases the rate (leaving real rate unchanged)
+\end{frame}
+
+\begin{frame}{Nominal rates and inflation}
+\end{frame}
+
+\begin{frame}{The costs of inflation}
+There are a number of costs of inflation
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Purchasing power fallacy
+\item Shoeleather costs
+\item Menu costs
+\item Relative price distortion
+\item Tax effects
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Inflation redistribution}
+Inflation will re-distribute between debtors and creditors
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Inflation reduces the burden of debt
+\begin{itemize}
+\item Makes it easier to pay back
+\item Debtors have money for other things
+\item Creditors get smaller but more likely return
+\end{itemize}
+\item Deflation increases the burden of debt
+\begin{itemize}
+\item Makes it harder to pay back
+\item Debors have less money
+\item Creditors get a larger but more uncertain return. 
+\end{itemize}
+\end{itemize}
+\endFrame}
+\end{frame}
+
 
 
 \end{document}
