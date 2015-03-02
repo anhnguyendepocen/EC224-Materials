@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \bibliographystyle{agsm}
+\usepackage{tikz}
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
@@ -40,14 +41,14 @@ Define terms
 da <- read.csv("../Data/CPI_Ann.csv")
 da <- da[,c("Date", "CDKO", "DOBH", "DOBP", "CZOG")]
 plot(da$Date, da$CDKO, type = 'l', main = "UK price index", xlab = "Date", 
-     ybal = "Index")
+     ylab = "Index")
 @
 \end{frame}
      
 \begin{frame}{The price of bread}
 <<Price2, echo=FALSE, warning=FALSE, message=FALSE,fig.height=4.5>>=
 plot(da$Date[120:216], da$CZOG[120:216], type = 'l', main = 
-       "Price of UK bread", xlab = "Date",  ybal = "Index")
+       "Price of UK bread", xlab = "Date",  ylab = "Index")
 @
 \end{frame}     
 
@@ -63,7 +64,383 @@ abline(h = 0, col = "darkgreen")
 \end{frame}
 
 
-\begin{frame}{Cost of living}
+\begin{frame}{Cost of living: 2000-2014}
+<<earnings, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
+library(zoo)
+names <- c("Date", "Earnings", "CPI")
+da <- read.csv("../Data/Earnings2.csv", skip = 8, stringsAsFactors = FALSE)
+names(da) <- names
+da$Date <- as.yearmon(da$Date, format = "%Y %b")
+# Need to remove the date column before converting to zoo so that the 
+# numerics are not converted to characters
+dat <- as.zoo(da[,2:3], order.by = da$Date)
+# This function will aggregate to year. Comes from examples for aggregate
+as.year <- function(x) as.numeric(floor(as.yearmon(x)))
+daty <- aggregate(dat, as.year, mean, na.locf = FALSE)
+daty <- aggregate(dat, as.year, mean, na.rm = TRUE)
+# reduce to just recent data. row 38 is 2000. 
+da2 <- data.frame(daty)
+da2$Earningsb <- da2$Earnings/da2$Earnings[38]
+da2$CPIb <-  da2$CPI/da2$CPI[38]
+#da2$Date <- 1964:2014
+#daty <- daty[38:52,]
+plot(rownames(da2)[38:52], da2[38:52, 3], type = 'l', lty = 2, 
+     xlab = "Date", ylab = "Index: 1 2000")
+lines(rownames(da2)[38:52], da2[38:52,4], type = 'l', col = 'Dark Green')
+legend(legend = c("Earnings", "Consumer Prices"), 
+       "topleft", col = c('black', 'Dark Green'), lty = c(2, 1))
+@
+\end{frame}
+
+\begin{frame}{Cost of living: 2007-2014}
+<<earnings2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
+library(zoo)
+names <- c("Date", "Earnings", "CPI")
+da <- read.csv("../Data/Earnings2.csv", skip = 8, stringsAsFactors = FALSE)
+names(da) <- names
+da$Date <- as.yearmon(da$Date, format = "%Y %b")
+# Need to remove the date column before converting to zoo so that the 
+# numerics are not converted to characters
+da2$Earningsb <- da2$Earnings/da2$Earnings[45]
+da2$CPIb <-  da2$CPI/da2$CPI[45]
+#daty <- daty[45:52,]
+plot(rownames(da2)[45:52], da2[45:52, 4], type = 'l', 
+     xlab = "Date", ylab = "Index: 1 2000")
+lines(rownames(da2)[45:52], da2[45:52,3], type = 'l', 
+      lty = 2, col = 'Dark Green')
+legend(legend = c("Earnings", "Consumer Prices"), 
+       "topleft", col = c('black', 'Dark Green'), lty = c(2, 1))
+@
+\end{frame}
+
+
+\begin{frame}{Money supply and demand 1}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (2, 0) to (2, 2.8);
+\node at (2.2, 2.5) {$M_s$};
+\node at (0.9, 2.4) {$M_d$};
+\draw [fill = red] (2, 1) circle [radius = 0.05];
+\draw [dashed] (0, 1) to (5, 1);
+%\draw [dashed] (2, 0) to (2, 1);
+\node at (2.71, 0) [below] {$q^*$};
+%\node at (0, 1) [left] {$i^*$};
+\node at (-0.35, 2) [above, rotate = 90] {Value of money 1/P};
+\node at (5.24, 2) [below, rotate = 90] {Price level P};
+\node at (5, 1) [right] {3};
+\node at (5, 2) [right] {2};
+\node at (5, 3) [right] {1};
+\node at (0, 1) [left] {0.3};
+\node at (0, 2) [left] {0.5};
+\node at (0, 3) [left] {1};
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{Money supply and demand 2}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (3, 0) to (3, 2.8);
+\node at (3.2, 2.5) {$M_s$};
+\node at (0.9, 2.4) {$M_d$};
+\draw [fill = red] (3, 0.68) circle [radius = 0.05];
+\draw [dashed] (0, 0.68) to (5, 0.68);
+%\draw [dashed] (2, 0) to (2, 1);
+\node at (2.71, 0) [below] {$q^*$};
+%\node at (0, 1) [left] {$i^*$};
+\node at (-0.35, 2) [above, rotate = 90] {Value of money 1/P};
+\node at (5.24, 2) [below, rotate = 90] {Price level P};
+\node at (5, 1) [right] {3};
+\node at (5, 2) [right] {2};
+\node at (5, 3) [right] {1};
+\node at (0, 1) [left] {0.3};
+\node at (0, 2) [left] {0.5};
+\node at (0, 3) [left] {1};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Money supply and demand 3}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (2, 0) to (2, 2.8);
+\node at (2.2, 2.5) {$M_s$};
+\node at (0.9, 2.4) {$M_d$};
+\draw [fill = red] (2, 1) circle [radius = 0.05];
+\draw [dashed] (0, 1) to (5, 1);
+%\draw [dashed] (2, 0) to (2, 1);
+\node at (2.71, 0) [below] {$q^*$};
+%\node at (0, 1) [left] {$i^*$};
+\node at (-0.35, 2) [above, rotate = 90] {Value of money 1/P};
+\node at (5.24, 2) [below, rotate = 90] {Price level P};
+\node at (5, 1) [right] {3};
+\node at (5, 2) [right] {2};
+\node at (5, 3) [right] {1};
+\node at (0, 1) [left] {0.3};
+\node at (0, 2) [left] {0.5};
+\node at (0, 3) [left] {1};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Money supply and demand 4}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$S$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};;
+\draw[thick] (1.5, 2.5) to [out = -60, in = 160] (3.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (2, 0) to (2, 2.78);
+\node at (2.2, 2.5) {$M_s$};
+\node at (1.2, 2.4) {$M_d$};
+\draw [fill = red] (2, 1.8) circle [radius = 0.05];
+\draw [dashed] (0, 1.78) to (5, 1.78);
+%\draw [dashed] (2, 0) to (2, 1);
+\node at (2.71, 0) [below] {$q^*$};
+%\node at (0, 1) [left] {$i^*$};
+\node at (-0.35, 2) [above, rotate = 90] {Value of money 1/P};
+\node at (5.24, 2) [below, rotate = 90] {Price level P};
+\node at (5, 1) [right] {3};
+\node at (5, 2) [right] {2};
+\node at (5, 3) [right] {1};
+\node at (0, 1) [left] {0.3};
+\node at (0, 2) [left] {0.5};
+\node at (0, 3) [left] {1};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Adjustment process}
+Imagine a helicopter dropping money
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item The money drop will move supply above the quantity demanded
+\item Excess demand will lead to increased spending, increased saving and lower interest rates
+\item Increased spending will push up prices if output cannot increase
+\item Output increase is constrained by factors of production (Labour, land, capital)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Nominal and real}
+The use of money brings in nominal and real variables
+\begin{itemize}[<+-| alert@+>]
+\item \emph{Classical dichotomy} separation into nominal and real factors
+\item Difference between monetary and real measurement
+\item Corn is \textsterling 2 a kilo; Wheat is \textsterling 1 per kilo
+\item Corn is equal to 2 Wheat (no \textsterling)
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Real wages}
+If the average wage is \textsterling 10 per hour and the price of banana is \textsterling 2 each, The \emph{real wage} is 
+\begin{block}{}
+\begin{equation*}
+\frac{W}{P} =  \frac{10}{2} = 5
+\end{equation*}
+\end{block}
+if the wage increases to \textsterling 12 per hour
+\begin{block}{}
+\begin{equation*}
+\frac{W}{P} = \frac{12}{2} = 6
+\end{equation*}
+\end{block}
+if bananas increase to \textsterling 5
+\begin{block}{}
+\begin{equation*}
+\frac{W}{P} = \frac{10}{5} = 2
+\end{equation*}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Money neutrality}
+If changes in money affect nominal values but not real values, there is \emph{money neutrality}
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Increase in money is like changing measurement from miles to kilometres
+\begin{itemize}
+\item Does not change distance
+\item But it may be confusing
+\end{itemize}
+\item Money neutrality does not seem to hold in the short-run
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Quantity theory 1}
+Velocity of money is the speed that it circles around the economy
+\begin{block}{}
+\begin{equation*}
+V = \frac{P \times Y}{M}
+\end{equation*}
+\end{block}
+Therefore
+\begin{block}{}
+\begin{equation*}
+V = \frac{\textsterling 10 \times 100}{\textsterling 50} = 20
+\end{equation*}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Quantity theory 2}
+The equation can be re-written so that
+\begin{block}{}
+\begin{equation*}
+V = \frac{P \times Y}{M}
+\end{equation*}
+\end{block}
+becomes, 
+\begin{block}{}
+\begin{equation*}
+M \times V = P \times Y 
+\end{equation*}
+\end{block}
+Remember, $P \times Y$ is nominal GDP
+\end{frame}
+
+
+
+
+\begin{frame}{Monetarism}
+Milton Friedman argued that the central bank should control just the quantity of money
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Monetary history of the US
+\item Assumes that velocity of circulation is stable
+\item Depends on a stable demand for money 
+\item In a condition when output is supply-constrained
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Velocity of circulation 1}
+<<broadrb, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
+names = c("Date", "Notes_coin", "Broad_money", "Nominal_GDP")
+da <- read.csv("../../Finance/Data/GDPmoney.csv", skip = 4, stringsAsFactors = FALSE)
+names(da)  <- names
+da$Date <- as.Date(da$Date, format = "%d-%b-%y")
+rebase <- function(x, n){
+  r <- x/x[n]
+}
+da$RB_Notes <- rebase(da$Notes_coin, 100)
+da$RB_Broad <- rebase(da$Broad_money, 100)
+da$RB_GDP <- rebase(da$Nominal_GDP, 100)
+  plot(da$Date[100:length(da$Date)], da[100:length(da$Date),6], type = 'l', 
+     main = "Growth in broad money", xlab = 
+       "Date", ylab = "Index: 1 = Jan 2007")
+lines(da$Date[100:length(da$Date)], da[100:length(da$Date),7], 
+      col = "red", lty = 2)
+legend(legend = c("Broad Money", "Nominal GDP"), "topleft", col = c('black', 'red'), lty = c(1, 2))
+@
+\end{frame}
+
+\begin{frame}{Velocity of circulation 2}
+<<vel, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
+da$V <- da$RB_GDP/da$RB_Broad
+plot(da$Date[100:length(da$Date)], da[100:length(da$Date),8], type = 'l', 
+     main = "Velocity of circulation (PQ/M)", xlab = 
+       "Date", ylab = "PQ/M")
+@
+\end{frame}
+
+\begin{frame}{Money demand 1}
+Two of the three functions of money
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Transaction demand (means of transaction)
+\begin{itemize} 
+\item Number of transactions 
+\item Price of transactions
+\end{itemize}
+\item Savings demand (Store of value)
+\begin{itemize}
+\item interest rate
+\item Confidence in other assets
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Money demand 2}
+These factors can be simplified 
+\begin{block}{}
+\begin{equation*}
+M_d = f(\underbrace{Y}_{+}, \underbrace{P}_{+} \underbrace{i}_{-}, \underbrace{C}_{-})
+\end{equation*}
+\end{block}
+\emph{Confidence} suggests that loanable funds theory does not always apply
+\end{frame}
+
+
+\begin{frame}{Fisher Effect}
+Money neutrality suggests that increased money will affect nominal values but not real
+\begin{block}{}
+Real interest rate = nominal interest rate - inflation rate
+\end{block}
+or 
+\begin{block}{}
+Nominal interest rate = Real interest rate + inflation rate
+\end{block}
+Increased money, increases inflation and increases the nominal rate (leaving real rate unchanged)
+\end{frame}
+
+
+\begin{frame}{Nominal rates and inflation}
+<<Inf2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
+da <- read.csv("../Data/UKinf.csv", skip = 7, stringsAsFactors = FALSE)
+names <- c("Date", "Interest_rate", "Inflation")
+names(da) <- names
+da$Date <- as.Date(da$Date, format = "%Y-%m-%d")
+plot(da$Date, da$Interest_rate, type = 'l', main = 
+     "UK inflation and nominal interest rate", ylab = "Pecentage change", 
+     xlab = "Date", lty = 2)
+lines(da$Date, da$Inflation, type = 'l', col = "Darkgreen")
+legend(legend = c("Interest rate", "Inflation"), "topright", col = c('black', 'Darkgreen'), lty = c(2, 1))
+@
+\end{frame}
+
+\begin{frame}{The costs of inflation}
+There are a number of costs of inflation
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Purchasing power fallacy
+\item Shoe-leather costs
+\item Menu costs
+\item Relative price distortion
+\item Tax effects
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Inflation redistribution}
+Inflation will re-distribute between debtors and creditors
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Inflation reduces the burden of debt
+\begin{itemize}
+\item Makes it easier to pay back
+\item Debtors have money for other things
+\item Creditors get smaller but more likely return
+\end{itemize}
+\item Deflation increases the burden of debt
+\begin{itemize}
+\item Makes it harder to pay back
+\item Debtors have less money
+\item Creditors get a larger but more uncertain return. 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
 
 
 \end{document}
