@@ -1,3 +1,4 @@
+library(dplyr)
 names <- c("Date", "GDP", "PGDP")
 da <- read.csv("Keynes/Data/USGDP.csv", skip = 11)
 names(da) <- names
@@ -21,3 +22,10 @@ names(eq2)
 head(da2)
 plot(da2$Date, da2$GDP, type = 'l', xlab = "Date", ylab = "USD billion", main = "US GDP and potential: 2000 to 2014")
 lines(da2$Date, eq2$fitted.values, type = 'l', col = "Dark Green")
+#---------------------------------------
+da3 <- da2 %>%
+  mutate(GDPL = lag(GDP)) %>%
+  mutate(DGDP = (GDP/GDPL-1)) 
+  plot(da3$Date, da3$DGDP, main = "GDP growth", type = 'l', main = 
+         "US GDP growth", ylab = "Percentage change", xlab = "Date")
+#--------------------  

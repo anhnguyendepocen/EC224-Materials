@@ -1,0 +1,413 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+\usepackage{tikz}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{Keynes and the multiplier}
+\author{Rob Hayward}
+
+
+\begin{document}
+\begin{frame}{Reading}
+Reading
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Chapter 30:  Short-run economic fluctuations
+\item Chapter 31: Keynesian Economics (p655 - 664 only)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Long-run and short-run}
+It is usual to distinguish between the long-run growth and short-run fluctuations around the trend
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \textbf{Long-run} determined by factors of production and the way that they are combined to create goods and services
+\begin{itemize} 
+\item Efficiency
+\item Flexibility
+\item Innovation and imagination
+\item New Resources
+\end{itemize}
+\item \textbf{Short-run} determined by fluctuations in aggregate demand
+\begin{itemize}
+\item Boom and bust
+\item Expansion, recession (2 quarters of negative growth)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{GDP growth and its potential 1}
+<<GDP, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.6>>=
+names <- c("Date", "GDP", "PGDP")
+da <- read.csv("../Data/USGDP.csv", skip = 11)
+names(da) <- names
+da$Date <- as.Date(da$Date, format = "%Y-%m-%d")
+da1 <- da[97:272,-3]
+da1$t <- seq(1:176)
+eq1 <- lm(da1$GDP ~ da1$t + I(da1$t^2))
+plot(da1$Date, da1$GDP, type = 'l', xlab = "Date", ylab = "USD billion", main = "US GDP and potential: 1970 to 2014")
+lines(da1$Date, eq1$fitted.values, type = 'l', col = "Dark Green", lty = 2)
+text(10650, 6000, "Below trend")
+text(12600, 14800, "Boom")
+@
+\end{frame}
+
+\begin{frame}{GDP growth and its potential 2}
+<<GDP2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.6>>=
+names <- c("Date", "GDP", "PGDP")
+da2 <- read.csv("../Data/USGDP.csv", skip = 11)
+names(da2) <- names
+da2$Date <- as.Date(da2$Date, format = "%Y-%m-%d")
+da2 <- da2[213:272,-3]
+da2$t <- seq(1:60)
+plot(da2$Date, da2$GDP, type = 'l', xlab = "Date", ylab = "USD billion", main = "US GDP and potential: 2000 to 2014")
+lines(da2$Date, eq1$fitted.values[117:176], type = 'l', col = "Dark Green", lty = 2)
+text(15500, 15000, "Below trend")
+text(13800, 15500, "Boom")
+@
+\end{frame}
+
+
+\begin{frame}{Time series}
+\begin{itemize}[<+-| alert@+>]
+\item These are a series of data that change over time
+\item There are \emph{Stationary} and {Nonstationary} series
+\item There may be \emph{Deterministic} and {Stochastic} trends
+\item Data may be \emph{Pro-cyclical} and \emph{Counter-cyclical}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{GDP growth}
+<<GDP3, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.6>>=
+library(dplyr)
+names <- c("Date", "GDP", "PGDP")
+da <- read.csv("../Data/USGDP.csv", skip = 11)
+names(da) <- names
+da$Date <- as.Date(da$Date, format = "%Y-%m-%d")
+da <- da[97:272,-3]
+da3 <- da %>%
+  mutate(GDPL = lag(GDP)) %>%
+  mutate(DGDP = (GDP/GDPL-1)) 
+  plot(da3$Date, da3$DGDP, type = 'l', main = "US GDP growth", 
+       ylab = "Percentage change", xlab = "Date")
+@
+\end{frame}
+
+\begin{frame}{The business cycle}
+There are a number of explanations for the business cycle
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Household decisions
+\item Firm decisions
+\item Government decisions
+\item External decisions
+\item Confidence and expectations
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Business cycle models}
+\begin{itemize}[<+-| alert@+>]
+\item Supply side (new classical)
+\item Keynesian model
+\item Real business cycle
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Keynesian economics}
+\begin{block}{}
+\begin{quotation}
+The long run is a misleading guide to current affairs. In the long run we are all dead. Economists set themselves too easy, too useless a task if in tempestuous seasons they can only tell us that when the storm is long past, the ocean will be flat
+\end{quotation}
+J.M. Keynes
+\end{block}
+\end{frame}
+
+\begin{frame}{Keynesian concepts}
+There are a number of key Keynesian concepts
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Planned spending, saving or investment
+\item Actual spending, saving or investment
+\item Autonomous spending or expenditure
+\item Inflationary, deflationary or output gap
+\item Equilibrium (not Keynesian)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Keynesian cross 1}
+\begin{columns}[T]
+\begin{column}{.60\textwidth}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\node at (-0.35, 2) [above, rotate = 90] {Planned Expenditure};
+\node at (2, 0) [below] {Income and output};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{itemize}
+\item 45 degree is equilibrium 
+\item Planned spending = income and output
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Keynesian cross 2}
+In a closed economy with no government
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item $PE = C + I$
+\item I is an \emph{exogenous} variable that is determined by interest rates and business confidence
+\item C is a \emph{endogenous} variable that partly determined by income (Y)
+\item MPC is the \emph{Marginal propensity to consume}
+\item Assume that MPC is 0.8
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Consumption function}
+How is consumption determined? 
+\begin{block}{}
+\begin{equation*}
+C = A + MPC \times Y
+\end{equation*}
+\end{block}
+Where A is \emph{autonomous consumer spending}
+\end{frame}
+
+
+\begin{frame}{Keynesian cross 3}
+\begin{columns}[T]
+\begin{column}{.60\textwidth}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [thick] (0,1) to (3,2);
+\node at (-0.35, 2) [above, rotate = 90] {Planned Expenditure};
+\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+\node at (2, 0) [below] {Income and output};
+\node at (2.2, 1.4) {\small MPC = 0.8};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{itemize}
+\item $PE = A + MPC \times Y$ 
+\item Assume A = 200
+\item A is the intercept
+\item MPC is the slope 
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Finding equilibrium}
+For equilibrium
+\begin{block}{}
+\begin{align*}
+Y =& PE\\
+PE =& 200 + 0.8Y
+\end{align*}
+\end{block}
+This is the point where the two lines meet
+\end{frame}
+
+\begin{frame}{Finding equilibrium 2}
+Substitute Y for PE
+\begin{block}{}
+\begin{align*}
+Y =& 200 + 0.8Y\\
+Y-0.8Y =& 200\\
+Y(1-0.8) =& 200\\
+Y =& 200/1-0.8\\
+Y =& 1000
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Keynesian cross 4}
+\begin{columns}[T]
+\begin{column}{.60\textwidth}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [thick] (0,1) to (3,2);
+\node at (-0.35, 2) [above, rotate = 90] {Planned Expenditure};
+\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+\node at (2, 0) [below] {Income and output};
+\node at (2.2, 1.4) {\small MPC = 0.8};
+\draw [dashed] (1.5,0) to (1.5, 1.5);
+\draw [dashed] (0, 1.5) to (1.5, 1.5);
+\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\end{tikzpicture}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{itemize}
+\item Equilibrium where PE = Y 
+\item This is where Y is equal to 1000
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Adding business investment}
+If business investment is added
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item It is assumed to be exogenous and therefore not affected by Y
+\item Let $I = \textsterling 50m$
+\item Now $PE = 200 + 0.8Y + 50$
+\item Or $PE = 250 + 0.8Y$
+\item This is a parallel shift to previous line
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Keynesian cross 5}
+\begin{columns}[T]
+\begin{column}{.60\textwidth}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [dashed] (0,1) to (3,2);
+\draw [thick] (0,1.2) to (3,2.2);
+\node at (-0.35, 2) [above, rotate = 90] {Planned Expenditure};
+\node at (0, 0.4) [above, rotate = 90] {\small $A = 250$};
+\node at (2, 0) [below] {Income and output};
+\node at (2.4, 1.5) {\small MPC = 0.8};
+\draw [dashed] (1.8,0) to (1.8, 1.8);
+\draw [dashed] (0, 1.8) to (1.8, 1.8);
+\draw [fill = red] (1.8, 1.8) circle [radius = 0.05];
+\end{tikzpicture}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{itemize}
+\item There is a parallel shift in the PE function
+\item A is now $200 + 50 = 250$
+\item MPC and slope remains 0.8
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Adding government spending}
+If government spending is added
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item It is assumed to be exogenous and therefore not affected by Y
+\item Let $G = \textsterling 20m$
+\item Now $PE = 250 + 0.8Y + 20$
+\item Or $PE = 270 + 0.8Y$
+\item This is a parallel shift to previous line
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Keynesian cross 6}
+\begin{columns}[T]
+\begin{column}{.60\textwidth}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [dashed] (0,1.2) to (3,2.2);
+\draw [thick] (0,1.3) to (3,2.3);
+\node at (-0.35, 2) [above, rotate = 90] {Planned Expenditure};
+\node at (0, 0.4) [above, rotate = 90] {\small $A = 270$};
+\node at (2, 0) [below] {Income and output};
+\node at (2.5, 1.7) {\small MPC = 0.8};
+\draw [dashed] (1.9,0) to (1.9, 1.9);
+\draw [dashed] (0, 1.9) to (1.9, 1.9);
+\draw [fill = red] (1.9, 1.9) circle [radius = 0.05];
+\end{tikzpicture}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{itemize}
+\item There is a parallel shift in the PE function
+\item A is now $250 + 20 = 270$
+\item MPC and slope remains 0.8
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{For You}
+\begin{itemize}[<+-| alert@+>]
+\item Equilibrium was \textsterling 1000 when there was just consumer spending
+\item What is the equilibrium when business investment is added? 
+\item What is the equilibrium when government spending is added?
+\item What is the relationship between an increase in autonomous spending and equilibrium output, income and expenditure? 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{The multiplier 1}
+An increase in autonomous spending (Business investment or government) will \emph{multiply} through the economy. 
+\begin{block}{}
+\begin{equation*}
+\Delta Y = A + MPC \times A + MPC^2 \times A + MPC^3 \times A \dots
+\end{equation*}
+\end{block}
+This is equivalent to 
+\begin{block}{}
+\begin{equation*}
+\Delta Y = \frac{A}{1-MPC}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{The multiplier 2}
+MPS is the \emph{marginal propensity to save}
+\begin{block}{}
+\begin{equation*}
+1-MPC = MPS
+\end{equation*}
+\end{block}
+Therefore, 
+\begin{block}{}
+\begin{equation*}
+\Delta Y = \frac{A}{MPS}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Multiplier 3}
+A \textsterling 10m increase in autonomous spending (I or G)
+\begin{block}{}
+\begin{align*}
+\Delta Y &= \frac{A}{MPS}\\
+&= \frac{10}{0.2}\\
+&= 50
+\end{align*}
+\end{block}
+Leads to a \textsterling 50m increase in economic activity. 
+\end{frame}
+
+\end{document}
+\begin{itemize}[<+-| alert@+>]
