@@ -409,5 +409,15 @@ A \textsterling 10m increase in autonomous spending (I or G)
 Leads to a \textsterling 50m increase in economic activity. 
 \end{frame}
 
+\begin{frame}{Adding government and overseas}
+If the government and overseas sectors are added, taxation and imports reduce the power of the multiplier.  
+\begin{block}{}
+\begin{equation*}
+\Delta Y = \frac{1}{MPC + MPT + MPM}
+\end{equation*}
+\end{block}
+Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity to import. 
+\end{frame}
+
 \end{document}
 \begin{itemize}[<+-| alert@+>]

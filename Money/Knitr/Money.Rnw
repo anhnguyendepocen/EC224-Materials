@@ -21,7 +21,6 @@
 \title{Money and inflation}
 \author{Rob Hayward}
 
-
 \begin{document}
 
 \begin{frame}{Money, prices, inflation}
