@@ -1,0 +1,53 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+\usepackage{tikz}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{IS-LM}
+\author{Rob Hayward}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}{Reading}
+Reading
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Chapter 31: Keynesian Economics (p665 - 675 only)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{{IS=LM}
+IS-LM seeks to understand the interaction between two parts of the economy
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item The goods market: determined by investment-savings (IS)
+\item The money market: determined by liquidity-money (LM)
+\end{itemize}
+\pause
+After a number of years out of favour, IS-LM has returned.
+\end}frame}
+
+\begin{frame}{The goods market}
+
+}
+\end{document}
+\begin{itemize}[<+-| alert@+>]
