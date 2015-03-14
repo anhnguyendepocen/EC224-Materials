@@ -1,12 +1,17 @@
 .Rproj.user
 .Rhistory
 .RData
-Prodq1.synctex.gz
-**/.pdf
-**/.docx
-**/.log
-.pdf
-
+*.Prodq1.synctex.gz
+*.pdf
+*.docx
+*.log
+*.snm
+*.synctex.gz
+*.nav
+*.toc
+IS-LM/Knitr/IS-LM.nav
+*.tex
+IS-LM/Knitr/IS-LM.log
 Assignment/Countries.docx
 Assignment/EC224 Assignment 2015.docx
 Finance/Questions.pdf
