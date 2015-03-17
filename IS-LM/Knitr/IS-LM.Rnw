@@ -29,13 +29,12 @@
 
 \begin{frame}{Reading}
 Reading
-\pause
-\begin{itemize}[<+-| alert@+>]
+\begin{itemize}
 \item Chapter 31: Keynesian Economics (p665 - 675 only)
 \end{itemize}
 \end{frame}
 
-\begin{frame}{IS=LM}
+\begin{frame}{IS-LM}
 IS-LM seeks to understand the interaction between two parts of the economy
 \pause
 \begin{itemize}[<+-| alert@+>]
@@ -48,6 +47,7 @@ After a number of years out of favour, IS-LM has returned.
 
 \begin{frame}{The goods market}
 As we saw with the Keynesian cross, equilibrium comes at the point where planned expenditure equals output. 
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item When not at the equilibrium, output will be expanded to meet demand, or
 \item Output will be cut
@@ -89,7 +89,7 @@ PE may shift due to change in autonomous spending
 \item The multiplier takes effect
 \end{itemize}
 \pause
-The slope of the PE curve may shift due to changes in (MPS, MPT, MPI)
+The slope of the PE curve may shift due to changes in (MPS, MPT, MPM)
 \begin{itemize}[<+-| alert@+>]
 \item In this case the slope of PE changes
 \item Effect of the multiplier is increased or reduced
@@ -206,52 +206,6 @@ The demand for real money $\frac{M}{P}$ is negatively related to interest rates
 \end{itemize}
 \end{frame}
 
-\begin{frame}{The LM Curve 1}
-\begin{columns}[T]
-\begin{column}{.50\textwidth}
-\begin{tikzpicture}[scale = 1.5]
-\draw[very thin, color = gray](0, 0) grid (3, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
-  |- (3, 0) node (xaxis) [right] {$\frac{M}{P}$};
-\draw [dashed] (1,0) to (1,1.2); 
-\draw [dashed] (0, 1.2) to (1, 1.2);
-%\draw [dashed] (0.75, 0) to (0.75, 0.75);
-%\draw [dashed] (0.1,1) to (2.9,2);
-\draw [thick] (0.1, 2.9) to [out = -70, in = 150] (1.3, 1.0) to [out = -30, in = 180] (2.9, 0.5);
-\node at (2.9, 0.5) [above left] {\footnotesize MD};
-\draw [thick] (1, 0) to (1, 2.9);
-\node at (1, 2.9) [below right] {\footnotesize $MS_1$};
-%\draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
-\draw [fill = red] (1, 1.2) circle [radius = 0.05];
-\node at (1, 0) [below] {\footnotesize $M/P_1$};
-\node at (0, 1.2) [left] {\footnotesize $i_i$};
-%\node at (3, 1.5) [above left] {\footnotesize $i_2$};
-%\node at (-0.1, 2) [above, rotate = 90] {Planned Expenditure};
-%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
-%\node at (2, 0) [below] {Income and output};
-%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
-\end{tikzpicture}
-\end{column}
-\begin{column}{.50\textwidth}
-\begin{tikzpicture}[scale = 1.5]
-\draw[very thin, color = gray](0, 0) grid (3, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
-  |- (3, 0) node (xaxis) [right] {$Y$};
-\draw [thick] (0.1, 0.5) to (2.9,2.5);
-\draw [dashed] (0, 1.2) to (1.1, 1.2);
-\draw [dashed] (1.1, 0) to (1.1, 1.2);
-\node at (1.1, 0) [below] {\footnotesize $y_1$};
-\node at (0, 1.2) [left] {\footnotesize $i_1$};
-\draw [fill = red] (1.1, 1.2) circle [radius = 0.05];
-\node at (2.9, 2.4) [above left] {\footnotesize LM};
-%\node at (-0.1, 2) [above, rotate = 90] {Interest rate};
-%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
-%\node at (2, 0) [below] {GDP};
-%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
-\end{tikzpicture}
-\end{column}
-\end{columns}
-\end{frame}
 
 \begin{frame}{LM curve 2}
 This provides all the points of equilibrium in the money market
@@ -488,8 +442,8 @@ An increase in money
 \begin{frame}{Comparison of fiscal-monetary policy 1}
 \begin{itemize}[<+-| alert@+>]
 \item \textbf{Fiscal policy is less effective}
-\item Demand for money will increase and raise interest rates, reducing affecting business investment and household spending
-\item \text{Monetary policy is more effective}
+\item Demand for money will increase and raise interest rates, reducing business investment and household spending
+\item \textbf{Monetary policy is more effective}
 \item Supply of money will reduce interest rates, raising business investment and household consumption
 \end{itemize}
 \end{frame}
@@ -498,9 +452,9 @@ An increase in money
 However
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item \text{The central bank may \emph{accommodate} the fiscal expansion}
+\item{The central bank may \emph{accommodate} the fiscal expansion}
 \item In this case, the fiscal policy will be more powerful
-\item \text{The central bank may offset the fiscal expansion}
+\item The central bank may offset the fiscal expansion
 \item In this case there will effect on output
 \end{itemize}
 \end{frame}
@@ -633,6 +587,15 @@ IS-LM model can be used to understand more about
 \node at (2.85, 0) [below] {$y_3$};
 \node at (0, 1.86) [left] {$i_3$};
 \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Summing up}
+\begin{itemize}[<+-| alert@+>]
+\item This is a \emph{General Equilibrium} model
+\item It is useful in a world of quantitative easing
+\item Economic arguments relate to the power of monetary and fiscal policy
+\item This depends on the gradient of the IS and LM curves
+\end{itemize}
 \end{frame}
 \end{document}
 \begin{itemize}[<+-| alert@+>]

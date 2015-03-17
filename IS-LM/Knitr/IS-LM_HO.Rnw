@@ -1,0 +1,602 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+\usepackage{tikz}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{IS-LM}
+\author{Rob Hayward}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}{Reading}
+Reading
+\begin{itemize}
+\item Chapter 31: Keynesian Economics (p665 - 675 only)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{IS-LM}
+IS-LM seeks to understand the interaction between two parts of the economy
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item The goods market: determined by investment-savings (IS)
+\item The money market: determined by liquidity-money (LM)
+\end{itemize}
+\pause
+After a number of years out of favour, IS-LM has returned.
+\end{frame}
+
+\begin{frame}{The goods market}
+As we saw with the Keynesian cross, equilibrium comes at the point where planned expenditure equals output. 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item When not at the equilibrium, output will be expanded to meet demand, or
+\item Output will be cut
+\item Each of these will lead to a change in income 
+\item This will also affect planned expenditure
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Goods market equilibrium}
+\begin{columns}[T]
+\begin{column}{.60\textwidth}
+\begin{tikzpicture}[scale = 1.82]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [thick] (0,1) to (3,2);
+\node at (-0.35, 2) [above, rotate = 90] {Planned Expenditure};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+\node at (2, 0) [below] {Income and output};
+\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{itemize}
+\item $PE = C + I + G  + NX$ 
+\item PE may move up or down
+\item PE slope may shift
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Equilibrium in the goods market}
+PE may shift due to change in autonomous spending 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item In this case there is a parallel shift upwards or downwards 
+\item The multiplier takes effect
+\end{itemize}
+\pause
+The slope of the PE curve may shift due to changes in (MPS, MPT, MPM)
+\begin{itemize}[<+-| alert@+>]
+\item In this case the slope of PE changes
+\item Effect of the multiplier is increased or reduced
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Effect of an interest rate change}
+A change (upwards) in interest rates has the following effects
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Savings (up)
+\item Business Investment (down)
+\item Government (not sure, maybe down)
+\item Net exports (down)
+\end{itemize}
+\pause
+Overall, this will reduce autonomous spending and shift the PE curve downwards
+\end{frame}
+
+\begin{frame}{The IS curve}
+\begin{columns}[T]
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [dashed] (0, 1.5) to (1.5, 1.5);
+\draw [dashed] (1.5, 0) to (1.5, 1.5);
+\draw [thick] (0.1,1) to (2.9,2);
+\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\node at (1.5, 0) [below] {\footnotesize $y_1$};
+\node at (0, 1.5) [left] {\footnotesize $PE_1$};
+\node at (3, 2) [above left] {\footnotesize $i_1$};
+%\node at (-0.1, 2) [above, rotate = 90] {Planned Expenditure};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {Income and output};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [thick] (0.1,2.5) to (2.9,0.5);
+\draw [dashed] (0, 1.5) to (1.5, 1.5);
+\draw [dashed] (1.5, 0) to (1.5, 1.5);
+\node at (1.5, 0) [below] {\footnotesize $y_1$};
+\node at (0, 1.5) [left] {\footnotesize $i_1$};
+\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\node at (2.9, 0.5) [below left] {\footnotesize IS};
+%\node at (-0.1, 2) [above, rotate = 90] {Interest rate};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {GDP};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Increased interest rate}
+\begin{columns}[T]
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$PE$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [dashed] (0,0) to (3,3); 
+\draw [dashed] (0, 0.75) to (0.75, 0.75);
+\draw [dashed] (0.75, 0) to (0.75, 0.75);
+%\draw [dashed] (0.1,1) to (2.9,2);
+\draw [thick] (0.1, 0.5) to (2.9, 1.5);
+\draw [fill = red] (0.75, 0.75) circle [radius = 0.05];
+\node at (0.75, 0) [below] {\footnotesize $y_2$};
+\node at (0, 0.75) [left] {\footnotesize $PE_2$};
+\node at (3, 1.5) [above left] {\footnotesize $i_2$};
+%\node at (-0.1, 2) [above, rotate = 90] {Planned Expenditure};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {Income and output};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [thick] (0.1,2.5) to (2.9,0.5);
+\draw [dashed] (0, 2) to (0.75, 2);
+\draw [dashed] (0.75, 0) to (0.75, 2);
+\node at (0.75, 0) [below] {\footnotesize $y_2$};
+\node at (0, 2) [left] {\footnotesize $i_2$};
+\draw [fill = red] (0.75, 2) circle [radius = 0.05];
+\node at (2.9, 0.5) [below left] {\footnotesize IS};
+%\node at (-0.1, 2) [above, rotate = 90] {Interest rate};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {GDP};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{LM curve}
+The demand for real money $\frac{M}{P}$ is negatively related to interest rates
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item There is an \emph{opportunity cost of holding money}
+\item There is dispute over how important the interest rate effect is
+\item A precautionary or savings demand for money may be more important. 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{LM curve 2}
+This provides all the points of equilibrium in the money market
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item This is the point where the demand for money is equal to the amount of money supplied by the central bank
+\item If national income increases, the (transaction) demand for money will increase
+\item This will require a higher interest rate to ration the given supply of money
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The LM Curve 2}
+\begin{columns}[T]
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (3, 0) node (xaxis) [right] {$\frac{M}{P}$};
+\draw [dashed] (1,0) to (1,1.2); 
+\draw [dashed] (0, 1.2) to (1, 1.2);
+%\draw [dashed] (0.75, 0) to (0.75, 0.75);
+%\draw [dashed] (0.1,1) to (2.9,2);
+\draw [thick] (0.1, 2.9) to [out = -70, in = 150] (1.3, 1.0) to [out = -30, in = 180] (2.9, 0.5);
+\node at (2.9, 0.5) [above left] {\footnotesize $MD_1$};
+\draw [thick] (1, 0) to (1, 2.9);
+\node at (1, 2.9) [below right] {\footnotesize $MS_1$};
+%\draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
+\draw [fill = red] (1, 1.2) circle [radius = 0.05];
+\node at (1, 0) [below] {\footnotesize $M/P_1$};
+\node at (0, 1.2) [left] {\footnotesize $i_1$};
+%\node at (3, 1.5) [above left] {\footnotesize $i_2$};
+%\node at (-0.1, 2) [above, rotate = 90] {Planned Expenditure};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {Income and output};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [thick] (0.1, 0.5) to (2.9,2.5);
+\draw [dashed] (0, 1.2) to (1.1, 1.2);
+\draw [dashed] (1.1, 0) to (1.1, 1.2);
+\node at (1.1, 0) [below] {\footnotesize $y_1$};
+\node at (0, 1.2) [left] {\footnotesize $i_1$};
+\draw [fill = red] (1.1, 1.2) circle [radius = 0.05];
+\node at (2.9, 2.4) [above left] {\footnotesize $LM$};
+%\node at (-0.1, 2) [above, rotate = 90] {Interest rate};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {GDP};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{The LM Curve 3}
+\begin{columns}[T]
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (3, 0) node (xaxis) [right] {$\frac{M}{P}$};
+\draw [dashed] (1,0) to (1,1.2); 
+\draw [dashed] (0, 1.65) to (1, 1.65);
+%\draw [dashed] (0.75, 0) to (0.75, 0.75);
+%\draw [dashed] (0.1,1) to (2.9,2);
+\draw [thick] (0.5, 2.9) to [out = -70, in = 150] (1.7, 1.0) to [out = -30, in = 180] (2.9, 0.8);
+\node at (2.9, 0.8) [above left] {\footnotesize $MD_2$};
+\draw [thick] (1, 0) to (1, 2.9);
+\node at (1, 2.9) [below right] {\footnotesize $MS_1$};
+%\draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
+\draw [fill = red] (1, 1.65) circle [radius = 0.05];
+\node at (1, 0) [below] {\footnotesize $M/P_1$};
+\node at (0, 1.65) [left] {\footnotesize $i_i$};
+%\node at (3, 1.5) [above left] {\footnotesize $i_2$};
+%\node at (-0.1, 2) [above, rotate = 90] {Planned Expenditure};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {Income and output};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\begin{column}{.50\textwidth}
+\begin{tikzpicture}[scale = 1.5]
+\draw[very thin, color = gray](0, 0) grid (3, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (3, 0) node (xaxis) [right] {$Y$};
+\draw [thick] (0.1, 0.5) to (2.9,2.5);
+\draw [dashed] (0, 1.64) to (1.65, 1.64);
+\draw [dashed] (1.65, 0) to (1.65, 1.64);
+\node at (1.65, 0) [below] {\footnotesize $y_2$};
+\node at (0, 1.64) [left] {\footnotesize $i_2$};
+\draw [fill = red] (1.65, 1.64) circle [radius = 0.05];
+\node at (2.9, 2.4) [above left] {\footnotesize LM};
+%\node at (-0.1, 2) [above, rotate = 90] {Interest rate};
+%\node at (0, 0.4) [above, rotate = 90] {\small $A = 200$};
+%\node at (2, 0) [below] {GDP};
+%\node at (2.2, 1.4) {\tiny PE = C + I + G + NX};
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{IS-LM}
+Putting the IS-LM together gives the places where there is equilibrium in the goods market and equilibrium in the money market. 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Shifts in the IS curve are caused by changes in autonomous spending
+\item Shifts in the LM curve are caused by changes in money supply or demand
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{IS-LM}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1, 2.4) {$IS_1$};
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\node at (2.71, 0) [below] {$y^*$};
+\node at (0, 1.42) [left] {$i^*$};
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{An increase in government spending}
+An increase in government spending
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Will shift the PE curve and change the point of equilibrium in the goods market
+\item This will cause a shift in the IS curve
+\item There is a move along the LM curve
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Increased government spending 1}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1, 2.4) {$IS_1$};
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\node at (2.71, 0) [below] {$y_1$};
+\node at (0, 1.42) [left] {$i_1$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Increased government spending 2}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (1.4, 2.5) to (4.8, 1.0);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1.2, 2.4) {$IS_1$};
+\draw [dashed] (3.2, 0) to (3.2, 1.7);
+\draw [dashed] (0, 1.7) to (3.2, 1.7);
+\draw [fill = red] (3.2, 1.7) circle [radius = 0.05];
+\node at (3.2, 0) [below] {$y_2$};
+\node at (0, 1.7) [left] {$i_2$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{An increase in money}
+An increase in money 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Will shift the money supply
+\item It will reduce rates 
+\item It will shift the LM curve
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Increased money supply 1}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1, 2.4) {$IS_1$};
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\node at (2.71, 0) [below] {$y_1$};
+\node at (0, 1.42) [left] {$i_1$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Increased money supply 2}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (1, 0.25) to (4.8, 1.8);
+\node at (4.3, 1.8) {$LM_2$};
+\node at (1, 2.4) {$IS_1$};
+\draw [dashed] (3.25, 0) to (3.25, 1.15);
+\draw [dashed] (0, 1.15) to (3.25, 1.15);
+\draw [fill = red] (3.25, 1.15) circle [radius = 0.05];
+\node at (3.25, 0) [below] {$y_2$};
+\node at (0, 1.15) [left] {$i_2$};
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}{Comparison of fiscal-monetary policy 1}
+\begin{itemize}[<+-| alert@+>]
+\item \textbf{Fiscal policy is less effective}
+\item Demand for money will increase and raise interest rates, reducing business investment and household spending
+\item \textbf{Monetary policy is more effective}
+\item Supply of money will reduce interest rates, raising business investment and household consumption
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparison of fiscal-monetary policy 2}
+However
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item{The central bank may \emph{accommodate} the fiscal expansion}
+\item In this case, the fiscal policy will be more powerful
+\item The central bank may offset the fiscal expansion
+\item In this case there will effect on output
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fiscal policy-monetary accommodation 1}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1, 2.4) {$IS_1$};
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\node at (2.71, 0) [below] {$y_1$};
+\node at (0, 1.42) [left] {$i_1$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Fiscal policy-monetary accommodation 2}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (1.4, 2.5) to (4.8, 1.0);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1.2, 2.4) {$IS_2$};
+\draw [dashed] (3.2, 0) to (3.2, 1.7);
+\draw [dashed] (0, 1.7) to (3.2, 1.7);
+\draw [fill = red] (3.2, 1.7) circle [radius = 0.05];
+\node at (3.2, 0) [below] {$y_2$};
+\node at (0, 1.7) [left] {$i_2$};
+\end{tikzpicture}
+\end{frame}
+
+
+
+
+\begin{frame}{Fiscal policy-monetary accommodation 3}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (1.4, 2.5) to (4.8, 1.0);
+%\draw[dashed] (0.5, 0.25) to (4.8, 2.5);
+\draw[thick] (1, 0.25) to (4.8, 1.8);
+%\node at (4.4, 2.5) {$LM_1$};
+\node at (4.5, 2.0) {$LM_2$};
+\node at (1.2, 2.3) {$IS_2$};
+\draw [dashed] (3.9, 0) to (3.9, 1.4);
+\draw [dashed] (0, 1.4) to (3.9, 1.4);
+%\cover<2>{\draw [fill = red] (3.2, 1.7) circle [radius = 0.05];}
+\draw [fill = red] (3.9, 1.4) circle [radius = 0.05];
+\node at (3.9, 0) [below] {$y_3$};
+\node at (0, 1.4) [left] {$i_3$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Extension and uses}
+IS-LM model can be used to understand more about 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Interactions between money market and goods market
+\item Changes autonomous spending (business investment, government and exports)
+\item Changes in tax and in the propensity to save and export
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fiscal policy with monetary offset 1}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};;
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (0.5, 2.5) to (4.8, 0.4);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1, 2.4) {$IS_1$};
+\draw [dashed] (2.71, 0) to (2.71, 1.42);
+\draw [dashed] (0, 1.42) to (2.71, 1.42);
+\draw [fill = red] (2.71, 1.42) circle [radius = 0.05];
+\node at (2.71, 0) [below] {$y_1$};
+\node at (0, 1.42) [left] {$i_1$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Fiscal policy with monetary offset 2}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (1.4, 2.5) to (4.8, 1.0);
+\draw[thick] (0.5, 0.25) to (4.8, 2.5);
+\node at (4.4, 2.5) {$LM_1$};
+\node at (1.2, 2.4) {$IS_2$};
+\draw [dashed] (3.2, 0) to (3.2, 1.7);
+\draw [dashed] (0, 1.7) to (3.2, 1.7);
+\draw [fill = red] (3.2, 1.7) circle [radius = 0.05];
+\node at (3.2, 0) [below] {$y_2$};
+\node at (0, 1.7) [left] {$i_2$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Fiscal policy with monetary offset 3}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$i$} 
+  |- (5, 0) node (xaxis) [right] {$Y$};
+%\draw[thick] (0.5, 2.5) to [out = -60, in = 160] (2.5, 0.8) to [out = -20, in = 175] (5, 0.4);
+%\draw[thick] (0.5, 0.25) to [out = 0, in = 200] (3.5, 1) to [out = 20, in = 220] (5, 2);
+\draw[thick] (1.4, 2.5) to (4.8, 1.0);
+\draw[thick] (0.5, 0.75) to (4.8, 2.8);
+\node at (4.2, 2.8) {$LM_2$};
+\node at (1.2, 2.4) {$IS_2$};
+\draw [dashed] (2.85, 0) to (2.85, 1.86);
+\draw [dashed] (0, 1.86) to (2.85, 1.86);
+\draw [fill = red] (2.85, 1.86) circle [radius = 0.05];
+\node at (2.85, 0) [below] {$y_3$};
+\node at (0, 1.86) [left] {$i_3$};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Summing up}
+\begin{itemize}[<+-| alert@+>]
+\item This is a \emph{General Equilibrium} model
+\item It is useful in a world of quantitative easing
+\item Economic arguments relate to the power of monetary and fiscal policy
+\item This depends on the gradient of the IS and LM curves
+\end{itemize}
+\end{frame}
+\end{document}
+\begin{itemize}[<+-| alert@+>]
+

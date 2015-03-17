@@ -9,7 +9,8 @@
 \usepackage{amsmath}
 \bibliographystyle{agsm}
 \usepackage{tikz}
-% Specify base color
+\usetikzlibrary{arrows,positioning} 
+%Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
 
@@ -498,4 +499,5 @@ Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity t
 \end{frame}
 
 \end{document}
+>>>>>>> 05b5801c9b096f2827e502e9e16c9ffb3e8414d8
 \begin{itemize}[<+-| alert@+>]
