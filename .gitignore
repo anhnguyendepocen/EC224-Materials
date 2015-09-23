@@ -9,6 +9,7 @@
 *.synctex.gz
 *.nav
 *.toc
+*.tmp
 IS-LM/Knitr/IS-LM.nav
 *.tex
 IS-LM/Knitr/IS-LM.log
@@ -50,3 +51,4 @@ Regression/Data/USPhil(Complete).xlsx
 Regression/Knitr/Regression.pdf
 Money/Knitr/MonQuestions.log
 Money/Knitr/MonQuestions.synctex.gz
+*pdf
