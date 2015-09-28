@@ -44,7 +44,7 @@ Economic man will make rational choice.
 \begin{tikzpicture}
 \draw [help lines] (0, 0) grid (5, 5);
 \draw [<->, thick] (0, 5) node (yaxis) [above] {$A$} 
-  |- (5, 0) node (xaxis) [right] {$B$};;
+  |- (5, 0) node (xaxis) [right] {$B$};
 \draw (4, 0) -- (0, 4);
 \draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
 \draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
@@ -87,10 +87,10 @@ I_1 = \frac{MU_A}{MU_B}
 \begin{tikzpicture}
 \draw [help lines] (0, 0) grid (5, 5);
 \draw [<->, thick] (0, 5) node (yaxis) [above] {$A$} 
-  |- (5, 0) node (xaxis) [right] {$B$};;
+  |- (5, 0) node (xaxis) [right] {$B$};
 \draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
 \draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
-\draw (4, 0) -- (0, 4)[]
+\draw (4, 0) -- (0, 4)[];
 \node [below] at (1, 0)  {1};
 \node [below] at (2, 0) {2};
 \node [below] at (3, 0) {3};
@@ -102,10 +102,16 @@ I_1 = \frac{MU_A}{MU_B}
 \node [left] at (0, 4) {4};
 \node [left] at (0, 5) {5};
 \node [right] at (1.5, 3.5) {$I_1$};
-\pause
 \draw (3, 0) -- (0, 4);
-\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.0, 1.5);
-\draw [dashed, ultra thick] (2.0 1.5) to [out = -45, in = 160] (4.2, 0.5);
+\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
+\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
+\pause
+\draw [dashed, ultra thick] (1.2, 3.5) to [out = -80, in = 145] (1.9, 1.6);
+\draw [dashed, ultra thick] (1.9, 1.6) to [out = -45, in = 160] (4.2, 0.3);
+\node at (1.0, 3.5) {$I_2$};
+\pause
+\draw [dashed, thin] (1.6, 0) to (1.6, 1.8);
+\draw [dashed, thin] (0, 1.8) to (1.6, 1.8);
 \end{tikzpicture}
 \end{column}
 \begin{column}{0.48\linewidth}
@@ -124,5 +130,56 @@ I_1 = \frac{MU_A}{MU_B}
 \end{columns}
 \end{frame}
 
+\begin{frame}{Substitution and income effects}
+Unsurprisingly, the demand for good B falls as the price increases.  There are two aspects to this. 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \textbf{Substitution effect}: there is a switch towards a cheaper product.  
+\item \textbf{Income effect}: incresae in price reduces disposible income and overall consumption
+\end{itemize}
+\pause
+There effects may not always move in the same direction.
+\end{frame}
+
+\begin{frame}{Substitution and income effects}
+
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (9, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$A$} 
+  |- (9, 0) node (xaxis) [right] {$B$};
+\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
+\draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
+\draw (4, 0) -- (0, 4)[];
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [below] at (6, 0) {6};
+\node [below] at (7, 0) {7};
+\node [below] at (8, 0) {8};
+\node [below] at (9, 0) {9};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [left] at (0, 6) {6};
+\node [right] at (1.5, 3.5) {$I_1$};
+\draw (8, 0) -- (0, 5);
+\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
+\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
+\pause
+\draw [dashed, ultra thick] (1.2, 3.5) to [out = -80, in = 145] (1.9, 1.6);
+\draw [dashed, ultra thick] (1.9, 1.6) to [out = -45, in = 160] (4.2, 0.3);
+\node at (1.0, 3.5) {$I_2$};
+\pause
+\draw [dashed, thin] (1.6, 0) to (1.6, 1.8);
+\draw [dashed, thin] (0, 1.8) to (1.6, 1.8);
+\end{tikzpicture}
+\end{frame}
+
+
 \end{document}
+
 

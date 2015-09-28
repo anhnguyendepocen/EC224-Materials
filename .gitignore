@@ -52,3 +52,5 @@ Regression/Knitr/Regression.pdf
 Money/Knitr/MonQuestions.log
 Money/Knitr/MonQuestions.synctex.gz
 *pdf
+*.doc
+*.docx
