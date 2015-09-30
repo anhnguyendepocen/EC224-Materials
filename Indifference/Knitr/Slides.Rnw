@@ -25,30 +25,64 @@
 \titlepage
 \end{frame}
 
-
-\section{Classsic analysis of consumer behaviour}
+\section{Introduction}
 \begin{frame}{Introduction}
 Economic person will make rational choice.  
-\begin{itemize}[<+-| alert@+>]
-\item Diminishing marginal utility
-\item Demand for one product
-\item Demand for two or more produdcts
-\item Effect of price or income changes
-\item Infference analysis
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Behavioural critiques}
-Classic analysis has been criticised
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item Can people process information in this calculating fashion?
-\item Khaneman and Tversky and \emph{behavioural economics}
-\item Long run?
-\item Learning?
+\item Rationality
+\item Utility
+\item Diminishing marginal utility
+\item Infference analysis
+\item Effect of price or income changes
 \end{itemize}
 \end{frame}
 
+\section{Classsic analysis of consumer behaviour}
+\begin{frame}{Utility}
+Utility is something between happiness and contentedness
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Assumes that people know perferences
+\item Classical theory based on ordinal utility
+\item \emph{Opportunity cost} is the sacrafice made
+\item Term \emph{rational} is limited relative to everyday use
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Diminishing marginal utiliTy 1}
+\begin{itemize}[<+-| alert@+>]
+\item Increased consumption will \emph{usually} bring smaller increments of pleasure
+\item Saturation can be reached
+\item The relationship between utilty and the consumption of one particular good or service can be expressed as $U = a + bX_1$
+\item $U_x$ is the utility produced by consumption of good $X$, $X$ is the amount of good $X$ consumed
+\end{itemize}
+\end{frame}
+
+\begin{frame}{DIminising marginal utility 2}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (9, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$U$} 
+  |- (9, 0) node (xaxis) [right] {$X$};
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [below] at (6, 0) {6};
+\node [below] at (7, 0) {7};
+\node [below] at (8, 0) {8};
+\node [below] at (9, 0) {9};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [left] at (0, 6) {6};
+\draw [olive, thick, domain = 0:9] plot (\x, {0 + 1.2* \x - 0.06 * \x^2});
+\end{tikzpicture}
+\end{frame}
 \begin{frame}{Indifference}
 \begin{columns}[T]
 \begin{column}{0.48\textwidth}
@@ -322,6 +356,18 @@ To find the income effect
 \item What are the indiffernece curves for perfect complients?
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Behavioural critiques}
+Classic analysis has been criticised
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Can people process information in this calculating fashion?
+\item Khaneman and Tversky and \emph{behavioural economics}
+\item Long run?
+\item Learning?
+\end{itemize}
+\end{frame}
+
 \end{document}
 
 

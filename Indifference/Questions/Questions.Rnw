@@ -1,0 +1,29 @@
+\documentclass[12pt]{hitec} 
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage[flushleft]{threeparttable}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+\hypersetup{urlcolor=blue, colorlinks=true} 
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.95}
+\lstset{backgroundcolor=\color{mygrey}}
+\begin{document}
+\author{Rob Hayward}
+\title{Consumption questions}
+
+\maketitle
+
+\section*{Introduction} 
+Please answer the following questions as we proceed. 
+\begin{enumerate}
+\item Write down an equation of the form $y = a + bx$ that will give you \emph{diminishing marginal utility}.  We will test this in the lab. 
+\vspace{5cm}
+\item What is the equation for the particular curve that I have drawn (in the domain of x = 0:9, y = 0:6)
+\vspace{5cm}
+\enumerate 
+\end{enumerate}
+\end{document}
