@@ -33,34 +33,34 @@ Economic person will make rational choice.
 \item Rationality
 \item Utility
 \item Diminishing marginal utility
-\item Infference analysis
+\item Indifference analysis
 \item Effect of price or income changes
 \end{itemize}
 \end{frame}
 
-\section{Classsic analysis of consumer behaviour}
+\section{Classic analysis of consumer behaviour}
 \begin{frame}{Utility}
 Utility is something between happiness and contentedness
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item Assumes that people know perferences
+\item Assumes that people know preferences
 \item Classical theory based on ordinal utility
-\item \emph{Opportunity cost} is the sacrafice made
+\item \emph{Opportunity cost} is the sacrifice made
 \item Term \emph{rational} is limited relative to everyday use
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Diminishing marginal utiliTy 1}
+\begin{frame}{Diminishing marginal utility 1}
 \begin{itemize}[<+-| alert@+>]
 \item Increased consumption will \emph{usually} bring smaller increments of pleasure
 \item Saturation can be reached
-\item The relationship between utilty and the consumption of one particular good or service can be expressed as $U = a + bX_1$
+\item The relationship between utility and the consumption of one particular good or service can be expressed as $U = a + bX_1$
 \item $U_x$ is the utility produced by consumption of good $X$, $X$ is the amount of good $X$ consumed
 \end{itemize}
 \end{frame}
 
-\begin{frame}{DIminising marginal utility 2}
+\begin{frame}{Diminishing marginal utility 2}
 \begin{tikzpicture}
 \draw [help lines] (0, 0) grid (9, 6);
 \draw [<->, thick] (0, 6) node (yaxis) [above] {$U$} 
@@ -246,7 +246,7 @@ Unsurprisingly, the demand for good B falls as the price increases.  There are t
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item \textbf{Substitution effect}: there is a switch towards a cheaper product.  
-\item \textbf{Income effect}: incresae in price reduces disposible income and overall consumption
+\item \textbf{Income effect}: increase in price reduces disposable income and overall consumption
 \end{itemize}
 \pause
 There effects may not always move in the same direction.
@@ -350,10 +350,10 @@ To find the income effect
 
 \begin{frame}{Applications}
 \begin{itemize}[<+-| alert@+>]
-\item Can shosw the relatioknship between demand and price of goods
-\item Can show teh relatinship between demand and income
-\item What are the indifference curves for perfect subtitutes? 
-\item What are the indiffernece curves for perfect complients?
+\item Can show the relationship between demand and price of goods
+\item Can show the relationship between demand and income
+\item What are the indifference curves for perfect substitutes? 
+\item What are the indifference curves for perfect compliments?
 \end{itemize}
 \end{frame}
 
@@ -362,7 +362,7 @@ Classic analysis has been criticised
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item Can people process information in this calculating fashion?
-\item Khaneman and Tversky and \emph{behavioural economics}
+\item Kahneman and Tversky and \emph{behavioural economics}
 \item Long run?
 \item Learning?
 \end{itemize}
