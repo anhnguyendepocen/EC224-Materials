@@ -27,7 +27,7 @@
 
 \section{Introduction}
 \begin{frame}{Introduction}
-Economic person will make rational choice.  
+The economic person will make a rational choice.  
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item Rationality
