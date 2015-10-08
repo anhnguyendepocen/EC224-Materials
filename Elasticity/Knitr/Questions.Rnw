@@ -1,0 +1,30 @@
+\documentclass[12pt]{hitec} 
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage[flushleft]{threeparttable}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{tikz}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+\hypersetup{urlcolor=blue, colorlinks=true} 
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.95}
+\lstset{backgroundcolor=\color{mygrey}}
+\begin{document}
+\author{Rob Hayward}
+\title{Elasticity}
+
+\maketitle
+
+\section*{Questions} 
+Please answer the following questions. 
+
+I think that it woudl be good to combine some questions on price discrimination with the elasticity file
+\begin{enumerate}
+
+
+\end{enumerate}
+
+\end{document}

@@ -29,6 +29,7 @@
 \section{Introduction}
 \begin{frame}{Introduction}
 Economics is all about relationships between variables.  We will look at three main types.  These all assess the change in demand.  Remember, demand will fall as the price increases.  Elasticity attempts to quantify that relationship.
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Price-elasticity of demand
 \item Income elasticity of demand
@@ -37,7 +38,8 @@ Economics is all about relationships between variables.  We will look at three m
 \end{frame}
 
 \begin{frame}{Determinants of elasticity}
-Five factors determine elasticity.
+Five factors determine elasticity of demand.
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Availability of substitutes
 \item Necessities vs luxuries
@@ -79,6 +81,7 @@ ped &= \frac{-2}{4}\\
 
 \begin{frame}{Measuring elasticity}
 There are two ways of measuring elasticity 
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Mid-point or arc elasticity of demand
 \item Point elasticity of demand
@@ -87,6 +90,7 @@ There are two ways of measuring elasticity
 
 \begin{frame}{Example}
 If there are two points
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Point A:  P = 4, Q = 120
 \item Point B: P = 6, Q = 80
@@ -260,6 +264,7 @@ Positive relationship for substitutes and negative for compliments.
 \begin{frame}{Importance of elasticity}
 Why care about elasticity?
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Monopolist should raise prices while demand is inelastic and drop them when demand is elastic
 \item Indirect tax
 \item Luxury or normal or inferior goods
@@ -274,6 +279,7 @@ Why care about elasticity?
 \begin{frame}{Price Discrimination}
 Charging different prices for the same product
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item There must be some element of market power
 \item perfect price discrimination will change a unique price to each buyer
 \item Related to market segmentation
@@ -289,9 +295,10 @@ Charging different prices for the same product
 
 
 
-\begin{frame}{Perice elasticity of supply}
+\begin{frame}{Price elasticity of supply}
 Factors that affect the response of supply to a change in price
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item The time period
 \item Productive capacity
 \item The size of the firm/industry

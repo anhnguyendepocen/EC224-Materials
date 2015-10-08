@@ -1,0 +1,373 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{multirow}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{Consumer Behaviour}
+\author{Rob Hayward}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Introduction}
+The economic person will make a rational choice.  
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Rationality
+\item Utility
+\item Diminishing marginal utility
+\item Indifference analysis
+\item Effect of price or income changes
+\end{itemize}
+\end{frame}
+
+\section{Classic analysis of consumer behaviour}
+\begin{frame}{Utility}
+Utility is something between happiness and contentedness
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Assumes that people know preferences
+\item Classical theory based on ordinal utility
+\item \emph{Opportunity cost} is the sacrifice made
+\item Term \emph{rational} is limited relative to everyday use
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Diminishing marginal utility 1}
+\begin{itemize}[<+-| alert@+>]
+\item Increased consumption will \emph{usually} bring smaller increments of pleasure
+\item Saturation can be reached
+\item The relationship between utility and the consumption of one particular good or service can be expressed as $U = a + bX_1$
+\item $U_x$ is the utility produced by consumption of good $X$, $X$ is the amount of good $X$ consumed
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Diminishing marginal utility 2}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (9, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$U$} 
+  |- (9, 0) node (xaxis) [right] {$X$};
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [below] at (6, 0) {6};
+\node [below] at (7, 0) {7};
+\node [below] at (8, 0) {8};
+\node [below] at (9, 0) {9};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [left] at (0, 6) {6};
+\draw [olive, thick, domain = 0:9] plot (\x, {0 + 1.2* \x - 0.06 * \x^2});
+\end{tikzpicture}
+\end{frame}
+\begin{frame}{Indifference}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (5, 5);
+\draw [<->, thick] (0, 5) node (yaxis) [above] {$A$} 
+  |- (5, 0) node (xaxis) [right] {$B$};
+\draw (4, 0) -- (0, 4);
+\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
+\draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [right] at (1.5, 3.5) {$I_1$};
+\pause
+\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
+\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
+\end{tikzpicture}
+\end{column}
+\begin{column}{0.48\linewidth}
+There are two products 
+\begin{itemize}
+\item Price of (A) = 3
+\item Price of (B) = 3
+\item Budget = 12
+\item Can buy $\frac{12}{3} = 4A$
+\item Can buy $\frac{12}{3} = 4B$
+\end{itemize}
+\begin{equation*}
+I_1 = \frac{MU_A}{MU_B}
+\end{equation*}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Marginal analysis}
+\begin{block}{Marginal Utility of A}
+$MU_A = \frac{\delta U}{\delta A}$ 
+\end{block}
+and
+\begin{block}{Marginal Utility of B}
+$MU_B = \frac{\delta U}{\delta B}$
+\end{block}
+\begin{block}{}
+$\frac{MU_A}{MU_B} = $ ratio of marginal utilities
+\end{block}
+\end{frame}
+
+\begin{frame}{Ratio of marginal utility}
+If
+\begin{itemize}[<+-| alert@+>]
+\item $MU_A > MU_B$ substitute one unit of A for B to increase utility
+\item $MU_A < MU_B$ substitute one unit of B for A to increase utility
+\end{itemize}
+\pause
+The key question is
+\pause
+\begin{block}{}
+Can this be done?
+\end{block}
+\end{frame}
+
+\begin{frame}{Indifference and budget lines}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (5, 5);
+\draw [<->, thick] (0, 5) node (yaxis) [above] {$A$} 
+  |- (5, 0) node (xaxis) [right] {$B$};
+\draw (4, 0) -- (0, 4);
+\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
+\draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [right] at (1.5, 3.5) {$I_1$};
+\pause
+\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
+\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
+\end{tikzpicture}
+\end{column}
+\begin{column}{0.48\linewidth}
+\begin{itemize}
+\item Slope of the budget line is $\frac{-1}{1} = -1$
+\item Slope of the indifference curve $(I_1)$ changes
+\item From large negative to close to zero
+\item Where they meet must be $-1$ or the tangent. 
+\item $\frac{MU_A}{MU_B} = MRS$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Price increase}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (5, 5);
+\draw [<->, thick] (0, 5) node (yaxis) [above] {$A$} 
+  |- (5, 0) node (xaxis) [right] {$B$};
+\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
+\draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
+\draw (4, 0) -- (0, 4)[];
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [right] at (1.5, 3.5) {$I_1$};
+\draw (3, 0) -- (0, 4);
+\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
+\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
+\pause
+\draw [dashed, ultra thick] (1.2, 3.5) to [out = -80, in = 145] (1.9, 1.6);
+\draw [dashed, ultra thick] (1.9, 1.6) to [out = -45, in = 160] (4.2, 0.3);
+\node at (1.0, 3.5) {$I_2$};
+\pause
+\draw [dashed, thin] (1.6, 0) to (1.6, 1.8);
+\draw [dashed, thin] (0, 1.8) to (1.6, 1.8);
+\end{tikzpicture}
+\end{column}
+\begin{column}{0.48\linewidth}
+There are two products 
+\begin{itemize}
+\item Price of (A) = 3
+\item Price of (B) = 4
+\item Budget = 12
+\item Can buy $\frac{12}{3} = 4A$
+\item Can buy $\frac{12}{4} = 3B$
+\end{itemize}
+\begin{equation*}
+I_1 = \frac{MU_A}{MU_B}
+\end{equation*}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Substitution and income effects}
+Unsurprisingly, the demand for good B falls as the price increases.  There are two aspects to this. 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \textbf{Substitution effect}: there is a switch towards a cheaper product.  
+\item \textbf{Income effect}: increase in price reduces disposable income and overall consumption
+\end{itemize}
+\pause
+There effects may not always move in the same direction.
+\end{frame}
+
+\begin{frame}{Substitution and income effects 1}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (9, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$A$} 
+  |- (9, 0) node (xaxis) [right] {$B$};
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [below] at (6, 0) {6};
+\node [below] at (7, 0) {7};
+\node [below] at (8, 0) {8};
+\node [below] at (9, 0) {9};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [left] at (0, 6) {6};
+\draw (8, 0) -- (0, 5);
+\draw [dashed, thin] (4.0, 0) to (4.0, 2.5);
+\draw [dashed, thin] (0, 2.5) to (4.0, 2.5);
+\draw [dashed, ultra thick] (2.0, 5.5) to [out = -80, in = 145] (4.0, 2.5);
+\draw [dashed, ultra thick] (4.0, 2.5) to [out = -30, in = 180] (9, 1.5);
+\node [right] at (2.0, 5.5) {$I_1$};
+\pause
+\draw (5, 0) -- (0, 5)[];
+\pause
+\draw [dashed, ultra thick] (1.5, 5.5) to [out = -80, in = 135] (3.0, 2.0);
+\draw [dashed, ultra thick] (3.0, 2.0) to [out = -40, in = 180] (9.0, 0.5);
+\node [left] at (1.5, 5.5) {$I_2$};
+\pause
+\draw [dashed, thin] (3.0, 0) to (3.0, 2.0);
+\draw [dashed, thin] (0, 2.0) to (3.0, 2.0);
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Substitution and income effects 2}
+To find the substitution effect
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Identify budget tangent with same indifference curve
+\end{itemize}
+\pause
+To find the income effect
+\begin{itemize}[<+-| alert@+>]
+\item Overall change less the income effect
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Substitution and income effects 3}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (9, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$A$} 
+  |- (9, 0) node (xaxis) [right] {$B$};
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [below] at (6, 0) {6};
+\node [below] at (7, 0) {7};
+\node [below] at (8, 0) {8};
+\node [below] at (9, 0) {9};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [left] at (0, 6) {6};
+\draw (8, 0) -- (0, 5);
+\draw [dashed] (2.0, 5.5) to [out = -80, in = 145] (4.0, 2.5);
+\draw [dashed] (4.0, 2.5) to [out = -30, in = 180] (9, 1.5);
+\node [right] at (2.0, 5.5) {$I_1$};
+\draw (5, 0) -- (0, 5)[];
+\draw [dashed] (1.5, 5.5) to [out = -80, in = 135] (3.0, 2.0);
+\draw [dashed] (3.0, 2.0) to [out = -40, in = 180] (9.0, 0.5);
+\node [left] at (1.5, 5.5) {$I_2$};
+\pause
+\draw [thick] (6.3, 0) -- (0.3, 6.0);
+\pause
+\draw [dashed, thin] (4.0, 0) to (4.0, 2.5);
+\draw [dashed, thin] (0, 2.5) to (4.0, 2.5);
+\draw [dashed, thin] (3.4, 0) to (3.4, 2.8);
+\draw [dashed, thin] (0, 2.8) to (3.4, 2.8);
+\draw [red, fill = red] (4.0, 2.5) circle (0.1cm);
+\draw [red, fill = red] (3.4, 2.8) circle (0.1cm);
+\pause
+\draw [dashed, thin] (3, 0) to (3, 2);
+\draw [dashed, thin] (0, 2) to (3, 2); 
+\draw [red, fill = red] (3, 2) circle (0.1cm);
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Applications}
+\begin{itemize}[<+-| alert@+>]
+\item Can show the relationship between demand and price of goods
+\item Can show the relationship between demand and income
+\item What are the indifference curves for perfect substitutes? 
+\item What are the indifference curves for perfect compliments?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Behavioural critiques}
+Classic analysis has been criticised
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Can people process information in this calculating fashion?
+\item Kahneman and Tversky and \emph{behavioural economics}
+\item Long run?
+\item Learning?
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+
