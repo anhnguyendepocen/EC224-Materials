@@ -18,13 +18,52 @@
 
 \maketitle
 
-\section*{Questions} 
-Please answer the following questions. 
-
-I think that it woudl be good to combine some questions on price discrimination with the elasticity file
+\section*{Questions on elasticity}
 \begin{enumerate}
-
-
+\item When the government is deciding which products and services to tax , why is it important to know about the elasticity of demand?  
+\item Why does long-run price elasticity of demand differ from short-run price elasticity of demand?  Give some examples to support your answer. 
+\item Bill Gates is reported to have said
+\begin{quotation}
+Over the next 20 years, the cost of computing will fall again by a factor of a million. Now, the good news here is that the demand elasticity for computing is quite amazing. Other markets where you find efficiency anywhere near this, you have a tendency to shrink the market. When radial tires came along, they lasted longer, and so they were quite a bit cheaper long term. But people didn't 
+respond by driving around a lot more, and so in fact the total revenue of the  market shrank.
+\end{quotation}
+\item Why is elasticity different for Microsoft compared to Firestones?   Is there anything to say about the cross price elasticity or income elasticity of Microsoft products?  What effect does the emergence of India and China and other have?
 \end{enumerate}
+
+\section*{The Birmingham Northern Relief Road (BNRR)}
+The M6 is a motorway or autobahn that links with the M40 and M5 motorways in the UK.  It is highly congested to say the least. The average speed of vehicles using this section was estimated to be around 17 mph; workers in the RAC's regional operational centre at Walsall in the West Midlands, which overlooks the M6, reckon they can set their watches to the time when queues will start to build on Junction 8 of the M6 and M5. The road was originally designed to carry 72,000 vehicles per day; currently over twice that many use the road.  With this problem in mind, the Department for Transport commissioned the Birmingham Northern Relief Road (BNRR) - 27 miles of 3 lane motorway linking 
+ the M42 south of Birmingham with the M6 to the North. The road cost pound485 million and was opened in December 2003.
+
+What is unusual about this motorway is that it is the first toll motorway in the UK. The tolls are operated by a company called Midland
+Expressway Ltd. Midland Expressway initially announced the charges for the tolls as follows:  
+\begin{itemize}
+\item Cars - \pounds 3 during the day and \pounds 2 at night (11.00pm - 6.00 am) 
+\item Heavy Goods Vehicles (HGVs) - \pounds 11.00 during the day and \pounds 10 at night 
+\end{itemize}
+
+On 13th August 2004, the 10 millionth customer paid their toll. The lucky driver was given a trip to Portugal! The initial opening period saw prices discounted (cars were \pounds 2) but the standard prices initially quoted are now being applied. However, Midland Expressway recently announced that for a five month trial period from July 2004, HGVs will receive a discount of pound6 during the day and pound5 at night.  What price to charge for the toll may have been decided by considering a number of factors:
+
+\begin{itemize}
+\item The cost of building the road 
+\item The expected usage of the road and therefore the time taken to 'break even' 
+\item The cost of maintaining the road  
+\item The price elasticity of demand for road use 
+\item The cross price elasticity of demand for other roads 
+\end{itemize}
+
+We are going to focus on the latter two factors.The aim of building the motorway was to relieve congestion on the M5/M6. In order for this to happen, enough people have to be persuaded to use the new motorway even though by doing so they will incur some private cost. Charge too high a price and people will avoid using the road, too low a price may not generate enough revenue to make a profit. An example may serve to highlight this:
+
+The Golden Gate Bridge spanning San Francisco Bay in the United States is a toll bridge. In September 2002, the toll was increased from \$3 to \$5 (\pounds 1.80 - \pounds 3.00). As a result demand fell by 82,000 over the next three months but revenue rose by 45\%!  The decision by Midland Expressway Limited to set different prices for the daytime and for the night time may be influenced in part by an attempt to encourage people to use the road during the night time when it will be less busy. Studies in Spain suggest that the price elasticity of demand for tolls range from -0.2 to -0.3 but, if there were alternative routes available this could be as high as -0.83.That same study estimates the price elasticity of demand for petrol as being between -0.34 and -0.53.
+
+\section*{Questions}
+\begin{enumerate}
+\item What can we say about the price elasticity of demand of using the Golden Gate Bridge in San Francisco? 
+\item How will Midland Expressway use the information that the price elasticity of demand of tolls is in the range of -0.2 to -0.8? 
+\item Under what circumstances would the decision to cut prices on the M6 in the evening lead to an increase in revenue? 
+\item What factors would influence the elasticity of demand on the new M6 toll? 
+\item If the government increase taxes on petrol by 5\%, what would be the effect on the use of the toll road assuming that 72,000 vehicles use the road?  What will be the effect on the revenues of Midland Expressway? 
+\item Why would Midland Expressway consider a trial discount for Heavy Goods Vehicles (HGVs)?
+\end{enumerate}
+
 
 \end{document}
