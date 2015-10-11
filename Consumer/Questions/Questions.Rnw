@@ -48,7 +48,7 @@ Please answer the following questions as we proceed.
 \draw [olive, thick, domain = 0:9] plot (\x, {0 + 1.2* \x - 0.06 * \x^2});
 \end{tikzpicture}
 \end{figure}
-\item Use this template to show the budget line when there is a budget of \$50 and A is priced at \$10 per unit and B is priced at \$5 per unit. Show the adjustment when the price of A falls to \$10? 
+\item Use this template to show the budget line when there is a budget of \$50 and A is priced at \$10 per unit and B is priced at \$5 per unit. Show the adjustment when the price of A rises to \$10? 
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}
@@ -91,7 +91,7 @@ Please answer the following questions as we proceed.
 \centering
 \begin{tikzpicture}
 \draw [help lines] (0, 0) grid (10, 10);
-\draw [<->, thick] (0, 10) node (yaxis) [above] {$A$} 
+\draw [<->, thick] (0, 15) node (yaxis) [above] {$A$} 
   |- (10, 0) node (xaxis) [right] {$B$};
 %\draw (4, 0) -- (0, 4);
 %\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
@@ -106,6 +106,11 @@ Please answer the following questions as we proceed.
 \node [below] at (8, 0) {8};
 \node [below] at (9, 0) {9};
 \node [below] at (10, 0) {10};
+\node [below] at (10, 0) {11};
+\node [below] at (10, 0) {12};
+\node [below] at (10, 0) {13};
+\node [below] at (10, 0) {14};
+\node [below] at (10, 0) {15};
 \node [left] at (0, 1) {1};
 \node [left] at (0, 2) {2};
 \node [left] at (0, 3) {3};
@@ -120,43 +125,7 @@ Please answer the following questions as we proceed.
 %\pause
 %\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
 %\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[!h]
-\centering
-\begin{tikzpicture}
-\draw [help lines] (0, 0) grid (10, 10);
-\draw [<->, thick] (0, 10) node (yaxis) [above] {$A$} 
-  |- (10, 0) node (xaxis) [right] {$B$};
-%\draw (4, 0) -- (0, 4);
-%\draw [dashed, ultra thick] (1.5, 3.5) to [out = -80, in = 135] (2.5, 1.5);
-%\draw [dashed, ultra thick] (2.5, 1.5) to [out = -45, in = 160] (4.2, 0.5);
-\node [below] at (1, 0)  {1};
-\node [below] at (2, 0) {2};
-\node [below] at (3, 0) {3};
-\node [below] at (4, 0) {4};
-\node [below] at (5, 0) {5};
-\node [below] at (6, 0) {6};
-\node [below] at (7, 0) {7};
-\node [below] at (8, 0) {8};
-\node [below] at (9, 0) {9};
-\node [below] at (10, 0) {10};
-\node [left] at (0, 1) {1};
-\node [left] at (0, 2) {2};
-\node [left] at (0, 3) {3};
-\node [left] at (0, 4) {4};
-\node [left] at (0, 5) {5};
-\node [left] at (0, 6) {6};
-\node [left] at (0, 7) {7};
-\node [left] at (0, 8) {8};
-\node [left] at (0, 9) {9};
-\node [left] at (0, 10) {10};
-%\node [right] at (1.5, 3.5) {$I_1$};
-%\pause
-%\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
-%\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
-\end{tikzpicture}
-\end{figure}
+
 \item Show draw a new budget line with an income of \$90.  Draw some indifference curves to show the effect of an increase in income on the demand for products A and B. 
 
 \item Using what you have uncovered, use the following figures to sketch the relationship between price $(P)$ and quantity demanded of good A $(Q_A)$ and between income $(Y)$ and quantitiy demanded of good A $(Q_A)$. 
