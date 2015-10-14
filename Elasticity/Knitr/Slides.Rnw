@@ -161,7 +161,29 @@ ped = & \frac{1}{0.5} \times  \frac{1}{2}\\
 \end{align*}
 \end{frame}
 
-\begin{frame}{Elasticities: Relatively elastic}
+
+\begin{frame}{Elasticity changes through the demand curve}
+\begin{tikzpicture}[scale = 2]
+%\usetiktzlibrary{calc}
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$P$} 
+  |- (5, 0) node (xaxis) [right] {$Q_d$};
+\node at (1, 0) [below] {$1$};
+\node at (2, 0) [below] {$2$};
+\node at (3, 0) [below] {$3$};
+\node at (4, 0) [below] {$4$};
+\node at (0, 1) [left] {$1$};
+\node at (0, 2) [left] {$2$};
+\node at (0, 3) [left] {$3$};
+\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
+\node at (1, 1.8) {Elastic};
+\node at (3.7, 0.5) {Inelastic};
+\fill (2, 1) circle (2pt);
+\node at (2, 1) [right] {Unit Elasticity};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Elasticities: relatively elastic}
 \begin{tikzpicture}[scale = 2]
 %\usetiktzlibrary{calc}
 %\draw[very thin, color = gray](0, 0) grid (5, 3);
@@ -218,27 +240,6 @@ ped = & \frac{1}{0.5} \times  \frac{1}{2}\\
 \node at (0.7, 1.5) {Big Change};
 \node at (3.3, 0.5) {Small Change};
 %\fill (2, 1) circle (2pt);
-\end{tikzpicture}
-\end{frame}
-
-\begin{frame}{Elasticity changes through the demand curve}
-\begin{tikzpicture}[scale = 2]
-%\usetiktzlibrary{calc}
-%\draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$P$} 
-  |- (5, 0) node (xaxis) [right] {$Q_d$};
-\node at (1, 0) [below] {$1$};
-\node at (2, 0) [below] {$2$};
-\node at (3, 0) [below] {$3$};
-\node at (4, 0) [below] {$4$};
-\node at (0, 1) [left] {$1$};
-\node at (0, 2) [left] {$2$};
-\node at (0, 3) [left] {$3$};
-\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
-\node at (1, 1.8) {Elastic};
-\node at (3.7, 0.5) {Inelastic};
-\fill (2, 1) circle (2pt);
-\node at (2, 1) [right] {Unit Elasticity};
 \end{tikzpicture}
 \end{frame}
 
