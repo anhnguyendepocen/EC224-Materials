@@ -21,7 +21,7 @@
 \section*{Questions} 
 Please answer the following questions as we proceed. 
 \begin{enumerate}
-\item Write down an equation of the form $y = a + bx$ that will give you \emph{diminishing marginal utility}.  We will test this in the lab. 
+\item Write down an equation of the form $y = a + bx + cx$ that will give you \emph{diminishing marginal utility}.  What are the signs for a, b and c? 
 %\vspace{5cm}
 \item What is the equation for the particular curve that I have drawn (in the domain of x = 0:9, y = 0:6)
 \begin{figure}[!h]
