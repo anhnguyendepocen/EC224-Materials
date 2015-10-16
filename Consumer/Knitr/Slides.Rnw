@@ -83,6 +83,7 @@ Utility is something between happiness and contentedness
 \draw [olive, thick, domain = 0:9] plot (\x, {0 + 1.2* \x - 0.06 * \x^2});
 \end{tikzpicture}
 \end{frame}
+
 \begin{frame}{Indifference}
 \begin{columns}[T]
 \begin{column}{0.48\textwidth}
