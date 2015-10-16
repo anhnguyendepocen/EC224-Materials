@@ -184,7 +184,7 @@ Can this be done?
 \item Slope of the indifference curve $(I_1)$ changes
 \item From large negative to close to zero
 \item Where they meet must be $-1$ or the tangent. 
-\item $\frac{MU_A}{MU_B} = MRS$
+\item $-\frac{MU_B}{MU_A} = MRS$
 \end{itemize}
 \end{column}
 \end{columns}
@@ -235,7 +235,7 @@ There are two products
 \item Can buy $\frac{12}{4} = 3B$
 \end{itemize}
 \begin{equation*}
-I_1 = \frac{MU_A}{MU_B}
+I_1 = \frac{MU_B}{MU_A}
 \end{equation*}
 \end{column}
 \end{columns}
