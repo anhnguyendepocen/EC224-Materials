@@ -17,6 +17,7 @@
 % Title and author information
 \title{Firms and production}
 \author{Rob Hayward}
+\date{}
 
 
 \begin{document}
@@ -25,7 +26,6 @@
 \titlepage
 \end{frame}
 
-\section{Introduction}
 \begin{frame}{Introduction}
 Traditionally firms maximise profits
 \pause
@@ -48,6 +48,28 @@ TP = TR - TC
 \pause
 \vspace{1cm}
 We concentrate on costs (factors of production)
+\end{frame}
+
+\begin{frame}{Measurement of costs}
+Economic costs include \emph{Opportunity cost}.  
+\pause
+\begin{block}{Total cost}
+\begin{equation*}
+TC = FC + VC
+\end{equation*}
+\end{block}
+\pause
+\begin{block}{Average costs}
+\begin{equation*}
+AC = \frac{TC}{A}
+\end{equation*}
+\end{block}
+\pause
+\begin{block}{Marginal cost}
+\begin{equation*}
+MC = \frac{\Delta TC}{\Delta Q}
+\end{equation*}
+\end{block}
 \end{frame}
 
 \begin{frame}{Production}
@@ -149,7 +171,7 @@ Labour & Output & MPL & FC & LC & TC \\
 \end{frame}
 
 \begin{frame}{Diminishing marginal product}
-The marginal product of labour is 
+The product of labour is 
 \begin{block}{}
 \begin{equation*}
 PL = 2 \times L - 0.14 \times L^2
@@ -194,8 +216,24 @@ Q & = f(K, L)\\
 With $\alpha = 1 = \beta$ there are \emph{constant returns to scale}
 \end{frame}
 
+\begin{frame}{Cobb Douglas producton function 2}
+<<fig1, echo=FALSE, message=FALSE, warning=FALSE, fig.height = 5.5, cache=TRUE>>=
+library(RColorBrewer)
+colors <- brewer.pal(n = 3, "Greens")
+L = 0:10
+K = 0:10
+CD <- function(L, K){
+  Z <- 2 * L^0.5 * K^0.5
+  return(Z)
+}
+Z <- outer(K, L, CD)
+persp(L, K, Z, theta = 30, phi = 20, col = colors, ltheta = 1, shade = 0.25, 
+      xlab = "Labour", ylab = "Capital", zlab = "Output", main = "Cobb Douglas Output")
+@
+\end{frame}
+
 \begin{frame}{Specific production function}
-If K = 26 and L = 25, 
+If K = 16 and L = 25, 
 \pause
 \begin{block}{}
 \begin{align*}
@@ -205,6 +243,20 @@ MP_L & = \frac{\delta Q}{\delta L}\\
 & = 8
 \end{align*}
 \end{block}
+\end{frame}
+
+\begin{frame}{Production functions and utility functions}
+Production functions can also be used as utility functions
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Inputs (consumed goods) to outputs (utility)
+\item The Cobb-Douglas utility function would be 
+\begin{equation*}
+U = A*X_1^{\beta}*X_2^{\alpha}
+\end{equation*}
+\end{itemize}
+\pause
+Once again, if $\alpha + \beta < 1$ for decreasing marginal utility
 \end{frame}
 
 \begin{frame}{Isocost and isoquant}
@@ -366,7 +418,7 @@ Q_1 = \frac{MP_L}{MP_K}
 \end{frame}
 
 \begin{frame}{Factor payments}
-As equilibrium is achieved at the tangent of the ratio of cost of input to that of the marginal rate of technical substitution
+As equilibrium is achieved at the tangent of the ratio of cost of input to that of the \emph{marginal rate of technical substitution}
 %\begin{itemize}[<+-| alert@+>]
 \pause
 \begin{block}{}

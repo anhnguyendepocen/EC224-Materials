@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+\documentclass[12pt, a4paper, oneside]{hitec} % Paper size, default font size and one-sided paper
 %\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
 %\usepackage[dcucite]{harvard}
 \usepackage{rotating}
@@ -28,7 +28,7 @@
 \item D.    The period during which the firm must report its profits. 
 \end{itemize}
 
-B. The short run has one fixed factor of production. 
+%B. The short run has one fixed factor of production. 
 
 \item The slope of any line between the origin and the total product curve is
 \begin{itemize}
@@ -38,7 +38,7 @@ B. The short run has one fixed factor of production.
 \item D Impossible to draw
 \end{itemize}
 
-B.  A line from the origin to the Total Physical Product curve will represent the Output divided by the number of variable units.  This is the average product. 
+%B.  A line from the origin to the Total Physical Product curve will represent the Output divided by the number of variable units.  This is the average product. 
 
 
 \item The marginal product of labour is 
@@ -49,7 +49,7 @@ B.  A line from the origin to the Total Physical Product curve will represent th
 \item D The total cost of labour divided by its output
 \end{itemize}
 
-B. 
+%B. 
 
 \item Which of these describe the production function
 \begin{itemize}
@@ -59,7 +59,7 @@ B.
 \item  D It helps firms to maximise profits
 \end{itemize}
 
-A and C.  It shows the relationship between inputs and outputs for a particular technology.  If the technolgoy is changed, there is a new Total Physical Product curve. 
+%A and C.  It shows the relationship between inputs and outputs for a particular technology.  If the technolgoy is changed, there is a new Total Physical Product curve. 
 
 \item Which of the following are examples of fixed costs
 \begin{itemize}
@@ -69,7 +69,7 @@ A and C.  It shows the relationship between inputs and outputs for a particular 
 \item D Petrol
 \end{itemize}
 
-Probably C and maybe B.  Some wages may be more variable than others. 
+%Probably C and maybe B.  Some wages may be more variable than others. 
 
 \item The realtionship between the marginal cost and diminishing returns is
 \begin{itemize}
@@ -79,7 +79,7 @@ Probably C and maybe B.  Some wages may be more variable than others.
 \item D It depends on the shape of the average product curve
 \end{itemize}
 
-A. The lowest point on the marginal cost curve is the point at which the diminishing returns sets in.  While there are increasing returns, there is more output for a given increase in input; once diminising returns set in, the inputs are achieving increasingly less output. 
+%A. The lowest point on the marginal cost curve is the point at which the diminishing returns sets in.  While there are increasing returns, there is more output for a given increase in input; once diminising returns set in, the inputs are achieving increasingly less output. 
 
 \item Marginal cost
 \begin{itemize}
@@ -89,7 +89,7 @@ A. The lowest point on the marginal cost curve is the point at which the diminis
 \item D Cuts the minimum on the average cost curve
 \end{itemize}
 
-D.  This is always the relationship between marginal and average. 
+%D.  This is always the relationship between marginal and average. 
 
 \item Which of these show diminishing returns?
 \begin{itemize} 
@@ -99,7 +99,7 @@ D.  This is always the relationship between marginal and average.
 \item D Marginal Product that is falling
 \end{itemize}
 
-A. The slope of the total physical product curve is the marginal product.  This will get steeper and steeper and then the steepness will start to diminish.  As the steepness diminishes, the diminishing returns are setting in. 
+%A. The slope of the total physical product curve is the marginal product.  This will get steeper and steeper and then the steepness will start to diminish.  As the steepness diminishes, the diminishing returns are setting in. 
 
 \item Please fill in the gaps in the following table that outlines the Total 
 Physical Product (TPP), Average Physical Product (APP) and Marginal Physical Product (MPP) of a short-run production function with different levels of labour input.   
@@ -138,11 +138,17 @@ Labour Input & TPP & APP & MP \\
 TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
 TL <- c(0:10)
 APP <- TPP/TL
-plot(TL, TPP, main = "Total Physical Product", type = 'l', col = 'red')
-lines(APP, col = 'blue')
-legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+MPP <- diff(TPP)/diff(TL)
+par(mfrow = c(2, 1))
+plot(TL, TPP, main = "Total, average and marginal Product", type = 'l', col = 'red', xlab = "Labour input", ylab = "Output (Q)")
+legend(x = "bottom", inset = 0, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+plot(TL, APP, col = 'blue', type = 'l', ylim = c(0, max(MPP)), xlab = "Labour input", ylab = "Output (Q)")
+lines(MPP, col = "red")
 @
 
 \item From the TPP curve, identify those points that represent the maximum and zero point of the MPP curve. 
+\item Think of one product or service and outline the most extreme techniques that can be used to combine capital and labour.  One case will be lots of capital and very little labour; the other will be lots of labour and very little capital.  Do alternative methods coincide with variations in factor costs? 
+
+
 \end{enumerate}
 \end{document}
