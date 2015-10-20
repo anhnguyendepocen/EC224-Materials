@@ -1,0 +1,140 @@
+\documentclass[12pt, a4paper, oneside]{hitec} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\begin{document}
+\title{Questions on Production}
+\author{Rob Hayward} 
+\date{\today}
+\maketitle
+
+\begin{enumerate}
+\item What is the characteristic of \emph{short run} production? 
+\begin{itemize}
+\item A. It shows the relationship between the industry and the final product. 
+\item B. That there is one fixed factor of production
+\item C. That the planning horizon of the business should concentrate on immediate issues
+\item D. It is the period during which the firm must report its profits. 
+\end{itemize}
+
+B. The short run has one fixed factor of production. 
+
+\item The slope of any line between the origin and the total product curve is
+\begin{itemize}
+\item A The way to find the maximum product
+\item B The average product
+\item C The maximum marginal product
+\item D Impossible to draw
+\end{itemize}
+
+B.  A line from the origin to the Total Physical Product curve will represent the Output divided by the number of variable units.  This is the average product. 
+
+\item The marginal product of labour is 
+\begin{itemize}
+\item A Total output produced by labour
+\item B The change in total output from a small change in labour
+\item C Total output less the cost of inputs
+\item D The total cost of labour divided by its output
+\end{itemize}
+
+B. 
+
+\item Which of these describe the production function
+\begin{itemize}
+\item A It shows the technological relationship between inputs and outputs
+\item B  It expresses the relationship between costs and revenues
+\item C It identifies the characteristics of a particular technology
+\item  D It helps firms to maximise profits
+\end{itemize}
+
+A and C.  It shows the relationship between inputs and outputs for a particular technology.  If the technolgoy is changed, there is a new Total Physical Product curve. 
+
+\item Which of the following are examples of fixed costs
+\begin{itemize}
+\item A The electricity bill
+\item B Wages
+\item C Gym membership
+\item D Petrol
+\end{itemize}
+
+Probably C and maybe B.  Some wages may be more variable than others. 
+
+\item Marginal cost
+\begin{itemize}
+\item A Cuts the peak of the Total Physical Product Curve
+\item B Is always upward sloping
+\item C Is always downward sloping
+\item D Cuts the minimum on the average cost curve
+\end{itemize}
+
+D.  This is always the relationship between marginal and average. 
+
+\item Which of these show diminishing returns?
+\begin{itemize} 
+\item A Marginal Product that is increasing at a slower rate
+\item B A narrowing in the gap between average product and marginal product
+\item C The peak in average physical product
+\item D Marginal Product that is falling
+\end{itemize}
+
+A. The slope of the total physical product curve is the marginal product.  This will get steeper and steeper and then the steepness will start to diminish.  As the steepness diminishes, the diminishing returns are setting in. 
+
+\item Please fill in the gaps in the following table that outlines the Total 
+Physical Product (TPP), Average Physical Product (APP) and Marginal Physical Product (MPP) of a short-run production function with different levels of labour input.   
+
+\begin{tabular}{c | p{2cm}p{2cm}p{2cm}p{2cm}}
+Labour Input & TPP & APP & MP \\
+\hline
+0 & 0 & 0 & \\
+  & & & 5 \\
+1 & 5  &5  & \\
+  & & & 7  \\
+2 & 12 & 6 & \\
+  & & & 8 \\
+3 & 20& 6.67& \\
+  & & &  5\\
+4 & 25 & 6.25 & \\
+  & & & 3\\
+5 & 28 & 5.6 & \\
+  & & & 2 \\
+6 & 30 & 5 & \\
+  & & & 0  \\
+7 & 30 & 4.29 & \\
+  & & &  -2\\
+8 & 28 &3.5 & \\
+  & & & -3  \\
+9 & 25 & 2.78& \\
+  & & & -5 \\
+10 &20 & 2& \\
+\hline
+\end{tabular}
+\item When you have completed the table, please plot the TPP and APP functions on a graph.
+
+<<plot, fig.align='center', echo=FALSE>>=
+TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
+TL <- c(0:10)
+APP <- TPP/TL
+MPP <- diff(TPP)/diff(TL)
+par(mfrow = c(2, 1))
+plot(TL, TPP, main = "Total, average and marginal Product", type = 'l', col = 'red', xlab = "Labour input", ylab = "Output (Q)")
+legend(x = "bottom", inset = 0, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+plot(TL, APP, col = 'blue', type = 'l', ylim = c(0, max(MPP)), xlab = "Labour input", ylab = "Output (Q)")
+lines(MPP, col = "red")
+@
+
+\item Show those points that represent the maximum and zero point of the MPP curve. What do they indicate for the TPP?  
+\item Think of one product or service and outline the most extreme techniques that can be used to combine capital and labour.  One case will be lots of capital and very little labour; the other will be lots of labour and very little capital.  Do alternative methods coincide with variations in factor costs? 
+\end{enumerate}
+
+\end{document}

@@ -61,7 +61,7 @@ TC = FC + VC
 \pause
 \begin{block}{Average costs}
 \begin{equation*}
-AC = \frac{TC}{A}
+AC = \frac{TC}{Q}
 \end{equation*}
 \end{block}
 \pause
@@ -209,11 +209,11 @@ This takes the form
 \begin{align*}
 Q & = f(K, L)\\
   & = AK^{\alpha}L^{\beta}\\
- & = 20K^{0.5}L^{0.5}
+ & = A*K^{0.5}L^{0.5}
 \end{align*}
 \end{block}
 \pause
-With $\alpha = 1 = \beta$ there are \emph{constant returns to scale}
+With $\alpha = 1 = \beta$ there are \emph{constant returns to scale}.  A is \emph{total factor productivity}
 \end{frame}
 
 \begin{frame}{Cobb Douglas producton function 2}
@@ -252,7 +252,7 @@ Production functions can also be used as utility functions
 \item Inputs (consumed goods) to outputs (utility)
 \item The Cobb-Douglas utility function would be 
 \begin{equation*}
-U = A*X_1^{\beta}*X_2^{\alpha}
+U = X_1^{\beta}*X_2^{\alpha}
 \end{equation*}
 \end{itemize}
 \pause
