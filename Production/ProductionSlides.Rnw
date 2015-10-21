@@ -33,8 +33,7 @@ Traditionally firms maximise profits
 \item Rationality and knowledge
 \item Agency issues
 \item Long-run and short-run
-\item Diminishing marginal returns
-\item Economies of scale 
+\item Stakeholder theories
 \end{itemize}
 \end{frame}
 
@@ -237,6 +236,7 @@ If K = 16 and L = 25,
 \pause
 \begin{block}{}
 \begin{align*}
+Q = 20*L^{0.5}*K^{0.5}\\
 MP_L & = \frac{\delta Q}{\delta L}\\
 \frac{\delta Q}{\delta L} & = 10K^{0.5}L^{-0.5}\\
 & = \frac{10\sqrt{16}}{\sqrt{25}} = \frac{40}{5}\\
@@ -256,7 +256,7 @@ U = X_1^{\beta}*X_2^{\alpha}
 \end{equation*}
 \end{itemize}
 \pause
-Once again, if $\alpha + \beta < 1$ for decreasing marginal utility
+$\alpha$ and $\beta$ represent the \emph{marginal utilities} 
 \end{frame}
 
 \begin{frame}{Isocost and isoquant}
