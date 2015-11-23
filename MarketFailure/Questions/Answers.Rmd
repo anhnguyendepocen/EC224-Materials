@@ -1,0 +1,187 @@
+---
+title: "Government in Market Answers"
+author: "Rob Hayward"
+date: "23 November 2015"
+output: 
+  html_document: 
+    highlight: textmate
+    theme: flatly
+---
+#Answers
+
+1. Markets subject to
+    + Price ceiling: Rents; music tickets; energy; university fee; rail fares; sports wages
+    + Price floor: alcohol; agricultural prices
+
+2. 
+$$ Q_s = 4P$$
+$$ Q_d = 300 - 2P$$
+
+  + Equilibrium price and quantity
+    
+$$Q_s = Q_d$$
+$$4P = 300 - 2P$$
+$$4P + 2P = 300$$
+$$6P = 300$$
+$$P = 50$$
+
+$$Q_s = 4 * 50 = 200$$
+
+P = 50; Q = 200
+
+  + Price ceiling of 40
+    
+$$Q_s = 4 * 40 = 160$$
+
+$$Q_d = 300 - 2 * 40 = 220$$
+
+There is excess demand of 60
+
+  + Price ceiling of 50
+
+$$Q_s = 4 * 50 = 200$$
+
+$$Q_d = 300 - 2 * 50 = 200$$
+
+Nothing happens here because the price ceiling is not effective. 
+
+3![Demos](https://s3.amazonaws.com/grapher/exports/rxqj5i4jzm.png). 
+
+From the [demos site](https://www.desmos.com/calculator)
+
+4. Re-write equations for *inverse*
+
+$$Q_s = 4P$$
+$$P = \frac{Q_s}{4}$$
+
+$$Q_d = 300 - 2P$$
+$$P = \frac{300 - Q_d}{2}$$
+
+5. 
+
+    + Direct tax is income tax; indirect tax is VAT, excise duty
+    
+    + Specific tax is Vehicle excise duty and road tax; *Ad valorem* is VAT and stamp duty
+    
+6. 
+
+  + Add 15 pound *specfic tax*
+
+$$P = \frac{Q_s}{4} + 15$$
+$$P = \frac{300 - Q_d}{2}$$
+
+Now equilibrium is 
+
+$$\frac{Q_s}{4} + 15 = \frac{300 - Q_d}{2}$$
+
+For equilibrium where $Q_s = Q_d$, 
+
+$$ \frac{Q}{4} + 15   = \frac{300 - Q}{2}$$
+
+Multiply each side by 4
+
+$$ 4 \times \left( \frac{Q}{4} + 15 \right)  = 4 \times \left(\frac{300 - Q}{2} \right )$$
+
+and 
+
+$$ Q + 60  = 600 - 2Q$$
+
+therefore, 
+
+$$3Q = 540$$ 
+
+and 
+
+$$Q = 180$$
+
+as 
+
+$$P = \frac{Q_S}{4} + 15$$
+
+$$P = \frac{180}{4} + 15$$
+
+Therefore, 
+
+$$P = 60$$
+
+![Effect of tax](https://s3.amazonaws.com/grapher/exports/o8fj4hgv60.png)
+
+  + 30\% *Ad Valorum* tax.  This means that the price is 1.3 times the non-tax price. Therefore, multiply P by 1.3 for supply. 
+    
+$$P = 1.3 \times \frac{Q_s}{4}$$
+
+For equilibrium $Q_s = Q_d$, therefore
+
+$$ 1.3 \times \frac{Q}{4} = \frac{300 - Q}{2}$$
+
+
+Multiply each side by 2
+$$ 2.6 \times \left (\frac{Q}{4}  \right) = 2 \times \left (\frac{300 - Q}{2} \right)$$
+
+Multiply...
+
+$$0.65Q = 300 - Q$$
+
+and gather...
+
+
+$$1.65Q = 300$$
+
+$$Q = 181.8$$
+
+As $$P = \frac{300 - Q_d}{2}$$
+
+$$P = \frac{300 - 181.8}{2} = 59.1$$
+
+![Ad Valorem](https://s3.amazonaws.com/grapher/exports/z2erxjn4xc.png)
+
+ + Tax incidence
+ 
+* Equilibrium price was 50.  
+
+For **specific tax**, 
+
+* Consumer pays 
+
+$$P = \frac{300 - 180}{2} = 60$$
+
+* Supplier receives 
+
+$$P = \frac{180}{4} = 45$$
+
+Therefore, the consumer pays 10 pound extra and the supplier receives five pounds less and the *incidence* is on the consumer.  
+
+For **Ad Valorem**
+* Consumer pays 
+
+$$P = \frac{300 - 181.8}{2} = 59.1$$
+
+* Supplier receives
+
+$$P = \frac{181.8}{4} = 45.5$$
+
+Therefore, the consumer pays 9.1 more and the supplier receives 4.5 pounds less and the tax incidence is on the consumer. 
+
+  + Welfare is reduced because the total surplus will cut. The dead-weight loss is the difference between the fall in the consumer and producer surplus less the tax that is taken. 
+  
+7. 
+  + The tax payer has to pay the extra tax.  It depends on the *tax incidence*. 
+  + The dead-weight loss is as above
+  + The administrative burden is the cost of collecting and monitoring the tax payment. 
+  
+8. 
+  + The *Benefits principle* is the idea that taxes should be based on what an individual receives. 
+  + The *ability to pay principle* is the idea that taxes should be based on ability to pay. 
+  
+9. 
+  + Vertical equity is about the merits of moving money from those with higher income to those with lower income.  Tax can be progressive, flat or regressive. 
+  
+  + Horizontal equity is about difference in people of similar levels of income.  For example, married vs unmarried. 
+  
+10. Progressive means higher tax *rates* for those with higher income, regressive means lower tax *rates* for those with higher income. 
+
+11. VAT is a regressive tax because those on lower income pay 20\% as do those on higher income.  
+
+12. Diminishing marginal utility means that the most benefit comes from the consumption of one or two units, there is less utility from higher levels of consumption.  This suggests that the loss of utility for those with high income will be less than the gain in utility for those with a low income. 
+
+
