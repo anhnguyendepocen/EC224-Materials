@@ -34,9 +34,9 @@
 %\end{frame}
 
 \begin{frame}{Usain Bolt}
-\includegraphics{tikz}
+%\includegraphics{tikz}
 \begin{tikzpicture}[xscale = 1, yscale = 1/10, scale = 0.6]
-\draw [thick, <->] (0,100) -- (0,0) -- (10,0);
+\draw [thick, <->] (0,10) -- (0,0) -- (10,0);
 \draw [thin] (0,0) -- (9.58, 100);
 \node [below left] at (9,0) {x = seconds};
 \node [above, rotate = 90] at (0,95) {y = meters};
@@ -50,7 +50,7 @@
 Slope is constant with average speed but varies over time.
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item $\text{Average Speed} = \frac{Distance}{Time}$
+\item $\text{Average Speed} = \frac{Distance}{Time} = \frac{\Delta Distance}{\Delta Speed}$
 \item $\text{Average Speed} = \frac{100}{9.58} = 10.43\frac{m}{s}$
 \item Need to find the tangent to the line for \emph{Instantaneous Speed}
 \item $\text{Instantaneous Speed} = \frac{\Delta y}{\Delta x}$
@@ -126,35 +126,34 @@ For any positive integer k, the derivative of $f(x) = x^k$ at $x_0$ is $f'(x) = 
 \end{block}
 \end{frame}
 
-<<<<<<< HEAD
-%\begin{frame}{Example 2 page 1}
-%\framesubtitle{$TPP  = 100 + 32Q + 10Q^2 - Q^3$}
-%\begin{tikzpicture}[yscale = 1/50, scale = 0.6]
-%\draw [thick, <->] (0,500) -- (0,0) -- (10,0);
-%\draw [olive, thick, domain = 0:10] plot (\x, {100+32*\x+10*\x*\x-\x*\x*\x});
-%\node [right] at (10, 420) {TPP};
-%\end{tikzpicture}
-%\end{frame}
+\begin{frame}{Example 2 page 1}
+\framesubtitle{$TPP  = 100 + 32Q + 10Q^2 - Q^3$}
+\begin{tikzpicture}[yscale = 1/50, scale = 0.6]
+\draw [thick, <->] (0,500) -- (0,0) -- (10,0);
+\draw [olive, thick, domain = 0:10] plot (\x, {100+32*\x+10*\x*\x-\x*\x*\x});
+\node [right] at (10, 420) {TPP};
+\end{tikzpicture}
+\end{frame}
 
-%\begin{frame}{Example 2 page 2}
-%{Differentiating TPP}
-%\begin{align*}
-%TPP  =& 100 + 32Q + 10Q2 - Q^3\\
-%TPP' =& 32 +20Q -3Q^2
-%\end{align*}
-%Gradient at maximum is zero, therefore
-%\begin{align*}
-%3Q^2 - 20Q -32 = & 0\\
-%(3Q + 4)(Q - 8) =& 0
-%\end{align*}
-%So $Q = 8$, or $Q = -1.33$ 
-%\end{frame}
+\begin{frame}{Example 2 page 2}
+{Differentiating TPP}
+\begin{align*}
+TPP  =& 100 + 32Q + 10Q2 - Q^3\\
+TPP' =& 32 +20Q -3Q^2
+\end{align*}
+Gradient at maximum is zero, therefore
+\begin{align*}
+3Q^2 - 20Q -32 = & 0\\
+(3Q + 4)(Q - 8) =& 0
+\end{align*}
+So $Q = 8$, or $Q = -1.33$ 
+\end{frame}
 
 \begin{frame}{Quadratic Solution}
 For a quadratic equation of the form
 \begin{equation*}
 ax^2 +bx + c
-\end{equation}
+\end{equation*}
 
 The \emph{solution} or the roots can be found with 
 \begin{block}{}
