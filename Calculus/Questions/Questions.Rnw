@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, oneside]{article} % Paper size, default font size and one-sided paper
+\documentclass[12pt, a4paper, oneside]{hitec} % Paper size, default font size and one-sided paper
 %\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
 %\usepackage[dcucite]{harvard}
 \usepackage{rotating}
@@ -103,36 +103,23 @@ plot(L, TPP, main = "Total Physical Product", type = 'l', col = 'red')
 @
 \begin{itemize}
 
-\item How would you calculate the \emph{marginal physical product}?
+\item Draw the \emph{average physical product} and the \emph{marginal physical product} at the point where 8 units of labour are being used. 
 \end{itemize}
 
 
 \item Given the $TPP = 500 + 200L + L^2 - L^3$, 
 \begin{itemize}
-\item What is the TPP' or MPP?
-
+\item Find the equation for the MPP?
 \item What is the gradient of the TPP at its peak? 
-
-\item What is the value of the MPP when TPP is at its peak? 
 \end{itemize}
 
 
-\item Given the $TPP = 100 + 32Q +23Q^2 - Q^3$, 
+\item Given the $TPP = 100 + 32L +23L^2 - L^3$, 
 \begin{itemize}
-\item What is the TPP' or MPP?
-
-\item How would you find the maximum TPP? What is the maximum TPP? This can be done with factorisation. 
+\item Use MPP to find the amout of labour that will maximise output.
 \end{itemize}
 
-\item Given the $TPP = 500 + 180Q + 15Q^2 - 2Q^3$, 
-\begin{itemize}
-\item What is the TPP' or MPP?
 
-$MPP = 180 + 30Q -6Q^2$
-
-\item What is the maximum TPP?  Use the equation method. 
-
-\end{itemize}
 
 
 \end{enumerate}
