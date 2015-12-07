@@ -1,0 +1,125 @@
+---
+title: "Calculus answers"
+author: "RobHayward"
+date: "6 December 2015"
+output: html_document
+---
+
+Answers
+
+1. $y = 2 + 6x$
+
+$\frac{d(y)}{d(x)} = 6$
+
+2. $y = 5 - 4x +2x^3$
+
+$\frac{d(y)}{d(x)} = -4 + 6x^2$
+
+3. $y = 25 +6x^2 - 3x^3 +25x^4$
+
+$\frac{d(y)}{d(x)} = 12x - 9x^2 + 100x^3$
+
+4. $y - 3 = 2x$
+
+$\frac{d(y)}{d(x)} = 2$
+
+5. $TPP = 24 +5L +2L^2 - L^3$
+
+$\frac{d(TPP)}{d(L)} = 5 +4L - 3L^2$
+
+Find the second derivative of the following
+
+6. $TU = 25 + X_1 - X_1^2$
+
+$\frac{dy}{dx} = 1 - 2X_1$
+
+$\frac{d^2(U)}{d(X_1)} = -2$
+
+7. $TU = 25 +25X_1 -2X_1^2$
+
+$\frac{dy}{dx} = 25 - 4X_1$
+
+$\frac{d^2(U)}{d(X_1)} = - 4$
+
+There is diminishing marginal utility.  The first derivative is the slope of the utility relative to the consumption of product $X_1$. This is marginl utility.  The second derivative shows how the slope or marginal utility changes with $X_1$.  The result is -2 or -4. Therefore, the slope is falling as the consumption of $X_1$ increases.  This is *diminishing marginal utility*. 
+
+8. $TPP = 15 +15Q +Q^2 - Q^3$
+
+$\frac{TPP}{dQ} = 15 + 2Q - 3Q^2$
+
+$\frac{d^2(TPP)}{d(Q)} = 2 -6Q$
+
+9. What does your answer to the previous question tell you about the shape of the Total Physical Product Curve? 
+
+There are deminishing returns.  The first derivative is the change in output as more input (Q) is added.  This slope is the marginal return to adding an input.  It is $15 + 2Q - 3Q^2$ meaning that as more (say) labour is added, output rises at a faster rate and then starts to rise at slower rate. The second derivtive shows how the rate of change in output changes over time.  This is $2 - 6Q$. Therefore it is positive or a short while (when $Q > \frac{1}{3}$) and then turns negative.  In other words, it accelerates and then decelerates. These are the *diminishing marginal  returns*.   
+
+17.  Given a demand curve 
+
+$$Q_d = 90 - 5P + 0.2P^2$$
+
+```{r,echo=FALSE}
+P <- seq(1, 10, 0.5)
+Q <- 90 - 5*P +0.2*P^2
+plot(Q, P, type = 'l', main = "Demand Curve")
+```
+
+What is the elasticity of demand at the point $P = 5, Q = 70$?
+
+The equation for elasticity is 
+
+$$\varepsilon_d = \frac{d(Q)}{d(P)}\times \frac{P}{Q}$$
+
+$$\frac{dQ}{dP} = -5 + 0.4P$$
+
+Therefore, 
+
+$$\varepsilon_d  = \frac{-5 + (0.4 \times 5)}\times \frac{5}{70}$$
+$$\varepsilon_d = -5 + 2 \times \frac{5}{70}$$
+$$\varepsilon_d = - \frac{35}{70}$$
+$$\varepsilon_d = -\frac{7}{10}$$
+
+
+As the absolute value is below one, the demand is inelastic
+
+10. Here is the total physical product curve. Show the *average physical product* and the *marginal physical product* at the point where 8 units of labour are being used.   
+  
+```{r, echo=FALSE} 
+TPP <- c(0, 5, 12, 20, 25, 28, 30, 30, 28, 25, 20)
+L <- c(0:10)
+APP <- TPP/L
+plot(L, TPP, main = "Total Physical Product", type = 'l', col = 'red')
+x <- c(0, 8)
+y <- c(0, 28)
+da <- data.frame(x = x, y = y)
+lines(x, y)
+#lines(APP, col = 'blue')
+#legend(0.75, 28, c("TPP", "APP"), lty = 1, col = c('red', 'blue'))
+```
+
+The marginal product is tangent to the red line at the point where L = 8.  
+
+14. Given the $TPP = 500 + 180Q + 15Q^2 - 2Q^3$, 
+
+Find equation for MPP
+
+MPP is the *marginal physical product* or the slope of the *total physical product*
+
+$$\frac{TPP}{Q} = 18 + 30Q - 6Q^2$$
+
+The gradient of the TPP is zero at its peak. 
+
+14. Given the $TPP = 100 + 32Q +23Q^2 - Q^3$, 
+
+Find the MPP
+
+$$MPP = 32 + 46Q - 3Q^2$$
+
+Set MPP equal to zero
+
+$$3Q^2 - 46Q -32 = 0$$
+$$(3Q + 2)(Q - 16) = 0$$
+
+Therefore
+$$3Q = -2 \quad \text{or} \quad Q = 16$$
+
+$Q - 16$ at the maximum. 

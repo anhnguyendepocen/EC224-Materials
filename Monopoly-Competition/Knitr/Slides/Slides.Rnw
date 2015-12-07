@@ -48,6 +48,7 @@
 \begin{frame}{Shape of average cost}
 The average cost curve is U shaped because
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Average costs initially fall with specialisation
 \item Average costs initially fall because fixed costs are spread
 \item Average costs eventually rise because of \emph{diminishing returns} in the short-run
@@ -71,6 +72,7 @@ The average cost curve is U shaped because
 \begin{frame}{Shape and position of the marginal cost}
 The average cost curve is U shaped because
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item The marginal cost is the cost of one more unit of output
 \item The marginal cost is below the average cost while average cost is falling
 \item The marginal cost is above the average  cost while the average cost is rising
@@ -375,6 +377,7 @@ When costs do not change, monopoly will charge a higher price and will therefore
 \pause
 However, costs are likely to change
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Specialisation
 \item Economies of scale
 \end{itemize}
