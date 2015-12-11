@@ -75,8 +75,8 @@ Therefore,
 
 $$\varepsilon_d  = \frac{-5 + (0.4 \times 5)}\times \frac{5}{70}$$
 $$\varepsilon_d = -5 + 2 \times \frac{5}{70}$$
-$$\varepsilon_d = - \frac{35}{70}$$
-$$\varepsilon_d = -\frac{7}{10}$$
+$$\varepsilon_d = - \frac{15}{70}$$
+$$\varepsilon_d = -\frac{3}{14}$$
 
 
 As the absolute value is below one, the demand is inelastic
@@ -104,9 +104,21 @@ Find equation for MPP
 
 MPP is the *marginal physical product* or the slope of the *total physical product*
 
-$$\frac{TPP}{Q} = 18 + 30Q - 6Q^2$$
+$$\frac{d(TPP)}{d(Q)} = 18 + 30Q - 6Q^2$$
 
 The gradient of the TPP is zero at its peak. 
+
+This cannot be solved by factorising.  You will have to use the equation 
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+Input this into your calculator or click the following link. 
+
+[On line quadratic solver](http://www.math.com/students/calculators/source/quadratic.htm)
+
+Remember that, a, b and c are given by the equation 
+
+$$ax^2 + bx + c$$
 
 14. Given the $TPP = 100 + 32Q +23Q^2 - Q^3$, 
 
@@ -122,4 +134,4 @@ $$(3Q + 2)(Q - 16) = 0$$
 Therefore
 $$3Q = -2 \quad \text{or} \quad Q = 16$$
 
-$Q - 16$ at the maximum. 
+$Q = 16$ at the maximum. 
