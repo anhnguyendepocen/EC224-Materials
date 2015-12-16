@@ -17,7 +17,7 @@ output:
 $$ Q_s = 4P$$
 $$ Q_d = 300 - 2P$$
 
-  + Equilibrium price and quantity
+  + Equilibrium price and quantity are found by setting quantity demanded equal to equantity supplied, solving for P and then substituting P into either equation to find Q. 
     
 $$Q_s = Q_d$$
 $$4P = 300 - 2P$$
@@ -27,9 +27,11 @@ $$P = 50$$
 
 $$Q_s = 4 * 50 = 200$$
 
-P = 50; Q = 200
+Therefore, the answer is 
 
-  + Price ceiling of 40
+**P = 50; Q = 200**
+  
+  + If there is a price ceiling of 40, set P to 40 for supply and demand. 
     
 $$Q_s = 4 * 40 = 160$$
 

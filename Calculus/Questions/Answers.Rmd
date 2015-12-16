@@ -75,8 +75,8 @@ Therefore,
 
 $$\varepsilon_d  = \frac{-5 + (0.4 \times 5)}\times \frac{5}{70}$$
 $$\varepsilon_d = -5 + 2 \times \frac{5}{70}$$
-$$\varepsilon_d = - \frac{35}{70}$$
-$$\varepsilon_d = -\frac{7}{10}$$
+$$\varepsilon_d = - \frac{15}{70}$$
+$$\varepsilon_d = -\frac{3}{14}$$
 
 
 As the absolute value is below one, the demand is inelastic
