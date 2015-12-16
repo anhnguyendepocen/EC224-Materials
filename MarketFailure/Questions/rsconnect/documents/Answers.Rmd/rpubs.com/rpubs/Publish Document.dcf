@@ -3,6 +3,5 @@ account: rpubs
 server: rpubs.com
 bundleId:
         https://api.rpubs.com/api/v1/document/130751/25703d18e84c4a1ebd19db1e9880fdf9
-url:
-        http://rpubs.com/publish/claim/130751/d2ca17688e2449fdbd1b8e326032ac33
-when: 1448312262.13001
+url: http://rpubs.com/RobHayward/130751
+when: 1450273823.77263

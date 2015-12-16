@@ -70,7 +70,7 @@ The average cost curve is U shaped because
 \end{frame}
 
 \begin{frame}{Shape and position of the marginal cost}
-The average cost curve is U shaped because
+The marginal cost curve is U shaped because
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item The marginal cost is the cost of one more unit of output
