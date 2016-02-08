@@ -14,7 +14,16 @@
 % Specify other colors and options as required
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
-
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 % Title and author information
 \title{The Financial System}
 \author{Rob Hayward}
@@ -51,7 +60,7 @@ The financial system coordinates savings and investment
 \begin{itemize}
 \item Working capital
 \item New capital equipment
-\item Government borrowing (T-G)
+\item Government borrowing (G-T)
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -311,11 +320,11 @@ Keynes presented an alternative theory of \emph{liquidity preference} for times 
 \end{frame}
 
 \begin{frame}{Liquidity trap}
-There is a liquidity trap now
+We are emerging from a liquidity trap now
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item Quantitative easing
-\item Negative interest rates in Switzerland and Euro area
+\item Negative interest rates in Switzerland, the Euro area and Japan
 \item Demand does not respond to the price
 \item Deflation ($r = i - \pi^e$)
 \end{itemize}
