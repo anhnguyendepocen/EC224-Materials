@@ -1,0 +1,10 @@
+da <- read.csv("BusinessCycle/Data/UKGDP.csv", stringsAsFactors = FALSE)
+colnames(da) <- c("Date", "GDP")
+da$GDP = as.numeric(da$GDP)/1000
+tail(da)
+str(da)
+plot(da$Date, da$GDP, type = 'l', main = "UK Real GDP", xlab = "Year", ylab = "GBP bn", col = "DarkGreen", lty = 2, lwd = 2)
+tt <- seq(1:length(da$GDP))
+eq1 <- lm(da$GDP ~ tt + I(tt^2))
+lines(da$Date, eq1$fitted.values, col = 'Grey', lty = 1, lwd = 2)
+legend(legend = c("GDP", "Trend"), "topleft", col = c("DarkGreen", "Grey"), lty = c(2, 1))

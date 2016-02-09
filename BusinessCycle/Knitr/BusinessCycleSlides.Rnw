@@ -1,0 +1,71 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+\usepackage{multirow}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{The Business Cycle}
+\author{Rob Hayward}
+\begin{document}
+% Title and author information
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Reading}
+\begin{frame}{Reading}
+This week's reading
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Chapter 30: Business Cycles
+\item Chapter 32: Aggregate Demand and Aggregate Supply
+\item You will be tested on your knowledge
+\end{itemize}
+\end{frame}
+
+\section{Trend growth rates}
+\begin{frame}{GDP and Underlying Trend}
+<<trend, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.6>>=
+da <- read.csv("../Data/UKGDP.csv", stringsAsFactors = FALSE)
+colnames(da) <- c("Date", "GDP")
+da$GDP = as.numeric(da$GDP)/1000
+plot(da$Date, da$GDP, type = 'l', main = "UK Real GDP", xlab = "Year", ylab = "GBP bn", col = "DarkGreen", lty = 2, lwd = 2)
+tt <- seq(1:length(da$GDP))
+eq1 <- lm(da$GDP ~ tt + I(tt^2))
+lines(da$Date, eq1$fitted.values, col = 'Grey', lty = 1, lwd = 2)
+legend(legend = c("GDP", "Trend"), "topleft", col = c("DarkGreen", "Grey"), lty = c(2, 1))
+@
+\end{frame}
+
+\section{Cyclical elements}
+
+\section{Causes of Business Cycle}
+
+\section{Business Cycle Models}
+
+\section{Aggregate demand and supply}
+
+\end{document}
+%\begin{itemize}[<+-| alert@+>]
