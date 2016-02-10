@@ -16,13 +16,27 @@
 % Specify other colors and options as required
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
-
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
 % Title and author information
 \title{Money and inflation}
 \author{Rob Hayward}
 
 \begin{document}
 
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Definitions and context}
 \begin{frame}{Money, prices, inflation}
 Define terms
 \pause
@@ -61,7 +75,6 @@ plot(da$Date, da$CDKOd, type = 'l', main = "UK inflation", ylab = "Percentage ch
 abline(h = 0, col = "darkgreen")
 @
 \end{frame}
-
 
 \begin{frame}{Cost of living: 2000-2014}
 <<earnings, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
@@ -112,7 +125,7 @@ legend(legend = c("Earnings", "Consumer Prices"),
 @
 \end{frame}
 
-
+\section{Money and inflation}
 \begin{frame}{Money supply and demand 1}
 \begin{tikzpicture}[scale = 1.82]
 \draw[very thin, color = gray](0, 0) grid (5, 3);
@@ -138,7 +151,6 @@ legend(legend = c("Earnings", "Consumer Prices"),
 \node at (0, 3) [left] {1};
 \end{tikzpicture}
 \end{frame}
-
 
 \begin{frame}{Money supply and demand 2}
 \begin{tikzpicture}[scale = 1.82]
@@ -229,7 +241,7 @@ Imagine a helicopter dropping money
 \end{itemize}
 \end{frame}
 
-
+\section{Nominal and real values}
 \begin{frame}{Nominal and real}
 The use of money brings in nominal and real variables
 \begin{itemize}[<+-| alert@+>]
@@ -239,8 +251,6 @@ The use of money brings in nominal and real variables
 \item Corn is equal to 2 Wheat (no \textsterling)
 \end{itemize}
 \end{frame}
-
-
 
 \begin{frame}{Real wages}
 If the average wage is \textsterling 10 per hour and the price of banana is \textsterling 2 each, The \emph{real wage} is 
@@ -263,7 +273,7 @@ if bananas increase to \textsterling 5
 \end{block}
 \end{frame}
 
-
+\section{Money neutrality}
 \begin{frame}{Money neutrality}
 If changes in money affect nominal values but not real values, there is \emph{money neutrality}
 \pause
@@ -292,8 +302,6 @@ V = \frac{\textsterling 10 \times 100}{\textsterling 50} = 20
 \end{block}
 \end{frame}
 
-
-
 \begin{frame}{Quantity theory 2}
 The equation can be re-written so that
 \begin{block}{}
@@ -309,9 +317,6 @@ M \times V = P \times Y
 \end{block}
 Remember, $P \times Y$ is nominal GDP
 \end{frame}
-
-
-
 
 \begin{frame}{Monetarism}
 Milton Friedman argued that the central bank should control just the quantity of money
@@ -381,7 +386,6 @@ M_d = f(\underbrace{Y}_{+}, \underbrace{P}_{+} \underbrace{i}_{-}, \underbrace{C
 \emph{Confidence} suggests that loanable funds theory does not always apply
 \end{frame}
 
-
 \begin{frame}{Fisher Effect}
 Money neutrality suggests that increased money will affect nominal values but not real
 \begin{block}{}
@@ -393,7 +397,6 @@ Nominal interest rate = Real interest rate + inflation rate
 \end{block}
 Increased money, increases inflation and increases the nominal rate (leaving real rate unchanged)
 \end{frame}
-
 
 \begin{frame}{Nominal rates and inflation}
 <<Inf2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.5>>=
@@ -409,6 +412,18 @@ legend(legend = c("Interest rate", "Inflation"), "topright", col = c('black', 'D
 @
 \end{frame}
 
+\section{Demand-pull inflation}
+Keynes argued that the demand for money was so unstable that it was not useful in assessig inflationary pressure outside of extremes
+\begin{itemize}[<+-| alert@+>]
+\item Importance of demand-pull
+\item If economy is growing close to capacity business will bid-up price of factors of production
+\item This will feed into prices
+\item Key factor of production - labour
+\item Link can be made between inflation and unemployment
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Phillips curve}
 \begin{frame}{The costs of inflation}
 There are a number of costs of inflation
 \pause

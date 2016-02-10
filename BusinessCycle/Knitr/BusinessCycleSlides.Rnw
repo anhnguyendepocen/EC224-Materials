@@ -59,6 +59,16 @@ legend(legend = c("GDP", "Trend"), "topleft", col = c("DarkGreen", "Grey"), lty 
 @
 \end{frame}
 
+\begin{frame}{Key terms}
+\begin{itemize}[<+-| alert@+>]
+\item Recession
+\item Boom
+\item Trends
+\item Pro-cyclical
+\item Aggregate Demand
+\item Aggregate Supply
+\end{itemize}
+
 \section{Cyclical elements}
 
 \section{Causes of Business Cycle}
