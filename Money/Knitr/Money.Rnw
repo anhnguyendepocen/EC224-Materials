@@ -36,6 +36,10 @@
 \titlepage
 \end{frame}
 
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
 \section{Definitions and context}
 \begin{frame}{Money, prices, inflation}
 Define terms
@@ -244,6 +248,7 @@ Imagine a helicopter dropping money
 \section{Nominal and real values}
 \begin{frame}{Nominal and real}
 The use of money brings in nominal and real variables
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item \emph{Classical dichotomy} separation into nominal and real factors
 \item Difference between monetary and real measurement
@@ -412,8 +417,10 @@ legend(legend = c("Interest rate", "Inflation"), "topright", col = c('black', 'D
 @
 \end{frame}
 
-\section{Demand-pull inflation}
-Keynes argued that the demand for money was so unstable that it was not useful in assessig inflationary pressure outside of extremes
+\section{Phillips curve}
+\begin{frame}{Demand-pull inflation}
+Keynes argued that the demand for money was so unstable that it was not useful in assessing inflationary pressure outside of extremes
+\pause
 \begin{itemize}[<+-| alert@+>]
 \item Importance of demand-pull
 \item If economy is growing close to capacity business will bid-up price of factors of production
@@ -424,6 +431,20 @@ Keynes argued that the demand for money was so unstable that it was not useful i
 \end{frame}
 
 \begin{frame}{Phillips curve}
+<<Phillips, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.6>>=
+da <- read.csv("../Data/USPhillips.csv", stringsAsFactors = FALSE, 
+               skip = 23)
+colnames(da) <- c("Date", "CPI", "Inflation", "Unemployment")
+da$Date <- as.Date(da$Date, format = "%Y-%m-%d")
+# remove the percentage sign
+da$Inflation <- as.numeric(gsub('%', "", da$Inflation))
+plot(da$Unemployment[1:216], da$Inflation[1:216], main = "US Unemployment
+     and Inflation (1948-65)", xlab = "Unemployment", ylab = "Inflation")
+eq1 <- lm(da$Inflation[1:216] ~ da$Unemployment[1:216])
+abline(eq1, col = "darkgreen", lwd = 3)
+@
+\end{frame}
+
 \begin{frame}{The costs of inflation}
 There are a number of costs of inflation
 \pause
@@ -455,7 +476,18 @@ Inflation will re-distribute between debtors and creditors
 \end{itemize}
 \end{frame}
 
-
+\begin{frame}{Key learning points}
+\begin{itemize}[<+-| alert@+>]
+\item Inflation is a recent (post 1950) phenomenon
+\item Money and inflation are linked
+\begin{itemize}
+\item but this is not one-to-one
+\item money is used for transactions and savings
+\end{itemize}
+\item Inflation can also be driven by excess demand
+\item There are costs to inflation and deflation - particularly for borrowers and lenders
+\end{itemize}
+\end{frame}
 
 \end{document}
 \begin{itemize}[<+-| alert@+>]

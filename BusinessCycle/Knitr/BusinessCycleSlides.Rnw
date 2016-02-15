@@ -68,6 +68,7 @@ legend(legend = c("GDP", "Trend"), "topleft", col = c("DarkGreen", "Grey"), lty 
 \item Aggregate Demand
 \item Aggregate Supply
 \end{itemize}
+\end{frame}
 
 \section{Cyclical elements}
 
