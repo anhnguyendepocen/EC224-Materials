@@ -1,0 +1,219 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{Introduction to Linear Regression and OLS}
+\author{Rob Hayward}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Modelling}
+\begin{frame}{Modelling}
+The model
+\begin{block}{}
+$y_t = \alpha + \beta x_t + \varepsilon_t$
+\end{block}
+\pause
+Where 
+\begin{itemize}[<+-| alert@+>]
+\item $y_t$ is the dependent variable
+\item $\alpha$ is an intercept or constant
+\item $x_t$ is the explanatory or independent variable(s)
+\item $\beta$ is the key relationship
+\item $\varepsilon_t$ is the error that covers omitted variables, measurement error and other stochastic or random elements
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modelling}
+The model
+\begin{block}{}
+$y_t = \alpha + \beta x_t + \varepsilon_t$
+\end{block}
+
+\pause
+
+Where 
+\begin{itemize}[<+-| alert@+>]
+\item $y_t$ is the inflation rate
+\item $\alpha$ is an intercept or constant
+\item $x_t$ is the unemployment rate
+\item $\beta$ is the relationship between the inflation rate and the unemployment rate
+\item $\varepsilon_t$ is all the other factors that affect the inflation rate
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Caution!}
+\begin{block}{}
+\begin{quote} ``Essentially all models are wrong, but some are useful''
+\end{quote} %citep[p. 424]{Box}
+\end{block}
+George Box
+\end{frame}
+
+\begin{frame}{Scattergram}
+<<scatter, fig.height=4.5, warning=FALSE, echo=FALSE, message=FALSE>>=
+da <- read.csv("../Data/USPhil.csv")
+eq1 <- lm(da$Inflation[6:34] ~ 
+            da$Unemployment[6:34])
+plot(da$Unemployment, da$Inflation, xlab = "Unemployment", ylab = "Inflation", main = "Inflation-unemployment")
+abline(eq1, col = 'darkgreen')
+@
+\end{frame}
+
+\section{Linear regression}
+\begin{frame}{Regression Table}
+% latex table generated in R 3.0.2 by xtable 1.7-1 package
+% Wed Dec 25 22:07:07 2013
+\begin{table}[ht]
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\centering
+\begin{tabular}{rrrrr}
+  \hline
+ & Estimate & Std. Error & t value & Pr($>$$|$t$|$) \\ 
+  \hline
+(Intercept) & 3.99 & 0.92 & 4.35 & 0.003 \\ 
+Unemployment & -0.20 & 0.15 & -1.35 & 0.19 \\ 
+   \hline
+\end{tabular}
+\end{table}
+The Adjusted $R^2$ is 0.08, therefore only 8\% of the change in inflation is explained by the change in unemployment.  95\% confidence intervals for the $\beta$ are  -0.5 to 0.9.  
+\end{frame}
+
+\begin{frame}{Important considerations}
+There are three thing to consider
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item How well do the data fit the model? $(R^2)$
+\item How reliable is the estimated relationship?  Does $\beta = 0$?
+\item Are the \emph{other factors} important $(\varepsilon)$? 
+\end{itemize}
+\pause
+\vskip 0.5cm
+Consider each in turn. 
+\end{frame}
+
+\section{How well do the data fit the model?}
+\begin{frame}{R Squared}
+The total variance of the dependent variable is called the total sum of squares (TSS).  This can be split into 
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Explained sum of squares or sum of squares of the regression (ESS)
+\item Residual sum of squares (RSS)
+\end{itemize}
+\pause
+\begin{align*}
+R^2 &= 1 - \frac{RSS}{TSS} = 1 - \frac{RSS}{RSS + ESS}\\
+R^2 &= 1 - \frac{\hat{\varepsilon}'\hat{\varepsilon}}{(y - \bar{y})'(y - \bar{y})}
+\end{align*}
+\begin{equation}
+u = \hat{\varepsilon}
+\end{equation}
+\end{frame}
+
+\section{How reliable are the estimates?}
+\begin{frame}{Coefficient Estimates}
+The estimates of the coefficients will depend on the sample
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item A different sample will give a different estimate
+\item We want to know how reliable the estimates will be under different samples
+\item $\beta$ is a random variable.  If OLS (\emph{Gauss-Markov} assumptions hold)
+\begin{itemize}
+\item $\hat{\beta} \sim N (\beta, \sigma_{\beta}^2)$
+\end{itemize}
+\pause
+If we assume a normal distribution we can carry out hypotheses tests about coefficients like $\beta$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hypothesis tests of Coefficients}
+Hypotheses tests are conducted using the t-statistic
+\begin{block}{}
+$\text{t-stat} = \frac{\text{estimator} - \text{hypothesised value}}{\text{standard error of the estimator}}$\\ 
+\vskip 0.5cm
+$t = \frac{\hat{\beta}-\beta_{H0}}{SE(\hat{\beta})}$\\
+\vskip 0.5cm 
+Need to estimate the standard deviation of the coefficient estimate
+\end{block}
+\end{frame}
+
+\begin{frame}{Normal Distribution}
+<<norm, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+x <- seq(-4, 4, 0.1)
+y = dnorm(x, 0, 1)
+main <- expression(paste("Normal Distribition of ", beta[1]))
+plot(x, y, type = 'l', main = main)
+cord.x <- c(-4, seq(-4, -2, 0.01), -2)
+cord.y <- c(0, dnorm(seq(-4, -2, 0.01)), 0)
+polygon(cord.x, cord.y, col = 'darkgreen')
+cord.x <- c(2, seq(2, 4, 0.01), 4)
+cord.y <- c(0, dnorm(seq(2, 4, 0.01)), 0)
+polygon(cord.x, cord.y, col = 'darkgreen')
+text(-3, 0.1, "Less than 2 SD")
+text(3, 0.1, "More than 2 SD")
+@
+\end{frame}
+
+\begin{frame}{Residuals 1}
+<<resid2, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+hist(resid(eq1),  main = "Residuals from inflation-unemployment regression", xlab = "Residuals")
+@
+\end{frame}
+
+\section{Are other factors important}
+\begin{frame}{Residuals 2}
+<<resid, warning=FALSE, message=FALSE, echo=FALSE, fig.height=4.5>>=
+plot(da$Date[6:34], resid(eq1),  type = 'l', main = "Residuals from inflation-unemployment regression", 
+     xlab = "Year", ylab = "Residual")
+@
+\end{frame}
+
+\begin{frame}{Other factors}
+\begin{itemize}[<+-| alert@+>]
+\item We would like the residuals to be random
+\begin{itemize}
+\item Then the other factors do not have a systematic influence
+\item The other factors are random and largely cancel each other out
+\end{itemize}
+\item If there are tends to the residuals 
+\begin{itemize}
+\item There is at least one other important factor we have left out
+\item There may be a structural break
+\item The estimated relationship is unreliable
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\end{document}
