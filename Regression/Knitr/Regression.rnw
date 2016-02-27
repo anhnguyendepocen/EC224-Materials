@@ -69,7 +69,7 @@ Where
 \item $\alpha$ is an intercept or constant
 \item $x_t$ is the unemployment rate
 \item $\beta$ is the relationship between the inflation rate and the unemployment rate
-\item $\varepsilon_t$ is all the other factors that affect the inflation rate
+\item $\varepsilon_t$ are all the other factors that affect the inflation rate
 \end{itemize}
 \end{frame}
 
@@ -148,7 +148,7 @@ The estimates of the coefficients will depend on the sample
 \begin{itemize}[<+-| alert@+>]
 \item A different sample will give a different estimate
 \item We want to know how reliable the estimates will be under different samples
-\item $\beta$ is a random variable.  If OLS (\emph{Gauss-Markov} assumptions hold)
+\item $\hat{\beta}$ is a random variable.  If OLS (\emph{Gauss-Markov} assumptions hold)
 \begin{itemize}
 \item $\hat{\beta} \sim N (\beta, \sigma_{\beta}^2)$
 \end{itemize}
@@ -206,7 +206,7 @@ plot(da$Date[6:34], resid(eq1),  type = 'l', main = "Residuals from inflation-un
 \item Then the other factors do not have a systematic influence
 \item The other factors are random and largely cancel each other out
 \end{itemize}
-\item If there are tends to the residuals 
+\item If there are trends to the residuals 
 \begin{itemize}
 \item There is at least one other important factor we have left out
 \item There may be a structural break
