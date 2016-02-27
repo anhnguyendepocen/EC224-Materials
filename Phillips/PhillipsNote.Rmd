@@ -1,0 +1,52 @@
+---
+title: "The Phillips Curve"
+author: "Rob Hayward"
+date: "25 February 2016"
+output: 
+  html_document: 
+    highlight: pygments
+    number_sections: yes
+    theme: united
+---
+
+#Introduction
+*The Phillips Curve* is the term given to the relationship between unemployment and inflation that was uncovered by the New Zealand economist William Phillips when looking at the relationship between UK wage inflation and unemployment for the period 1861 to 1857.  This becase expanded to the relationship between general inflation and unemployment. 
+
+##Theory
+There are a number of theories for why this relationship might exist. 
+
+* A simple relatonship between aggregate demand and aggregate supply. This is related to the business cycle and suggests that as the economy does well, people are employed, unemployment falls and the shortage of available workers means that to expand further firms will have to pay higher wages. This pushes up inflation.  If the economy is weak, employment is low, unemployment is high and inflation is low.  You can preview AD-AS at the [Khan Academy](https://www.khanacademy.org/economics-finance-domain/macroeconomics/aggregate-supply-demand-topic). 
+
+* Nominal rigitdities and money illusion.  Even if the economy is working close to full capacity and there are limited space resources (workers), an increase in the amount of money could cause increased spending and increased work effort if people suffer *money illusion*.  This means that in the short-run they may not be fully aware of the real values and may be fooled by nominal values.  This means that money is not neutral and that the Phillips curve could operate in the short-run. 
+However, these ideas are controversial. Some people argue that the Phillips curve does not exist, some say that it is only seen in the short-run.  These people would suggest that the Phillips curve must have inflation expectations added to it.  
+
+* If I get a large wage rise and I think that inflation is going to be low, I will feel better off and I may spend more and this can bolster the whole economy
+* If I get a large wage rise and I think that inflation is going to rise as well, I will be aware that I am no better off and my behaviour may not change. 
+
+
+
+##Evidence
+This relationship has been tested many times for different countries and for different times periods.  We saw in the lecture and seminar classes that there is a negative relationship between US unemployment and US inflation for the period 1986 to 2013.  This is presented in below. 
+
+```{r, echo=FALSE,fig.height=5.0}
+da <- read.csv("../Regression/Data/USPhil.csv")
+eq1 <- lm(da$Inflation[6:34] ~ 
+            da$Unemployment[6:34])
+plot(da$Unemployment, da$Inflation, xlab = "Unemployment", ylab = "Inflation", main = "Inflation-unemployment")
+abline(eq1, col = 'darkgreen')
+```
+
+The regression line that has been created with **Ordinary Least Squares** gives the relationship between unemployment and inflation.  We found that this relationship could be described by 
+
+$$y_t = \alpha + \beta x_t + \varepsilon$$, 
+
+where $y_t$ is inflation, $\alpha$ is the estimate of the intercept, $x_t$ is unemployment, $\beta$ is the relationship between inflation and unemployment and $\varepsilon$ is the error term that encompasses all the other factors that have not been included in the model. The following estimates were made with OLS. 
+
+Coefficient | Estimate | Standard Error | T-Statistic | P-value
+----------- |----------|----------------|-------------|--------
+(Intercept) | 3.99     |  0.92          | 4.35        | 0.003  
+Unemployment|-0.20     |  0.15          | -1.35       | 0.19
+
+Therefore we concluded that we if actual value of beta was zero (meaning that there was no relationship between unempoyment and inflation) there would be a 19\% chance of getting this estimated value of -0.20 and therefore we could not reject the null hypothesis that $\beta$ was actually zero and that no relationship existed. 
+
+## Theory

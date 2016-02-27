@@ -89,18 +89,9 @@ text(13800, 15500, "Boom")
 
 \begin{frame}{Output gap}
 <<OG, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.6>>=
-plot(da2$Date, da2$GDP-da2$fitted.values[117:176], type = 'l', col = "Dark Green", main = "Gap between US GDP and its potenital", xlab = "Date", ylab = "USD bn")
+plot(da1$Date[117:176], da1$GDP[117:176]-eq1$fitted.values[117:176], type = 'l', col = "Dark Green", main = "Gap between US GDP and its potenital", xlab = "Date", ylab = "USD bn")
+abline(h = 0, col = "darkseagreen4")
 @
-\end{frame}
-
-
-\begin{frame}{Time series}
-\begin{itemize}[<+-| alert@+>]
-\item These are a series of data that change over time
-\item There are \emph{Stationary} and \emph{Nonstationary} series
-\item There may be \emph{Deterministic} and \emph{Stochastic} trends
-\item Data may be \emph{Pro-cyclical} and \emph{Counter-cyclical}
-\end{itemize}
 \end{frame}
 
 
@@ -364,8 +355,6 @@ If government spending is added
 \end{columns}
 \end{frame}
 
-
-
 \begin{frame}{For You}
 \begin{itemize}[<+-| alert@+>]
 \item Equilibrium was \textsterling 1000 when there was just consumer spending
@@ -384,6 +373,7 @@ What are the main factors influencing each component
 \item Government spending
 \item Next exports
 \end{itemize}
+\vskip 0.5cm
 Try to put these into an equation. 
 \end{frame}
 
@@ -407,7 +397,7 @@ Try to put these into an equation.
            shorten >=2pt,}
 }
 \begin{figure}
-\begin{tikzpicture}[scale = 0.7, transform shape]
+\begin{tikzpicture}[scale = 0.65, transform shape]
 %\draw [very thin, color = gray](-2, -2) grid (13, 7);
 \tikzstyle{block} = [draw, rectangle, text width = 8em, 
   text centered, minimum height = 15mm, node distance = 8em]
@@ -445,6 +435,11 @@ Try to put these into an equation.
 \end{figure}
 \end{frame}
 
+\begin{frame}{Phillips' machine}
+\begin{figure}
+\includegraphics[scale = 0.4]{"../Pictures/moniac"}
+\end{figure}
+\end{frame}
 
 \begin{frame}{The multiplier 1}
 An increase in autonomous spending (Business investment or government) will \emph{multiply} through the economy. 
@@ -492,12 +487,11 @@ Leads to a \textsterling 50m increase in economic activity.
 If the government and overseas sectors are added, taxation and imports reduce the power of the multiplier.  
 \begin{block}{}
 \begin{equation*}
-\Delta Y = \frac{1}{MPC + MPT + MPM}
+\Delta Y = \frac{1}{MPC + MPT + MPM} = \frac{1}{1 - \text{Slope of PE}}
 \end{equation*}
 \end{block}
-Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity to import. 
+Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity to import.  
 \end{frame}
 
 \end{document}
->>>>>>> 05b5801c9b096f2827e502e9e16c9ffb3e8414d8
 \begin{itemize}[<+-| alert@+>]

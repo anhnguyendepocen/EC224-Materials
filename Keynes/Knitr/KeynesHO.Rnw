@@ -9,7 +9,8 @@
 \usepackage{amsmath}
 \bibliographystyle{agsm}
 \usepackage{tikz}
-% Specify base color
+\usetikzlibrary{arrows,positioning} 
+%Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
 
@@ -20,9 +21,13 @@
 % Title and author information
 \title{Keynes and the multiplier}
 \author{Rob Hayward}
-
-
 \begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
 \begin{frame}{Reading}
 Reading
 \pause
@@ -82,16 +87,12 @@ text(13800, 15500, "Boom")
 @
 \end{frame}
 
-
-\begin{frame}{Time series}
-\begin{itemize}[<+-| alert@+>]
-\item These are a series of data that change over time
-\item There are \emph{Stationary} and {Nonstationary} series
-\item There may be \emph{Deterministic} and {Stochastic} trends
-\item Data may be \emph{Pro-cyclical} and \emph{Counter-cyclical}
-\end{itemize}
+\begin{frame}{Output gap}
+<<OG, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4.6>>=
+plot(da1$Date[117:176], da1$GDP[117:176]-eq1$fitted.values[117:176], type = 'l', col = "Dark Green", main = "Gap between US GDP and its potenital", xlab = "Date", ylab = "USD bn")
+abline(h = 0, col = "darkseagreen4")
+@
 \end{frame}
-
 
 
 \begin{frame}{GDP growth}
@@ -354,8 +355,6 @@ If government spending is added
 \end{columns}
 \end{frame}
 
-
-
 \begin{frame}{For You}
 \begin{itemize}[<+-| alert@+>]
 \item Equilibrium was \textsterling 1000 when there was just consumer spending
@@ -365,7 +364,82 @@ If government spending is added
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Influence on aggregate demand}
+What are the main factors influencing each component
+\pause
+\begin{itemize}
+\item Consumer spending
+\item Business investment
+\item Government spending
+\item Next exports
+\end{itemize}
+\vskip 0.5cm
+Try to put these into an equation. 
+\end{frame}
 
+\begin{frame}{The circular flow}
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+\begin{figure}
+\begin{tikzpicture}[scale = 0.65, transform shape]
+%\draw [very thin, color = gray](-2, -2) grid (13, 7);
+\tikzstyle{block} = [draw, rectangle, text width = 8em, 
+  text centered, minimum height = 15mm, node distance = 8em]
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [punkt] (Household) {Household};
+\node [punkt, above  of = Household, yshift =10em] (Firm){Firm};
+\node [punkt, above right of = Household, yshift = 4.0em, xshift = 5.5em] (Finsys){Finsys};
+\node [punkt, right of = Finsys, xshift = 7em] (Gov){Gov};
+\node [punkt, right of = Gov, xshift = 7em] (OS){OS};
+\path (Household.east) edge[pil, bend right=35] (OS.south);  
+\path (Household.east) edge[pil, bend right=35] (Gov.south);
+\path (Household.north) edge[pil] (Finsys.south);
+\path (OS.north) edge[pil, bend right=35] (Firm.east);  
+\path (Gov.north) edge[pil, bend right=35] (Firm.east);
+\path (Finsys.north) edge[pil] (Firm.south);
+\path (Household.north) edge[pil, bend left = 45] (Firm.south);
+\path (Firm.south) edge[pil, bend left = 45] (Household.north);
+%\path [line, right of = Household] -- (Finsys);
+%\path [line] (Finsys) -- (Firm);
+%\path [line] (Household) -- (Gov);
+%\path [line] (Household) -- (OS);
+%\path [line] (Gov) -- (Firm);
+%\path [line] (OS) -- (Firm);
+
+\node at (2.6, 1) (Savings) {Savings};
+\node at (8.2, 1) (Taxation) {Taxation};
+\node at (12.8, 1) (Imports) {Imports};
+\node at (3.7, 4.0) (Investment) {Investment};
+\node at (8.8, 4.0) (Government) {Government};
+\node at (12.8, 4.0) (Exports) {Exports};
+\node at (-2.3, 4.2) (Consumption) {Consumption};
+\node at (-0.0, 2.0) (Income) {Income};
+\end{tikzpicture}
+\caption{Circular flow of income}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Phillips' machine}
+\begin{figure}
+\includegraphics[scale = 0.4]{"../Pictures/moniac"}
+\end{figure}
+\end{frame}
 
 \begin{frame}{The multiplier 1}
 An increase in autonomous spending (Business investment or government) will \emph{multiply} through the economy. 
@@ -413,10 +487,10 @@ Leads to a \textsterling 50m increase in economic activity.
 If the government and overseas sectors are added, taxation and imports reduce the power of the multiplier.  
 \begin{block}{}
 \begin{equation*}
-\Delta Y = \frac{1}{MPC + MPT + MPM}
+\Delta Y = \frac{1}{MPC + MPT + MPM} = \frac{1}{1 - \text{Slope of PE}}
 \end{equation*}
 \end{block}
-Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity to import. 
+Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity to import.  
 \end{frame}
 
 \end{document}
