@@ -240,7 +240,7 @@ Substitute Y for PE
 Y =& 200 + 0.8Y\\
 Y-0.8Y =& 200\\
 Y(1-0.8) =& 200\\
-Y =& 200/1-0.8\\
+Y =& 200/(1-0.8)\\
 Y =& 1000
 \end{align*}
 \end{block}
@@ -490,7 +490,7 @@ If the government and overseas sectors are added, taxation and imports reduce th
 \Delta Y = \frac{1}{MPC + MPT + MPM} = \frac{1}{1 - \text{Slope of PE}}
 \end{equation*}
 \end{block}
-Where MPT is the marginal propenstiy of tax and MPM is the marginal propensity to import.  
+Where MPT is the marginal propensity of tax and MPM is the marginal propensity to import.  
 \end{frame}
 
 \end{document}
