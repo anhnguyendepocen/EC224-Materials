@@ -1,0 +1,146 @@
+---
+title: "Keynes Answers"
+author: "Rob Hayward"
+date: "12 March 2016"
+output: html_document
+---
+##Question 1.
+**Give an example of a leading and a lagging indicator.  Justify your choice**. 
+
+As the economy evolves through periods of boom and recession, running above and below the long-run potential growth rate, households and business, making decisions about spending and investment would like to know where the economy is in the cycle and what is likely to happen next. 
+
+```{r, fig.height=4.5, echo=FALSE}
+date <- seq(from = 1980, to = 2015, by = 5)
+LR <- (date/1980)^50
+plot(date, LR, type = 'l', main = "The business cycle", xlab = "Date", 
+     ylab = "GDP", lty = 1)
+BC <- LR + 0.2 * sin(LR * 5)
+# http://betterexplained.com/articles/intuitive-understanding-of-sine-waves/
+# http://tex.stackexchange.com/questions/210723/phases-stages-of-economic-cycle
+# for information about use of sine. 
+lines(date, BC, col = 'red', lty = 2)
+text(2010, 1.7, "Recession")
+text(2000, 2.0, "Boom")
+legend(legend = c("Long run trend", "Short-run cycle"), "topleft", 
+  col = c("black","red"), lty = c(1, 2))
+```
+
+A consideration of the *circular flow of income* indicates that not all parts of the economy at operating at the same point. The parts that initiate change are:
+
+**Leading indicators**
+
+* **Consumer confidence** rises and this leads to more consumer spending and less savings, increasing economic activity through the multiplier. 
+* **Business inventories** fall, causing firms to contemplate an increase in production to replenish inventories
+
+As consumer spending rises and business output increases, more factors of production are required to produce more goods.  Initially, firms are likely to run down stock, use existing capital and workers by using machines more intensely and offering extra and over time to workers.  However, once business are confident that the upswing in the economy is established, they will increase stocks, buy new plant and machinery to increase capacity and hire new workers.
+
+** Lagging indicators** 
+
+* **Business investment** in plant and machinery rises
+* **Employment** increases
+
+##Question 2
+**Complete the task from the lecture.  What is the equilibrium level of output when Autonomous consumption is 200m, the MPC is 0.8 and business investment is 50m?  What is the equilibrium when autonomous government spending of 20m?** 
+
+```{r, fig.height=4.6, echo=FALSE}
+Y <- seq(0, 2000, 10)
+PE <- 270 + 0.8*Y
+plot(Y, PE, type = 'l', main = "Planned expendiure, income and output", 
+     ylim = c(0, 2000), xlim = c(0, 2000))
+abline(a = 0, b = 1, lty = 2)
+# I do not know how these coordinates work
+lines(x = c(1350, 0), y = c(1350, 1350), lty = 2)
+lines(x = c(1350, 1350), y = c(0, 1350), lty = 2)
+text(1360, 1470, "E")
+```
+
+The graph shows the relationship between income/output and planned expenditure.  The 45 degree line shows areas of equilibrium: above that line, planned expenditure above output and firms will boost production, spending on factors of production and household income until there is a return to equilibrium; below equilibrium, output is above planned expenditure so firms must cut back on production, reduce their use of factors or production and household income until equilibrium is re-established.  The initial effects **multiply** through the economy (see below). 
+
+Equilibrium is where PE = Y
+
+In this case, 
+
+$$PE = 270 + 0.8Y$$
+
+therefore, in equilibrium, 
+
+$$Y = 270 + 0.8Y$$
+
+and 
+
+$$270 = Y - 0.8Y$$
+
+and 
+
+$$Y = \frac{270}{(1-0.8)}$$
+
+so, 
+
+$$Y = 1350 = PE$$
+
+##Question 3. 
+**What is the effect of a \textsterling 5m increase in government spending?**
+
+This will increase government spending to 25m.  Adding 5 to all the calculations above leaves us with 
+
+$$Y = \frac{275}{(1-0.8)}$$
+
+or 
+
+$$Y = 1375 = PE$$
+
+You can see that the 5m increase in government spending has lead to a 25m increase in total output, income and spending. 
+
+This could also be viewed through the multiplier.  Recall from the lecture notes that the multiplier is 
+
+$$Multiplier = \frac{1}{(1 - MPC)}$$
+
+As MPC = 0.8
+
+$$Multiplier = \frac{1}{(1 - 0.8)}$$
+
+or 
+
+$$Multiplier = \frac{1}{0.2} = 5$$
+
+Therefore, the 5m increase in government spending will lead to a $5 \times 5 = 25m$ increase in total output, income and spending (GDP). 
+
+##Question 4
+**Assume that government taxes income at 20\%, how does this affect the multiplier?**
+
+Now we are interested in *disposible income*.  This is the income after tax.  If disposable income is DI, 
+
+$$DI = (1 - T)Y$$, 
+
+where T = tax rate, therefore, 
+
+$$DI = (1 - 0.2)Y = 0.8Y$$
+
+Now the multiplier is 
+
+$$Multiplier = \frac{1}{1 - MPC*(1-T)} = \frac{1}{1 - 0.64)}$$
+
+$$Miltiplier = \frac{1}{0.36} = 2.77$$
+
+This means that the multiplier is less powerful.  It is clear that in each round of the circulate flow, some of the rise in income is taxed and some is saved.  Now there is less new spending to circulate. 
+
+##Question 5
+**Read the Case Study:The accelerator principle on page 660 of the textbook.  What effect does incorporation of this accelerator principle have on the multiplier?**
+
+Investment is not autonomous but is related to the change in demand.  As demand increases, firms try produce more and if they do not have the capacity, they will buy more machines, introduce more efficient ways or working and purchase more tools, machines and software. Therefore, investment is not just give or *autonomous*.  It will depend on the change in Aggregate Demand (AD). This could be written as 
+
+$$ \Delta I = \gamma \Delta Y$$
+
+where $\gamma$ is a parameter that tells use how powerfully investment responds to a change in demand.  This **investment accellerator** is an addition to the multiplier:  increased demand circulates through the economy and also has some added feedback on the change in business investment. 
+
+##Question 6
+**List the factors that determine consumer spending, business investment, government spending and net exports.  Simplify these so that they can form an equation.**
+
+* Consumer spending:  income, wealth, confidence, interest rates
+* Business investment:  business confidence, interest rates, new technology
+* Government:  policy, level of debt. 
+* Net exports:  exchange rate, demand in other countries
+
+There are many others.  Now you need to chose those that are more dominant and think about the trade off between a model that is sufficiently small to be useful and one that is realistic. 
+
+
