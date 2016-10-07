@@ -115,6 +115,7 @@ MP_L = \frac{\Delta Q}{\Delta L}
 \begin{frame}{Short-run and long-run}
 In the short-run one factor of production is fixed
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Land-fixed and variable labour can be added
 \item Capital is fixed and variable labour can be added
 \item Labour fixed and variable capital added
@@ -189,6 +190,7 @@ MPL = \frac{\delta Q}{\delta L} = 2 - 0.28L
 \begin{frame}{Long-run}
 In the long run all factors can be varied
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item New land and machinery can be bought
 \item Company can merge with others
 \item Returns to scale can be 
@@ -429,6 +431,20 @@ As equilibrium is achieved at the tangent of the ratio of cost of input to that 
 \pause
 Idea that factors are paid their marginal product is controversial
 \end{frame}
+
+\begin{frame}{Payment for marginal product}
+Factors that suggest that the wage will not be equal to the marginal product of labour  
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Monopsony
+\item Unions
+\item Efficiency wages
+\item Super-star effects
+\item Differentials
+\end{itemize}
+\end{frame}
+
+
 
 \end{document}
 
