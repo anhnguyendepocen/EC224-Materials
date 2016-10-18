@@ -5,7 +5,9 @@
 % See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
 \usepackage{caption}
 \usepackage{tikz}
+\usepackage[absolute, overlay]{textpos}
 \usepackage{multirow}
+\graphicspath{{./figure/}}
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
@@ -115,13 +117,12 @@ MP_L = \frac{\Delta Q}{\Delta L}
 \begin{frame}{Short-run and long-run}
 In the short-run one factor of production is fixed
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Land-fixed and variable labour can be added
 \item Capital is fixed and variable labour can be added
 \item Labour fixed and variable capital added
 \end{itemize}
 \end{frame}
-
-
 
 \begin{frame}{Pizza production}
 \begin{center}
@@ -183,12 +184,14 @@ where
 MPL = \frac{\delta Q}{\delta L} = 2 - 0.28L
 \end{equation*}
 \end{block}
+\pause
 \emph{Partial derivative} because the capital (factory) does not vary
 \end{frame}
 
 \begin{frame}{Long-run}
 In the long run all factors can be varied
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item New land and machinery can be bought
 \item Company can merge with others
 \item Returns to scale can be 
@@ -212,10 +215,24 @@ Q & = f(K, L)\\
 \end{align*}
 \end{block}
 \pause
-With $\alpha = 1 = \beta$ there are \emph{constant returns to scale}.  A is \emph{total factor productivity}
+With $\alpha + \beta = 1$ there are \emph{constant returns to scale}.  A is \emph{total factor productivity}
 \end{frame}
 
-\begin{frame}{Cobb Douglas producton function 2}
+\begin{frame}{Cobb Douglas production function 2}
+Constant returns to scale (increase labour and capital by some arbitrary value c)
+\pause
+\begin{block}{}
+\begin{align*}
+Q_0 &= AK^{\alpha}L^{\beta}\\
+Q_1 &= A(cK)^{\alpha}(cL)^{\beta}\\
+ &= Ac^{\alpha}K^{\alpha}c^{\beta}L^{\beta}\\
+ &= c^{\alpha + \beta} A K^{\alpha} L^{\beta}\\
+Q_1 &= c^{\alpha + \beta} Q_0
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Cobb Douglas production function 3}
 <<fig1, echo=FALSE, message=FALSE, warning=FALSE, fig.height = 5.5, cache=TRUE>>=
 library(RColorBrewer)
 colors <- brewer.pal(n = 3, "Greens")
@@ -257,6 +274,10 @@ U = X_1^{\beta}*X_2^{\alpha}
 \end{itemize}
 \pause
 $\alpha$ and $\beta$ represent the \emph{marginal utilities} 
+\pause
+\vspace{0.5cm}
+
+\textbf{Question:} Is $\alpha + \beta = 1, > 1 \text{or} < 1?$
 \end{frame}
 
 \begin{frame}{Isocost and isoquant}
@@ -430,6 +451,14 @@ As equilibrium is achieved at the tangent of the ratio of cost of input to that 
 Idea that factors are paid their marginal product is controversial
 \end{frame}
 
+\begin{frame}{Factor substitution in practice}
+\begin{textblock*}{5.5cm}(0.8cm, 4cm)
+\includegraphics[width = 5.5cm]{handcar}
+\end{textblock*}
+\begin{textblock*}{5.5cm}(7cm, 4cm)
+\includegraphics[width = 5.5cm]{autocar}
+\end{textblock*}
+\end{frame}
 \end{document}
 
 
