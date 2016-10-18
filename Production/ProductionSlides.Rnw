@@ -451,6 +451,18 @@ As equilibrium is achieved at the tangent of the ratio of cost of input to that 
 Idea that factors are paid their marginal product is controversial
 \end{frame}
 
+\begin{frame}{Payment for marginal product}
+Factors that suggest that the wage will not be equal to the marginal product of labour  
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Monopsony
+\item Unions
+\item Efficiency wages
+\item Super-star effects
+\item Differentials
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Factor substitution in practice}
 \begin{textblock*}{5.5cm}(0.8cm, 4cm)
 \includegraphics[width = 5.5cm]{handcar}
@@ -459,6 +471,7 @@ Idea that factors are paid their marginal product is controversial
 \includegraphics[width = 5.5cm]{autocar}
 \end{textblock*}
 \end{frame}
+
 \end{document}
 
 
