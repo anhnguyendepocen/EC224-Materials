@@ -316,7 +316,7 @@ There are two factors or resources (Capital and Labour)
 \item Can buy $\frac{12}{3} = 4L$
 \end{itemize}
 \begin{equation*}
-Q_1 = \frac{MP_L}{MP_K}
+Q_1 = -\frac{MP_L}{MP_K}
 \end{equation*}
 \end{column}
 \end{columns}
