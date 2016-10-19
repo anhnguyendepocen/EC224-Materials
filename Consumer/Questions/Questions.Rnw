@@ -125,6 +125,9 @@ Please answer the following questions as we proceed.
 %\pause
 %\draw [dashed, thin] (2.5, 0) to (2.5, 1.5);
 %\draw [dashed, thin] (0, 1.5) to (2.5, 1.5);
+\end{tikzpicture}
+\end{figure}
+
 
 \item Show draw a new budget line with an income of \$90.  Draw some indifference curves to show the effect of an increase in income on the demand for products A and B. 
 
