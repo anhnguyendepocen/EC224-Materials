@@ -1,0 +1,78 @@
+\documentclass[12pt]{hitec} 
+\usepackage{rotating}
+\usepackage{amsmath}
+\usepackage[flushleft]{threeparttable}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\usepackage{tikz}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+\hypersetup{urlcolor=blue, colorlinks=true} 
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.95}
+\lstset{backgroundcolor=\color{mygrey}}
+\begin{document}
+\author{Rob Hayward}
+\title{Questions about supply and demand}
+
+\maketitle
+
+\section*{Questions} 
+Please answer the following questions  
+\begin{enumerate} 
+\item Given the following supply and demand curves: 
+
+\begin{equation*}
+P = 6 - 0.7Q
+\end{equation*} 
+and 
+\begin{equation*}
+P = 0.5 + 0.6Q
+\end{equation*}
+
+Find the equilibrium price and quantity.  
+
+\vspace{4cm}
+\item It is more usual to put the \emph{dependent} variable on the y-axis.  Convert these two equations into the more conventional supply and demand and plot the curves on in the space provided below. 
+
+
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}[scale = 0.9]
+\draw [help lines] (0, 0) grid (9, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$P$} 
+  |- (9, 0) node (xaxis) [right] {$Q$};
+\node [below] at (1, 0)  {1};
+\node [below] at (2, 0) {2};
+\node [below] at (3, 0) {3};
+\node [below] at (4, 0) {4};
+\node [below] at (5, 0) {5};
+\node [below] at (6, 0) {6};
+\node [below] at (7, 0) {7};
+\node [below] at (8, 0) {8};
+\node [below] at (9, 0) {9};
+\node [left] at (0, 1) {1};
+\node [left] at (0, 2) {2};
+\node [left] at (0, 3) {3};
+\node [left] at (0, 4) {4};
+\node [left] at (0, 5) {5};
+\node [left] at (0, 6) {6};
+%\draw [olive, thick, domain = 1:8] plot (\x, {6 - 0.7* \x});
+%\node [right] at (8, 0.5) {D};
+%\draw [olive, thick, domain = 1:8] plot (\x, {0.5 + 0.6* \x});
+%\node [right] at (8, 5.5) {S};
+\end{tikzpicture}
+\end{figure}
+
+\item Explain 
+\begin{itemize}
+\item Why the supply curve slopes upward?
+\item Why the demand curve slopes downwards?
+\end{itemize}
+\item Assuming that this represents the market for orange juice identify three factors that could shift the demand curve and three factors that could shift the supply curve and describe how each would change the equilibrium price of orange juice and the quantity traded.  Does this appear plausible?  
+
+
+\end{enumerate}
+
+\end{document}
