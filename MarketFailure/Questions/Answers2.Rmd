@@ -1,0 +1,21 @@
+---
+title: "Market Failure"
+author: "Rob Hayward"
+date: "30 November 2016"
+output: 
+  html_document: 
+    highlight: textmate
+    theme: flatly
+---
+#Answers
+
+1. Products and services can be defined depending on whether there is: 
+
+    + *rivalry* - it can be reproduced without using resources
+
+    + *excludability* - its use can be made exclusive
+    
+  
+  
+  
+
