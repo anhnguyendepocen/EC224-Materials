@@ -1,0 +1,25 @@
+---
+title: "Market failure"
+author: "Rob Hayward"
+date: "28 November 2016"
+output:
+  word_document: default
+  pdf_document: default
+  html_document:
+    highlight: textmate
+    theme: flatly
+---
+#Answers
+
+1. 
+The public good is *non-rival* and *non-exludable* while a common resource is *rival* but *non-excludable*.  Remember that rival means whether using the resource will deprive others of the opportunity of using the same resource; excludable means that people can be given exclusive rights to its use. Examples of public goods are national defence, street lights and firework displays; examples of common resources are clean air, fish in the ocean and toll-free, busy roads. 
+
+The main point of this question is to distinguish *private goods* which are rival and excludable and where a market allocation may be expected to be effective from public goods, common resources and club goods (also called natural monopolies) where the market allocation is not likely to be efficient.  For public goods, there is no incentive for a firm to supply goods for which people cannot be excluded because they will face the *free-rider* problem.  Common resources tend to be overused as people do not pay the cost of using up resources.  Club goods tend to lead to *natural monopolies*.  We will return to this when we speak about market-structure. 
+
+2. A merit-good is something that provides benefits beyond the immediate consumption.  For example, education or vaccines are merit goods because they may provide benefits to society as well as the immediate increase in utility from being able to get a better job or to reduce the risk of infection.  
+
+3. These additional benefits are usually called *externalities*.  Externalities can also involve additional costs to society.  The key issues is that these costs and benefits are not internalised by the household or firm when they make their decisions about what to buy and what to produce.  The households are only considering their personal utility; the first are only trying to maximise profits by reducing their costs.  
+
+4. 
+   + Production of electricity using fossil fuels causes externalities in the form of **greenhouse gasses**. 
+
