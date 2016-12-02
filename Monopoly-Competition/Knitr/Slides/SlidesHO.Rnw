@@ -1,4 +1,4 @@
-\documentclass[14pt,xcolor=pdftex,dvipsnames,table, handout]{beamer}
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
 
 % Specify theme
 \usetheme{Madrid}
@@ -48,6 +48,7 @@
 \begin{frame}{Shape of average cost}
 The average cost curve is U shaped because
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Average costs initially fall with specialisation
 \item Average costs initially fall because fixed costs are spread
 \item Average costs eventually rise because of \emph{diminishing returns} in the short-run
@@ -69,8 +70,9 @@ The average cost curve is U shaped because
 \end{frame}
 
 \begin{frame}{Shape and position of the marginal cost}
-The average cost curve is U shaped because
+The marginal cost curve is U shaped because
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item The marginal cost is the cost of one more unit of output
 \item The marginal cost is below the average cost while average cost is falling
 \item The marginal cost is above the average  cost while the average cost is rising
@@ -84,10 +86,10 @@ In a perfectly competitive market, the marginal cost curve is the firm supply cu
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$TC$} 
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $TC$} 
   |- (5, 0) node (xaxis) [right] {$Q$};
-\node at (5, 2) [above left] {AC};
-\node at (4, 2.5) [above left] {MC};
+\node at (5, 2) [above left] {\scriptsize AC};
+\node at (4, 2.5) [above left] {\scriptsize MC};
 \draw [dashed] (5, 1.70) to (0, 1.70);
 \draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
 \draw[thick, color = red] (0.5, 0.25) to [out = 0, in = 195] (2.5, 0.5) to [out = 10, in = 250] (4, 2.5);
@@ -97,11 +99,11 @@ In a perfectly competitive market, the marginal cost curve is the firm supply cu
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$P$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
-\node at (4.3, 0.5) [above right] {D};
-\node at (4.3, 3.5) [below left] {S};
-\node at (0, 1.70) [left] {$p^*$};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $P$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
+\node at (4.3, 0.5) [above right] {\scriptsize D};
+\node at (4.3, 3.2) [below left] {\scriptsize S};
+\node at (0, 1.70) [left] {\scriptsize $p^*$};
 \draw (0.25, 3) to (4.5, 0.5);
 \draw (0.25, 0.25) to (4.5, 3);
 \draw [dashed] (5, 1.70) to (0, 1.70);
@@ -118,13 +120,13 @@ Profit maximised at MR = MC
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$TC$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $TC$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
 %\node at (5, 2) [above left] {AC};
-\node at (4, 2.5) [above left] {MC};
+\node at (4, 2.5) [above left] {\scriptsize MC};
 \draw [dashed] (5, 1.70) to (0, 1.70);
 \draw [dashed] (3.75, 0) to (3.75, 1.70);
-\node at (3.5, 0) [below] {$q^*$};
+\node at (3.5, 0) [below] {\scriptsize $q^*$};
 \draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
 \draw[thick, color = red] (0.5, 0.25) to [out = 0, in = 195] (2.5, 0.5) to [out = 10, in = 250] (4, 2.5);
 %\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
@@ -133,10 +135,10 @@ Profit maximised at MR = MC
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$P$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
-\node at (4.3, 0.5) [above right] {D};
-\node at (4.3, 3.5) [below left] {S};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $P$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
+\node at (4.3, 0.5) [above right] {\scriptsize D};
+\node at (4.3, 3.5) [below left] {\scriptsize S};
 \draw (0.25, 3) to (4.5, 0.5);
 \draw (0.25, 0.25) to (4.5, 3);
 \draw [dashed] (5, 1.70) to (0, 1.70);
@@ -170,16 +172,16 @@ Profit maximised at MR = MC
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$TC$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $TC$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
 %\node at (5, 2) [above left] {AC};
 %\node at (4, 2.5) [above left] {MC};
 \draw [dashed] (5, 1.70) to (0, 1.70);
 \draw [dashed] (5, 1.40) to (0, 1.40);
 \draw [dashed] (3.75, 0) to (3.75, 1.70);
 \draw [dashed] (3.50, 0) to (3.50, 1.40);
-\node at (3.75, 0) [below] {$q_0^*$};
-\node at (3.50, 0) [below left] {$q_1^*$};
+\node at (3.75, 0) [below] {\scriptsize $q_0^*$};
+\node at (3.50, 0) [below left] {\scriptsize $q_1^*$};
 \draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
 \draw[thick, color = red] (0.5, 0.25) to [out = 0, in = 195] (2.5, 0.5) to [out = 10, in = 250] (4, 2.5);
 %\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
@@ -188,11 +190,11 @@ Profit maximised at MR = MC
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$P$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
-\node at (4.3, 0.5) [above right] {D};
-\node at (4.3, 3.5) [below left] {$S_0$};
-\node at (4.3, 2.5) [below] {$S_1$};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $P$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
+\node at (4.3, 0.5) [above right] {\scriptsize D};
+\node at (4.3, 3.5) [below left] {\scriptsize $S_0$};
+\node at (4.3, 2.5) [below] {\scriptsize $S_1$};
 \draw (0.25, 3) to (4.5, 0.5);
 \draw [dashed] (0.25, 0.25) to (4.5, 3);
 \draw (1.25, 0.25) to (4.0, 2.0);
@@ -209,15 +211,15 @@ Profit-maximising output moves along the MC curve
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$TC$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $TC$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
 %\node at (5, 2) [above left] {AC};
 %\node at (4, 2.5) [above left] {MC};
 \draw [dashed] (5, 0.5) to (0, 0.5);
 %\draw [dashed] (5, 1.40) to (0, 1.40);
 %\draw [dashed] (3.75, 0) to (3.75, 1.70);
 \draw [dashed] (2.50, 0) to (2.50, 0.5);
-\node at (2.5, 0) [below] {$q^*$};
+\node at (2.5, 0) [below] {\scriptsize $q^*$};
 \draw[thick, color = blue] (0.5, 2.5) to [out = -60, in = 180] (2.5, 0.5) to [out = 5, in = 220] (5, 2);
 \draw[thick, color = red] (0.5, 0.25) to [out = 0, in = 195] (2.5, 0.5) to [out = 10, in = 250] (4, 2.5);
 %\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
@@ -226,11 +228,11 @@ Profit-maximising output moves along the MC curve
 \begin{column}{.48\textwidth}
 \begin{tikzpicture}
 \draw[very thin, color = gray](0, 0) grid (5, 3);
-\draw [<->, thick] (0, 3) node (yaxis) [above] {$P$} 
-  |- (5, 0) node (xaxis) [right] {$Q$};
+\draw [<->, thick] (0, 3) node (yaxis) [above] {\scriptsize $P$} 
+  |- (5, 0) node (xaxis) [right] {\scriptsize $Q$};
 %\node at (4.3, 0.5) [above right] {D};
-\node at (5, 1) [above left] {$S$};
-\node at (0, 0.5) [left] {$p^*$};
+\node at (5, 1) [above left] {\scriptsize $S$};
+\node at (0, 0.5) [left] {\scriptsize $p^*$};
 %\node at (4.3, 2.5) [below] {$S_1$};
 \draw (0.25, 3) to (4.5, 0.5);
 %\draw [dashed] (0.25, 0.25) to (4.9, 2.8);
@@ -239,7 +241,7 @@ Profit-maximising output moves along the MC curve
 %\draw[domain = 0.1:3.9, color = blue] plot(\x, {2 - 0.5*\x});
 \end{tikzpicture}
 \end{column}
-\end{columns}
+    \end{columns}
 Long-run equilibrium when price is equal to the minimum on the average cost curve. 
 \end{frame}
 
@@ -375,6 +377,7 @@ When costs do not change, monopoly will charge a higher price and will therefore
 \pause
 However, costs are likely to change
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Specialisation
 \item Economies of scale
 \end{itemize}
@@ -452,7 +455,59 @@ Monopoly may be able to use super-normal profits for Research and Development (i
 \end{tikzpicture}
 \end{frame}
 
+\begin{frame}{Monopoly and welfare}
+\begin{tikzpicture}[scale = 2]
+\draw[very thin, color = gray] (0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$TC$} 
+  |- (5, 0) node (xaxis) [right] {$Q$};
+%\node at (4.5, 1.5) [above left] {AC};
+%\node at (3.2, 2.0) [above left] {MC};
+%\draw [thick] (0.0, 2.0) to [out = -60, in = 180] (2, 0.5) to 
+%[out = 10, in = 220] (4, 1.5);
+%\draw [thick] (0, 1.2) to [out = -35, in = 190] (2, 0.5) to [out = %10, in = 250] (3.2, 2.0);
+\draw [thick, color = blue] (0, 3) to (5, 1); 
+\node at (5, 1.25) [above left] {D = AR};
+\node at (4, 0) [above] {MR};
+\draw [thick, color = red] (0, 3) to (4, 0);
+\draw [thick] (0, 1) to (5, 1);
+\node at (5, 1) [below] {MC};
+\pause
+\draw [fill = red] (2.7, 1.0) circle [radius = 0.05];
+\draw [dashed] (2.7, 0) to (2.7, 1.9);
+\draw [dashed] (0, 1.9) to (2.7, 1.9);
+\pause
+\draw [thick, fill = yellow, fill opacity = 0.2] 
+(0, 1) -- (2.7, 1) -- (2.7, 1.9) -- (0, 1.9);
+\node at (1.5, 1.5) {Profit};
+\pause
+\draw [thick, fill = red, fill opacity = 0.2] 
+(0, 1.9) -- (0, 3) -- (2.7, 1.9);
+\node at (1.3, 2.5) [right] {Consumer Surplus};
+\pause
+\draw [thick, fill = blue, fill opacity = 0.2]
+(2.7, 1) -- (5, 1) -- (2.7, 1.9);
+\node at (3.3, 1.8) [right] {Dead-weight loss};
+%\pause
+%\draw [fill = red] (2.35, 1.6) circle [radius = 0.05];
+%\draw [dashed] (2.35, 0) to (2.35, 2.2);
+%\node at (2.35, 0) [below] {qm};
+%\draw [dashed] (0, 2.2) to (2.35, 2.2);
+%\node at (0, 2.2) [left] {pm};
+%\pause
+%\draw [dashed] (2.9, 0) to (2.9, 2);
+%\draw [dashed] (0, 2) to (2.9, 2);
+%\draw [fill = red] (2.9, 1.3) circle [radius = 0.05];
+%\node at (0, 2) [left] {$pm_2$};
+%\node at (2.9, 0) [below] {$qm_2$};%
 
+%\pause
+%\draw [dashed] (4.22, 1.53) to (4.22, 0);
+%\node at (5, 1.5) [above left] {LRS};
+%\node at (4.22, 0) [below] {qc};
+%\node at (0, 1.53) [left] {pc};
+%\draw [fill = red] (4.22, 1.53) circle [radius = 0.05];
+\end{tikzpicture}
+\end{frame}
 \begin{frame}{Regulation}
 It is also possible to regulate 
 \pause
